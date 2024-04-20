@@ -2,7 +2,6 @@ using APG_TRUSS.ViewModels;
 using APG_TRUSS.Views;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Controls.PanAndZoom;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
@@ -25,7 +24,7 @@ namespace APG_TRUSS
 				BindingPlugins.DataValidators.RemoveAt(0);
 				desktop.MainWindow = new MainWindow
 				{
-					DataContext = new ZoomBorder(),
+					DataContext = new MainWindowViewModel(),
 				};
 			}
 
