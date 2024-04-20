@@ -1,0 +1,129 @@
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\APG TRUSS.exe
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\APG TRUSS.deps.json
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\APG TRUSS.runtimeconfig.json
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\APG TRUSS.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\APG TRUSS.pdb
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Base.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Controls.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.DesignerSupport.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Dialogs.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Markup.Xaml.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Markup.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Metal.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.MicroCom.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.OpenGL.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Controls.ColorPicker.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Controls.DataGrid.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Desktop.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Diagnostics.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Fonts.Inter.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.FreeDesktop.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Native.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Remote.Protocol.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Skia.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Themes.Fluent.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Themes.Simple.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Win32.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.X11.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\CommunityToolkit.Mvvm.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\HarfBuzzSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\MicroCom.Runtime.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\SkiaSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\System.IO.Pipelines.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Tmds.DBus.Protocol.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-arm64\native\av_libglesv2.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-x64\native\av_libglesv2.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-x86\native\av_libglesv2.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\osx\native\libAvaloniaNative.dylib
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-arm\native\libSkiaSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-arm64\native\libSkiaSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\linux-x64\native\libSkiaSharp.so
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.csproj.AssemblyReference.cache
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\Avalonia\Resources.Inputs.cache
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\Avalonia\resources
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.AssemblyInfoInputs.cache
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.AssemblyInfo.cs
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.csproj.CoreCompileInputs.cache
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\Avalonia\references
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\Avalonia\original.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\Avalonia\original.pdb
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\Avalonia\original.ref.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\refint\APG TRUSS.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.pdb
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.csproj.Up2Date
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.genruntimeconfig.cache
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\obj\Debug\net8.0\ref\APG TRUSS.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Controls.PanAndZoom.dll
+D:\Projects\APG TRUSS\APG TRUSS\APG TRUSS\bin\Debug\net8.0\Avalonia.Controls.PanAndZoom.xml

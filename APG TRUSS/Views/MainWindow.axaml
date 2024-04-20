@@ -1,0 +1,55 @@
+<Window
+	x:Class="APG_TRUSS.Views.MainWindow"
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:app="using:APG_TRUSS"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="using:APG_TRUSS.Views"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:paz="using:Avalonia.Controls.PanAndZoom"
+	xmlns:vm="using:APG_TRUSS.ViewModels"
+	Title="APG_TRUSS"
+	d:DesignHeight="450"
+	d:DesignWidth="800"
+	x:DataType="vm:MainWindowViewModel"
+	Icon="/Assets/avalonia-logo.ico"
+	mc:Ignorable="d">
+	<Design.DataContext>
+		<vm:MainWindowViewModel />
+	</Design.DataContext>
+	<Grid ColumnDefinitions="Auto,*">
+		<StackPanel Grid.Column="0">
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_node.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_member.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_hinge.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_hroller.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_delete.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_load.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_load2.png" />
+			</Button>
+		</StackPanel>
+		<Grid Grid.Column="1" RowDefinitions="*,Auto,Auto">
+			<local:CustomSkiaPage
+				Name="CustomSkia"
+				Grid.Row="0"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Background="Black" />
+			<TextBox Grid.Row="1" Text="{Binding #CustomSkia.X}" />
+			<TextBox Grid.Row="2" Text="{Binding #CustomSkia.Y}" />
+		</Grid>
+	</Grid>
+</Window>
