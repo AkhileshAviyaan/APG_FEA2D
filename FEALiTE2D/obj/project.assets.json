@@ -1,53 +1,108 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.5": {
-      "CSparse/3.5.0": {
-        "type": "package",
-        "compile": {
-          "lib/net45/CSparse.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net45/CSparse.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "MathNet.Numerics/4.15.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "System.Core",
-          "System.Numerics",
-          "System.Runtime.Serialization"
-        ],
-        "compile": {
-          "lib/net40/MathNet.Numerics.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40/MathNet.Numerics.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.NETFramework.ReferenceAssemblies/1.0.3": {
+    ".NETStandard,Version=v2.0": {
+      "Avalonia/11.0.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net45": "1.0.3"
+          "Avalonia.BuildServices": "0.0.29",
+          "Avalonia.Remote.Protocol": "11.0.10",
+          "MicroCom.Runtime": "0.11.0",
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.ComponentModel.Annotations": "4.5.0",
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "ref/netstandard2.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "ref/netstandard2.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "lib/netstandard2.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Avalonia.props": {},
+          "buildTransitive/Avalonia.targets": {}
         }
       },
-      "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.3": {
+      "Avalonia.BuildServices/0.0.29": {
         "type": "package",
         "build": {
-          "build/Microsoft.NETFramework.ReferenceAssemblies.net45.targets": {}
+          "buildTransitive/Avalonia.BuildServices.targets": {}
         }
-      }
-    },
-    ".NETStandard,Version=v2.0": {
+      },
+      "Avalonia.Remote.Protocol/11.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CSparse/3.5.0": {
         "type": "package",
         "compile": {
@@ -70,6 +125,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/MathNet.Numerics.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MicroCom.Runtime/0.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MicroCom.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MicroCom.Runtime.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {
             "related": ".xml"
           }
         }
@@ -167,6 +247,17 @@
           }
         }
       },
+      "System.ComponentModel.Annotations/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.ComponentModel.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Memory/4.5.5": {
         "type": "package",
         "dependencies": {
@@ -198,7 +289,7 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
@@ -210,10 +301,261 @@
             "related": ".xml"
           }
         }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
       }
     }
   },
   "libraries": {
+    "Avalonia/11.0.10": {
+      "sha512": "EH1FyD1SA7G/TfLmb7JKQlZiOBqr6VzttJMtA5Hnc/c1623zJej0PRuQlqn8Ad6qWKorrKEypBGA9Gye3uWDrA==",
+      "type": "package",
+      "path": "avalonia/11.0.10",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "analyzers/dotnet/cs/Avalonia.Analyzers.dll",
+        "analyzers/dotnet/cs/Avalonia.Generators.dll",
+        "avalonia.11.0.10.nupkg.sha512",
+        "avalonia.nuspec",
+        "build/Avalonia.Generators.props",
+        "build/Avalonia.props",
+        "build/Avalonia.targets",
+        "build/AvaloniaBuildTasks.props",
+        "build/AvaloniaBuildTasks.targets",
+        "build/AvaloniaItemSchema.xaml",
+        "build/AvaloniaPrivateApis.targets",
+        "build/AvaloniaVersion.props",
+        "buildTransitive/Avalonia.Generators.props",
+        "buildTransitive/Avalonia.props",
+        "buildTransitive/Avalonia.targets",
+        "buildTransitive/AvaloniaBuildTasks.props",
+        "buildTransitive/AvaloniaBuildTasks.targets",
+        "buildTransitive/AvaloniaItemSchema.xaml",
+        "buildTransitive/AvaloniaPrivateApis.targets",
+        "lib/net461/Avalonia.Base.dll",
+        "lib/net461/Avalonia.Base.xml",
+        "lib/net461/Avalonia.Controls.dll",
+        "lib/net461/Avalonia.Controls.xml",
+        "lib/net461/Avalonia.DesignerSupport.dll",
+        "lib/net461/Avalonia.DesignerSupport.xml",
+        "lib/net461/Avalonia.Dialogs.dll",
+        "lib/net461/Avalonia.Dialogs.xml",
+        "lib/net461/Avalonia.Markup.Xaml.dll",
+        "lib/net461/Avalonia.Markup.Xaml.xml",
+        "lib/net461/Avalonia.Markup.dll",
+        "lib/net461/Avalonia.Markup.xml",
+        "lib/net461/Avalonia.Metal.dll",
+        "lib/net461/Avalonia.Metal.xml",
+        "lib/net461/Avalonia.MicroCom.dll",
+        "lib/net461/Avalonia.MicroCom.xml",
+        "lib/net461/Avalonia.OpenGL.dll",
+        "lib/net461/Avalonia.OpenGL.xml",
+        "lib/net461/Avalonia.dll",
+        "lib/net461/Avalonia.xml",
+        "lib/net6.0/Avalonia.Base.dll",
+        "lib/net6.0/Avalonia.Base.xml",
+        "lib/net6.0/Avalonia.Controls.dll",
+        "lib/net6.0/Avalonia.Controls.xml",
+        "lib/net6.0/Avalonia.DesignerSupport.dll",
+        "lib/net6.0/Avalonia.DesignerSupport.xml",
+        "lib/net6.0/Avalonia.Dialogs.dll",
+        "lib/net6.0/Avalonia.Dialogs.xml",
+        "lib/net6.0/Avalonia.Markup.Xaml.dll",
+        "lib/net6.0/Avalonia.Markup.Xaml.xml",
+        "lib/net6.0/Avalonia.Markup.dll",
+        "lib/net6.0/Avalonia.Markup.xml",
+        "lib/net6.0/Avalonia.Metal.dll",
+        "lib/net6.0/Avalonia.Metal.xml",
+        "lib/net6.0/Avalonia.MicroCom.dll",
+        "lib/net6.0/Avalonia.MicroCom.xml",
+        "lib/net6.0/Avalonia.OpenGL.dll",
+        "lib/net6.0/Avalonia.OpenGL.xml",
+        "lib/net6.0/Avalonia.dll",
+        "lib/net6.0/Avalonia.xml",
+        "lib/netcoreapp2.0/Avalonia.Base.dll",
+        "lib/netcoreapp2.0/Avalonia.Base.xml",
+        "lib/netcoreapp2.0/Avalonia.Controls.dll",
+        "lib/netcoreapp2.0/Avalonia.Controls.xml",
+        "lib/netcoreapp2.0/Avalonia.DesignerSupport.dll",
+        "lib/netcoreapp2.0/Avalonia.DesignerSupport.xml",
+        "lib/netcoreapp2.0/Avalonia.Dialogs.dll",
+        "lib/netcoreapp2.0/Avalonia.Dialogs.xml",
+        "lib/netcoreapp2.0/Avalonia.Markup.Xaml.dll",
+        "lib/netcoreapp2.0/Avalonia.Markup.Xaml.xml",
+        "lib/netcoreapp2.0/Avalonia.Markup.dll",
+        "lib/netcoreapp2.0/Avalonia.Markup.xml",
+        "lib/netcoreapp2.0/Avalonia.Metal.dll",
+        "lib/netcoreapp2.0/Avalonia.Metal.xml",
+        "lib/netcoreapp2.0/Avalonia.MicroCom.dll",
+        "lib/netcoreapp2.0/Avalonia.MicroCom.xml",
+        "lib/netcoreapp2.0/Avalonia.OpenGL.dll",
+        "lib/netcoreapp2.0/Avalonia.OpenGL.xml",
+        "lib/netcoreapp2.0/Avalonia.dll",
+        "lib/netcoreapp2.0/Avalonia.xml",
+        "lib/netstandard2.0/Avalonia.Base.dll",
+        "lib/netstandard2.0/Avalonia.Base.xml",
+        "lib/netstandard2.0/Avalonia.Controls.dll",
+        "lib/netstandard2.0/Avalonia.Controls.xml",
+        "lib/netstandard2.0/Avalonia.DesignerSupport.dll",
+        "lib/netstandard2.0/Avalonia.DesignerSupport.xml",
+        "lib/netstandard2.0/Avalonia.Dialogs.dll",
+        "lib/netstandard2.0/Avalonia.Dialogs.xml",
+        "lib/netstandard2.0/Avalonia.Markup.Xaml.dll",
+        "lib/netstandard2.0/Avalonia.Markup.Xaml.xml",
+        "lib/netstandard2.0/Avalonia.Markup.dll",
+        "lib/netstandard2.0/Avalonia.Markup.xml",
+        "lib/netstandard2.0/Avalonia.Metal.dll",
+        "lib/netstandard2.0/Avalonia.Metal.xml",
+        "lib/netstandard2.0/Avalonia.MicroCom.dll",
+        "lib/netstandard2.0/Avalonia.MicroCom.xml",
+        "lib/netstandard2.0/Avalonia.OpenGL.dll",
+        "lib/netstandard2.0/Avalonia.OpenGL.xml",
+        "lib/netstandard2.0/Avalonia.dll",
+        "lib/netstandard2.0/Avalonia.xml",
+        "ref/net461/Avalonia.Base.dll",
+        "ref/net461/Avalonia.Base.xml",
+        "ref/net461/Avalonia.Controls.dll",
+        "ref/net461/Avalonia.Controls.xml",
+        "ref/net461/Avalonia.DesignerSupport.dll",
+        "ref/net461/Avalonia.DesignerSupport.xml",
+        "ref/net461/Avalonia.Dialogs.dll",
+        "ref/net461/Avalonia.Dialogs.xml",
+        "ref/net461/Avalonia.Markup.Xaml.dll",
+        "ref/net461/Avalonia.Markup.Xaml.xml",
+        "ref/net461/Avalonia.Markup.dll",
+        "ref/net461/Avalonia.Markup.xml",
+        "ref/net461/Avalonia.Metal.dll",
+        "ref/net461/Avalonia.Metal.xml",
+        "ref/net461/Avalonia.MicroCom.dll",
+        "ref/net461/Avalonia.MicroCom.xml",
+        "ref/net461/Avalonia.OpenGL.dll",
+        "ref/net461/Avalonia.OpenGL.xml",
+        "ref/net461/Avalonia.dll",
+        "ref/net461/Avalonia.xml",
+        "ref/net6.0/Avalonia.Base.dll",
+        "ref/net6.0/Avalonia.Base.xml",
+        "ref/net6.0/Avalonia.Controls.dll",
+        "ref/net6.0/Avalonia.Controls.xml",
+        "ref/net6.0/Avalonia.DesignerSupport.dll",
+        "ref/net6.0/Avalonia.DesignerSupport.xml",
+        "ref/net6.0/Avalonia.Dialogs.dll",
+        "ref/net6.0/Avalonia.Dialogs.xml",
+        "ref/net6.0/Avalonia.Markup.Xaml.dll",
+        "ref/net6.0/Avalonia.Markup.Xaml.xml",
+        "ref/net6.0/Avalonia.Markup.dll",
+        "ref/net6.0/Avalonia.Markup.xml",
+        "ref/net6.0/Avalonia.Metal.dll",
+        "ref/net6.0/Avalonia.Metal.xml",
+        "ref/net6.0/Avalonia.MicroCom.dll",
+        "ref/net6.0/Avalonia.MicroCom.xml",
+        "ref/net6.0/Avalonia.OpenGL.dll",
+        "ref/net6.0/Avalonia.OpenGL.xml",
+        "ref/net6.0/Avalonia.dll",
+        "ref/net6.0/Avalonia.xml",
+        "ref/netcoreapp2.0/Avalonia.Base.dll",
+        "ref/netcoreapp2.0/Avalonia.Base.xml",
+        "ref/netcoreapp2.0/Avalonia.Controls.dll",
+        "ref/netcoreapp2.0/Avalonia.Controls.xml",
+        "ref/netcoreapp2.0/Avalonia.DesignerSupport.dll",
+        "ref/netcoreapp2.0/Avalonia.DesignerSupport.xml",
+        "ref/netcoreapp2.0/Avalonia.Dialogs.dll",
+        "ref/netcoreapp2.0/Avalonia.Dialogs.xml",
+        "ref/netcoreapp2.0/Avalonia.Markup.Xaml.dll",
+        "ref/netcoreapp2.0/Avalonia.Markup.Xaml.xml",
+        "ref/netcoreapp2.0/Avalonia.Markup.dll",
+        "ref/netcoreapp2.0/Avalonia.Markup.xml",
+        "ref/netcoreapp2.0/Avalonia.Metal.dll",
+        "ref/netcoreapp2.0/Avalonia.Metal.xml",
+        "ref/netcoreapp2.0/Avalonia.MicroCom.dll",
+        "ref/netcoreapp2.0/Avalonia.MicroCom.xml",
+        "ref/netcoreapp2.0/Avalonia.OpenGL.dll",
+        "ref/netcoreapp2.0/Avalonia.OpenGL.xml",
+        "ref/netcoreapp2.0/Avalonia.dll",
+        "ref/netcoreapp2.0/Avalonia.xml",
+        "ref/netstandard2.0/Avalonia.Base.dll",
+        "ref/netstandard2.0/Avalonia.Base.xml",
+        "ref/netstandard2.0/Avalonia.Controls.dll",
+        "ref/netstandard2.0/Avalonia.Controls.xml",
+        "ref/netstandard2.0/Avalonia.DesignerSupport.dll",
+        "ref/netstandard2.0/Avalonia.DesignerSupport.xml",
+        "ref/netstandard2.0/Avalonia.Dialogs.dll",
+        "ref/netstandard2.0/Avalonia.Dialogs.xml",
+        "ref/netstandard2.0/Avalonia.Markup.Xaml.dll",
+        "ref/netstandard2.0/Avalonia.Markup.Xaml.xml",
+        "ref/netstandard2.0/Avalonia.Markup.dll",
+        "ref/netstandard2.0/Avalonia.Markup.xml",
+        "ref/netstandard2.0/Avalonia.Metal.dll",
+        "ref/netstandard2.0/Avalonia.Metal.xml",
+        "ref/netstandard2.0/Avalonia.MicroCom.dll",
+        "ref/netstandard2.0/Avalonia.MicroCom.xml",
+        "ref/netstandard2.0/Avalonia.OpenGL.dll",
+        "ref/netstandard2.0/Avalonia.OpenGL.xml",
+        "ref/netstandard2.0/Avalonia.dll",
+        "ref/netstandard2.0/Avalonia.xml",
+        "tools/net461/designer/Avalonia.Designer.HostApp.exe",
+        "tools/netcoreapp2.0/designer/Avalonia.Designer.HostApp.dll",
+        "tools/netstandard2.0/Avalonia.Build.Tasks.dll"
+      ]
+    },
+    "Avalonia.BuildServices/0.0.29": {
+      "sha512": "U4eJLQdoDNHXtEba7MZUCwrBErBTxFp6sUewXBOdAhU0Kwzwaa/EKFcYm8kpcysjzKtfB4S0S9n0uxKZFz/ikw==",
+      "type": "package",
+      "path": "avalonia.buildservices/0.0.29",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "avalonia.buildservices.0.0.29.nupkg.sha512",
+        "avalonia.buildservices.nuspec",
+        "build/Avalonia.BuildServices.targets",
+        "buildTransitive/Avalonia.BuildServices.targets",
+        "tools/netstandard2.0/Avalonia.BuildServices.Collector.dll",
+        "tools/netstandard2.0/Avalonia.BuildServices.dll",
+        "tools/netstandard2.0/runtimeconfig.json"
+      ]
+    },
+    "Avalonia.Remote.Protocol/11.0.10": {
+      "sha512": "4/zXSx7P2+4g7nIkSd8aIfEfRnvHjpeSEBjJznzE5iJBYO98B78wDPWEkyN8sQBJnLghaNKKsGCApx3g5R0Gsg==",
+      "type": "package",
+      "path": "avalonia.remote.protocol/11.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.remote.protocol.11.0.10.nupkg.sha512",
+        "avalonia.remote.protocol.nuspec",
+        "lib/net6.0/Avalonia.Remote.Protocol.dll",
+        "lib/net6.0/Avalonia.Remote.Protocol.xml",
+        "lib/netstandard2.0/Avalonia.Remote.Protocol.dll",
+        "lib/netstandard2.0/Avalonia.Remote.Protocol.xml"
+      ]
+    },
     "CSparse/3.5.0": {
       "sha512": "tcZr0u6rsbfBWXNt8zCGeAjGkqW4c9TfTr9GbqxH3f4Y7l/ImYypWwKf3CTH+NMqTChmlpe0OlvMbOv1HLohTg==",
       "type": "package",
@@ -251,6 +593,40 @@
         "mathnet.numerics.nuspec"
       ]
     },
+    "MicroCom.Runtime/0.11.0": {
+      "sha512": "MEnrZ3UIiH40hjzMDsxrTyi8dtqB5ziv3iBeeU4bXsL/7NLSal9F1lZKpK+tfBRnUoDSdtcW3KufE4yhATOMCA==",
+      "type": "package",
+      "path": "microcom.runtime/0.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/MicroCom.Runtime.dll",
+        "lib/netstandard2.0/MicroCom.Runtime.dll",
+        "microcom.runtime.0.11.0.nupkg.sha512",
+        "microcom.runtime.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+      "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -264,335 +640,6 @@
         "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json"
-      ]
-    },
-    "Microsoft.NETFramework.ReferenceAssemblies/1.0.3": {
-      "sha512": "vUc9Npcs14QsyOD01tnv/m8sQUnGTGOw1BCmKcv77LBJY7OxhJ+zJF7UD/sCL3lYNFuqmQEVlkfS4Quif6FyYg==",
-      "type": "package",
-      "path": "microsoft.netframework.referenceassemblies/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
-        "microsoft.netframework.referenceassemblies.nuspec"
-      ]
-    },
-    "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.3": {
-      "sha512": "dcSLNuUX2rfZejsyta2EWZ1W5U6ucbFt697lRg1qiTlTM5ZlYv4uAvuxE6ROy6xLWWhLhOaReCDxkhxcajRYtQ==",
-      "type": "package",
-      "path": "microsoft.netframework.referenceassemblies.net45/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/.NETFramework/v4.5/Accessibility.dll",
-        "build/.NETFramework/v4.5/Accessibility.xml",
-        "build/.NETFramework/v4.5/CustomMarshalers.dll",
-        "build/.NETFramework/v4.5/CustomMarshalers.xml",
-        "build/.NETFramework/v4.5/Facades/System.Collections.Concurrent.dll",
-        "build/.NETFramework/v4.5/Facades/System.Collections.dll",
-        "build/.NETFramework/v4.5/Facades/System.ComponentModel.Annotations.dll",
-        "build/.NETFramework/v4.5/Facades/System.ComponentModel.EventBasedAsync.dll",
-        "build/.NETFramework/v4.5/Facades/System.ComponentModel.dll",
-        "build/.NETFramework/v4.5/Facades/System.Diagnostics.Contracts.dll",
-        "build/.NETFramework/v4.5/Facades/System.Diagnostics.Debug.dll",
-        "build/.NETFramework/v4.5/Facades/System.Diagnostics.Tools.dll",
-        "build/.NETFramework/v4.5/Facades/System.Diagnostics.Tracing.dll",
-        "build/.NETFramework/v4.5/Facades/System.Dynamic.Runtime.dll",
-        "build/.NETFramework/v4.5/Facades/System.Globalization.dll",
-        "build/.NETFramework/v4.5/Facades/System.IO.dll",
-        "build/.NETFramework/v4.5/Facades/System.Linq.Expressions.dll",
-        "build/.NETFramework/v4.5/Facades/System.Linq.Parallel.dll",
-        "build/.NETFramework/v4.5/Facades/System.Linq.Queryable.dll",
-        "build/.NETFramework/v4.5/Facades/System.Linq.dll",
-        "build/.NETFramework/v4.5/Facades/System.Net.NetworkInformation.dll",
-        "build/.NETFramework/v4.5/Facades/System.Net.Primitives.dll",
-        "build/.NETFramework/v4.5/Facades/System.Net.Requests.dll",
-        "build/.NETFramework/v4.5/Facades/System.ObjectModel.dll",
-        "build/.NETFramework/v4.5/Facades/System.Reflection.Emit.ILGeneration.dll",
-        "build/.NETFramework/v4.5/Facades/System.Reflection.Emit.Lightweight.dll",
-        "build/.NETFramework/v4.5/Facades/System.Reflection.Emit.dll",
-        "build/.NETFramework/v4.5/Facades/System.Reflection.Extensions.dll",
-        "build/.NETFramework/v4.5/Facades/System.Reflection.Primitives.dll",
-        "build/.NETFramework/v4.5/Facades/System.Reflection.dll",
-        "build/.NETFramework/v4.5/Facades/System.Resources.ResourceManager.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.Extensions.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.InteropServices.WindowsRuntime.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.InteropServices.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.Numerics.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.Serialization.Json.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.Serialization.Primitives.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.Serialization.Xml.dll",
-        "build/.NETFramework/v4.5/Facades/System.Runtime.dll",
-        "build/.NETFramework/v4.5/Facades/System.Security.Principal.dll",
-        "build/.NETFramework/v4.5/Facades/System.ServiceModel.Duplex.dll",
-        "build/.NETFramework/v4.5/Facades/System.ServiceModel.Http.dll",
-        "build/.NETFramework/v4.5/Facades/System.ServiceModel.NetTcp.dll",
-        "build/.NETFramework/v4.5/Facades/System.ServiceModel.Primitives.dll",
-        "build/.NETFramework/v4.5/Facades/System.ServiceModel.Security.dll",
-        "build/.NETFramework/v4.5/Facades/System.Text.Encoding.Extensions.dll",
-        "build/.NETFramework/v4.5/Facades/System.Text.Encoding.dll",
-        "build/.NETFramework/v4.5/Facades/System.Text.RegularExpressions.dll",
-        "build/.NETFramework/v4.5/Facades/System.Threading.Tasks.Parallel.dll",
-        "build/.NETFramework/v4.5/Facades/System.Threading.Tasks.dll",
-        "build/.NETFramework/v4.5/Facades/System.Threading.dll",
-        "build/.NETFramework/v4.5/Facades/System.Xml.ReaderWriter.dll",
-        "build/.NETFramework/v4.5/Facades/System.Xml.XDocument.dll",
-        "build/.NETFramework/v4.5/Facades/System.Xml.XmlSerializer.dll",
-        "build/.NETFramework/v4.5/ISymWrapper.dll",
-        "build/.NETFramework/v4.5/ISymWrapper.xml",
-        "build/.NETFramework/v4.5/Microsoft.Activities.Build.dll",
-        "build/.NETFramework/v4.5/Microsoft.Activities.Build.xml",
-        "build/.NETFramework/v4.5/Microsoft.Build.Conversion.v4.0.dll",
-        "build/.NETFramework/v4.5/Microsoft.Build.Conversion.v4.0.xml",
-        "build/.NETFramework/v4.5/Microsoft.Build.Engine.dll",
-        "build/.NETFramework/v4.5/Microsoft.Build.Engine.xml",
-        "build/.NETFramework/v4.5/Microsoft.Build.Framework.dll",
-        "build/.NETFramework/v4.5/Microsoft.Build.Framework.xml",
-        "build/.NETFramework/v4.5/Microsoft.Build.Tasks.v4.0.dll",
-        "build/.NETFramework/v4.5/Microsoft.Build.Tasks.v4.0.xml",
-        "build/.NETFramework/v4.5/Microsoft.Build.Utilities.v4.0.dll",
-        "build/.NETFramework/v4.5/Microsoft.Build.Utilities.v4.0.xml",
-        "build/.NETFramework/v4.5/Microsoft.Build.dll",
-        "build/.NETFramework/v4.5/Microsoft.Build.xml",
-        "build/.NETFramework/v4.5/Microsoft.CSharp.dll",
-        "build/.NETFramework/v4.5/Microsoft.CSharp.xml",
-        "build/.NETFramework/v4.5/Microsoft.JScript.dll",
-        "build/.NETFramework/v4.5/Microsoft.JScript.xml",
-        "build/.NETFramework/v4.5/Microsoft.VisualBasic.Compatibility.Data.dll",
-        "build/.NETFramework/v4.5/Microsoft.VisualBasic.Compatibility.Data.xml",
-        "build/.NETFramework/v4.5/Microsoft.VisualBasic.Compatibility.dll",
-        "build/.NETFramework/v4.5/Microsoft.VisualBasic.Compatibility.xml",
-        "build/.NETFramework/v4.5/Microsoft.VisualBasic.dll",
-        "build/.NETFramework/v4.5/Microsoft.VisualBasic.xml",
-        "build/.NETFramework/v4.5/Microsoft.VisualC.STLCLR.dll",
-        "build/.NETFramework/v4.5/Microsoft.VisualC.STLCLR.xml",
-        "build/.NETFramework/v4.5/Microsoft.VisualC.dll",
-        "build/.NETFramework/v4.5/Microsoft.VisualC.xml",
-        "build/.NETFramework/v4.5/PermissionSets/FullTrust.xml",
-        "build/.NETFramework/v4.5/PermissionSets/Internet.xml",
-        "build/.NETFramework/v4.5/PermissionSets/LocalIntranet.xml",
-        "build/.NETFramework/v4.5/PresentationBuildTasks.dll",
-        "build/.NETFramework/v4.5/PresentationBuildTasks.xml",
-        "build/.NETFramework/v4.5/PresentationCore.dll",
-        "build/.NETFramework/v4.5/PresentationCore.xml",
-        "build/.NETFramework/v4.5/PresentationFramework.Aero.dll",
-        "build/.NETFramework/v4.5/PresentationFramework.Aero.xml",
-        "build/.NETFramework/v4.5/PresentationFramework.Aero2.dll",
-        "build/.NETFramework/v4.5/PresentationFramework.AeroLite.dll",
-        "build/.NETFramework/v4.5/PresentationFramework.Classic.dll",
-        "build/.NETFramework/v4.5/PresentationFramework.Classic.xml",
-        "build/.NETFramework/v4.5/PresentationFramework.Luna.dll",
-        "build/.NETFramework/v4.5/PresentationFramework.Luna.xml",
-        "build/.NETFramework/v4.5/PresentationFramework.Royale.dll",
-        "build/.NETFramework/v4.5/PresentationFramework.Royale.xml",
-        "build/.NETFramework/v4.5/PresentationFramework.dll",
-        "build/.NETFramework/v4.5/PresentationFramework.xml",
-        "build/.NETFramework/v4.5/ReachFramework.dll",
-        "build/.NETFramework/v4.5/ReachFramework.xml",
-        "build/.NETFramework/v4.5/RedistList/FrameworkList.xml",
-        "build/.NETFramework/v4.5/System.Activities.Core.Presentation.dll",
-        "build/.NETFramework/v4.5/System.Activities.Core.Presentation.xml",
-        "build/.NETFramework/v4.5/System.Activities.DurableInstancing.dll",
-        "build/.NETFramework/v4.5/System.Activities.DurableInstancing.xml",
-        "build/.NETFramework/v4.5/System.Activities.Presentation.dll",
-        "build/.NETFramework/v4.5/System.Activities.Presentation.xml",
-        "build/.NETFramework/v4.5/System.Activities.dll",
-        "build/.NETFramework/v4.5/System.Activities.xml",
-        "build/.NETFramework/v4.5/System.AddIn.Contract.dll",
-        "build/.NETFramework/v4.5/System.AddIn.Contract.xml",
-        "build/.NETFramework/v4.5/System.AddIn.dll",
-        "build/.NETFramework/v4.5/System.AddIn.xml",
-        "build/.NETFramework/v4.5/System.ComponentModel.Composition.Registration.dll",
-        "build/.NETFramework/v4.5/System.ComponentModel.Composition.dll",
-        "build/.NETFramework/v4.5/System.ComponentModel.Composition.xml",
-        "build/.NETFramework/v4.5/System.ComponentModel.DataAnnotations.dll",
-        "build/.NETFramework/v4.5/System.ComponentModel.DataAnnotations.xml",
-        "build/.NETFramework/v4.5/System.Configuration.Install.dll",
-        "build/.NETFramework/v4.5/System.Configuration.Install.xml",
-        "build/.NETFramework/v4.5/System.Configuration.dll",
-        "build/.NETFramework/v4.5/System.Configuration.xml",
-        "build/.NETFramework/v4.5/System.Core.dll",
-        "build/.NETFramework/v4.5/System.Core.xml",
-        "build/.NETFramework/v4.5/System.Data.DataSetExtensions.dll",
-        "build/.NETFramework/v4.5/System.Data.DataSetExtensions.xml",
-        "build/.NETFramework/v4.5/System.Data.Entity.Design.dll",
-        "build/.NETFramework/v4.5/System.Data.Entity.Design.xml",
-        "build/.NETFramework/v4.5/System.Data.Entity.dll",
-        "build/.NETFramework/v4.5/System.Data.Entity.xml",
-        "build/.NETFramework/v4.5/System.Data.Linq.dll",
-        "build/.NETFramework/v4.5/System.Data.Linq.xml",
-        "build/.NETFramework/v4.5/System.Data.OracleClient.dll",
-        "build/.NETFramework/v4.5/System.Data.OracleClient.xml",
-        "build/.NETFramework/v4.5/System.Data.Services.Client.dll",
-        "build/.NETFramework/v4.5/System.Data.Services.Client.xml",
-        "build/.NETFramework/v4.5/System.Data.Services.Design.dll",
-        "build/.NETFramework/v4.5/System.Data.Services.Design.xml",
-        "build/.NETFramework/v4.5/System.Data.Services.dll",
-        "build/.NETFramework/v4.5/System.Data.Services.xml",
-        "build/.NETFramework/v4.5/System.Data.SqlXml.dll",
-        "build/.NETFramework/v4.5/System.Data.SqlXml.xml",
-        "build/.NETFramework/v4.5/System.Data.dll",
-        "build/.NETFramework/v4.5/System.Data.xml",
-        "build/.NETFramework/v4.5/System.Deployment.dll",
-        "build/.NETFramework/v4.5/System.Deployment.xml",
-        "build/.NETFramework/v4.5/System.Design.dll",
-        "build/.NETFramework/v4.5/System.Design.xml",
-        "build/.NETFramework/v4.5/System.Device.dll",
-        "build/.NETFramework/v4.5/System.Device.xml",
-        "build/.NETFramework/v4.5/System.DirectoryServices.AccountManagement.dll",
-        "build/.NETFramework/v4.5/System.DirectoryServices.AccountManagement.xml",
-        "build/.NETFramework/v4.5/System.DirectoryServices.Protocols.dll",
-        "build/.NETFramework/v4.5/System.DirectoryServices.Protocols.xml",
-        "build/.NETFramework/v4.5/System.DirectoryServices.dll",
-        "build/.NETFramework/v4.5/System.DirectoryServices.xml",
-        "build/.NETFramework/v4.5/System.Drawing.Design.dll",
-        "build/.NETFramework/v4.5/System.Drawing.Design.xml",
-        "build/.NETFramework/v4.5/System.Drawing.dll",
-        "build/.NETFramework/v4.5/System.Drawing.xml",
-        "build/.NETFramework/v4.5/System.EnterpriseServices.Thunk.dll",
-        "build/.NETFramework/v4.5/System.EnterpriseServices.Wrapper.dll",
-        "build/.NETFramework/v4.5/System.EnterpriseServices.dll",
-        "build/.NETFramework/v4.5/System.EnterpriseServices.xml",
-        "build/.NETFramework/v4.5/System.IO.Compression.FileSystem.dll",
-        "build/.NETFramework/v4.5/System.IO.Compression.FileSystem.xml",
-        "build/.NETFramework/v4.5/System.IO.Compression.dll",
-        "build/.NETFramework/v4.5/System.IO.Compression.xml",
-        "build/.NETFramework/v4.5/System.IO.Log.dll",
-        "build/.NETFramework/v4.5/System.IO.Log.xml",
-        "build/.NETFramework/v4.5/System.IdentityModel.Selectors.dll",
-        "build/.NETFramework/v4.5/System.IdentityModel.Selectors.xml",
-        "build/.NETFramework/v4.5/System.IdentityModel.Services.dll",
-        "build/.NETFramework/v4.5/System.IdentityModel.Services.xml",
-        "build/.NETFramework/v4.5/System.IdentityModel.dll",
-        "build/.NETFramework/v4.5/System.IdentityModel.xml",
-        "build/.NETFramework/v4.5/System.Management.Instrumentation.dll",
-        "build/.NETFramework/v4.5/System.Management.Instrumentation.xml",
-        "build/.NETFramework/v4.5/System.Management.dll",
-        "build/.NETFramework/v4.5/System.Management.xml",
-        "build/.NETFramework/v4.5/System.Messaging.dll",
-        "build/.NETFramework/v4.5/System.Messaging.xml",
-        "build/.NETFramework/v4.5/System.Net.Http.WebRequest.dll",
-        "build/.NETFramework/v4.5/System.Net.Http.WebRequest.xml",
-        "build/.NETFramework/v4.5/System.Net.Http.dll",
-        "build/.NETFramework/v4.5/System.Net.Http.xml",
-        "build/.NETFramework/v4.5/System.Net.dll",
-        "build/.NETFramework/v4.5/System.Net.xml",
-        "build/.NETFramework/v4.5/System.Numerics.dll",
-        "build/.NETFramework/v4.5/System.Numerics.xml",
-        "build/.NETFramework/v4.5/System.Printing.dll",
-        "build/.NETFramework/v4.5/System.Printing.xml",
-        "build/.NETFramework/v4.5/System.Reflection.Context.dll",
-        "build/.NETFramework/v4.5/System.Reflection.Context.xml",
-        "build/.NETFramework/v4.5/System.Runtime.Caching.dll",
-        "build/.NETFramework/v4.5/System.Runtime.Caching.xml",
-        "build/.NETFramework/v4.5/System.Runtime.DurableInstancing.dll",
-        "build/.NETFramework/v4.5/System.Runtime.DurableInstancing.xml",
-        "build/.NETFramework/v4.5/System.Runtime.Remoting.dll",
-        "build/.NETFramework/v4.5/System.Runtime.Remoting.xml",
-        "build/.NETFramework/v4.5/System.Runtime.Serialization.Formatters.Soap.dll",
-        "build/.NETFramework/v4.5/System.Runtime.Serialization.Formatters.Soap.xml",
-        "build/.NETFramework/v4.5/System.Runtime.Serialization.dll",
-        "build/.NETFramework/v4.5/System.Runtime.Serialization.xml",
-        "build/.NETFramework/v4.5/System.Security.dll",
-        "build/.NETFramework/v4.5/System.Security.xml",
-        "build/.NETFramework/v4.5/System.ServiceModel.Activation.dll",
-        "build/.NETFramework/v4.5/System.ServiceModel.Activation.xml",
-        "build/.NETFramework/v4.5/System.ServiceModel.Activities.dll",
-        "build/.NETFramework/v4.5/System.ServiceModel.Activities.xml",
-        "build/.NETFramework/v4.5/System.ServiceModel.Channels.dll",
-        "build/.NETFramework/v4.5/System.ServiceModel.Channels.xml",
-        "build/.NETFramework/v4.5/System.ServiceModel.Discovery.dll",
-        "build/.NETFramework/v4.5/System.ServiceModel.Discovery.xml",
-        "build/.NETFramework/v4.5/System.ServiceModel.Routing.dll",
-        "build/.NETFramework/v4.5/System.ServiceModel.Routing.xml",
-        "build/.NETFramework/v4.5/System.ServiceModel.Web.dll",
-        "build/.NETFramework/v4.5/System.ServiceModel.Web.xml",
-        "build/.NETFramework/v4.5/System.ServiceModel.dll",
-        "build/.NETFramework/v4.5/System.ServiceModel.xml",
-        "build/.NETFramework/v4.5/System.ServiceProcess.dll",
-        "build/.NETFramework/v4.5/System.ServiceProcess.xml",
-        "build/.NETFramework/v4.5/System.Speech.dll",
-        "build/.NETFramework/v4.5/System.Speech.xml",
-        "build/.NETFramework/v4.5/System.Threading.Tasks.Dataflow.xml",
-        "build/.NETFramework/v4.5/System.Transactions.dll",
-        "build/.NETFramework/v4.5/System.Transactions.xml",
-        "build/.NETFramework/v4.5/System.Web.Abstractions.dll",
-        "build/.NETFramework/v4.5/System.Web.ApplicationServices.dll",
-        "build/.NETFramework/v4.5/System.Web.ApplicationServices.xml",
-        "build/.NETFramework/v4.5/System.Web.DataVisualization.Design.dll",
-        "build/.NETFramework/v4.5/System.Web.DataVisualization.dll",
-        "build/.NETFramework/v4.5/System.Web.DataVisualization.xml",
-        "build/.NETFramework/v4.5/System.Web.DynamicData.Design.dll",
-        "build/.NETFramework/v4.5/System.Web.DynamicData.Design.xml",
-        "build/.NETFramework/v4.5/System.Web.DynamicData.dll",
-        "build/.NETFramework/v4.5/System.Web.DynamicData.xml",
-        "build/.NETFramework/v4.5/System.Web.Entity.Design.dll",
-        "build/.NETFramework/v4.5/System.Web.Entity.Design.xml",
-        "build/.NETFramework/v4.5/System.Web.Entity.dll",
-        "build/.NETFramework/v4.5/System.Web.Entity.xml",
-        "build/.NETFramework/v4.5/System.Web.Extensions.Design.dll",
-        "build/.NETFramework/v4.5/System.Web.Extensions.Design.xml",
-        "build/.NETFramework/v4.5/System.Web.Extensions.dll",
-        "build/.NETFramework/v4.5/System.Web.Extensions.xml",
-        "build/.NETFramework/v4.5/System.Web.Mobile.dll",
-        "build/.NETFramework/v4.5/System.Web.Mobile.xml",
-        "build/.NETFramework/v4.5/System.Web.RegularExpressions.dll",
-        "build/.NETFramework/v4.5/System.Web.RegularExpressions.xml",
-        "build/.NETFramework/v4.5/System.Web.Routing.dll",
-        "build/.NETFramework/v4.5/System.Web.Services.dll",
-        "build/.NETFramework/v4.5/System.Web.Services.xml",
-        "build/.NETFramework/v4.5/System.Web.dll",
-        "build/.NETFramework/v4.5/System.Web.xml",
-        "build/.NETFramework/v4.5/System.Windows.Controls.Ribbon.dll",
-        "build/.NETFramework/v4.5/System.Windows.Controls.Ribbon.xml",
-        "build/.NETFramework/v4.5/System.Windows.Forms.DataVisualization.Design.dll",
-        "build/.NETFramework/v4.5/System.Windows.Forms.DataVisualization.dll",
-        "build/.NETFramework/v4.5/System.Windows.Forms.DataVisualization.xml",
-        "build/.NETFramework/v4.5/System.Windows.Forms.dll",
-        "build/.NETFramework/v4.5/System.Windows.Forms.xml",
-        "build/.NETFramework/v4.5/System.Windows.Input.Manipulations.dll",
-        "build/.NETFramework/v4.5/System.Windows.Input.Manipulations.xml",
-        "build/.NETFramework/v4.5/System.Windows.Presentation.dll",
-        "build/.NETFramework/v4.5/System.Windows.Presentation.xml",
-        "build/.NETFramework/v4.5/System.Windows.dll",
-        "build/.NETFramework/v4.5/System.Workflow.Activities.dll",
-        "build/.NETFramework/v4.5/System.Workflow.Activities.xml",
-        "build/.NETFramework/v4.5/System.Workflow.ComponentModel.dll",
-        "build/.NETFramework/v4.5/System.Workflow.ComponentModel.xml",
-        "build/.NETFramework/v4.5/System.Workflow.Runtime.dll",
-        "build/.NETFramework/v4.5/System.Workflow.Runtime.xml",
-        "build/.NETFramework/v4.5/System.WorkflowServices.dll",
-        "build/.NETFramework/v4.5/System.WorkflowServices.xml",
-        "build/.NETFramework/v4.5/System.Xaml.dll",
-        "build/.NETFramework/v4.5/System.Xaml.xml",
-        "build/.NETFramework/v4.5/System.Xml.Linq.dll",
-        "build/.NETFramework/v4.5/System.Xml.Linq.xml",
-        "build/.NETFramework/v4.5/System.Xml.Serialization.dll",
-        "build/.NETFramework/v4.5/System.Xml.dll",
-        "build/.NETFramework/v4.5/System.Xml.xml",
-        "build/.NETFramework/v4.5/System.dll",
-        "build/.NETFramework/v4.5/System.xml",
-        "build/.NETFramework/v4.5/UIAutomationClient.dll",
-        "build/.NETFramework/v4.5/UIAutomationClient.xml",
-        "build/.NETFramework/v4.5/UIAutomationClientsideProviders.dll",
-        "build/.NETFramework/v4.5/UIAutomationClientsideProviders.xml",
-        "build/.NETFramework/v4.5/UIAutomationProvider.dll",
-        "build/.NETFramework/v4.5/UIAutomationProvider.xml",
-        "build/.NETFramework/v4.5/UIAutomationTypes.dll",
-        "build/.NETFramework/v4.5/UIAutomationTypes.xml",
-        "build/.NETFramework/v4.5/WindowsBase.dll",
-        "build/.NETFramework/v4.5/WindowsBase.xml",
-        "build/.NETFramework/v4.5/WindowsFormsIntegration.dll",
-        "build/.NETFramework/v4.5/WindowsFormsIntegration.xml",
-        "build/.NETFramework/v4.5/XamlBuildTask.dll",
-        "build/.NETFramework/v4.5/XamlBuildTask.xml",
-        "build/.NETFramework/v4.5/mscorlib.dll",
-        "build/.NETFramework/v4.5/mscorlib.xml",
-        "build/.NETFramework/v4.5/sysglobl.dll",
-        "build/.NETFramework/v4.5/sysglobl.xml",
-        "build/Microsoft.NETFramework.ReferenceAssemblies.net45.targets",
-        "microsoft.netframework.referenceassemblies.net45.1.0.3.nupkg.sha512",
-        "microsoft.netframework.referenceassemblies.net45.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -877,6 +924,95 @@
         "version.txt"
       ]
     },
+    "System.ComponentModel.Annotations/4.5.0": {
+      "sha512": "UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/portable-net45+win8/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.annotations.4.5.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Memory/4.5.5": {
       "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
@@ -943,43 +1079,116 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.3": {
-      "sha512": "3TIsJhD1EiiT0w2CcDMN/iSSwnNnsrnbzeVHSKkaEgV85txMprmuO+Yq2AdSbeVGcg28pdNDTPK87tJhX7VFHw==",
+    "System.Runtime.CompilerServices.Unsafe/4.6.0": {
+      "sha512": "HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.3",
+      "path": "system.runtime.compilerservices.unsafe/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     }
   },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.5": [
-      "CSparse >= 3.5.0",
-      "MathNet.Numerics >= 4.15.0",
-      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.3"
-    ],
     ".NETStandard,Version=v2.0": [
+      "Avalonia >= 11.0.10",
       "CSparse >= 3.5.0",
       "MathNet.Numerics >= 4.15.0",
       "NETStandard.Library >= 2.0.3",
@@ -1009,7 +1218,6 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net45",
         "netstandard2.0"
       ],
       "sources": {
@@ -1018,10 +1226,6 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net45": {
-          "targetAlias": "net45",
-          "projectReferences": {}
-        },
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {}
@@ -1039,29 +1243,13 @@
       }
     },
     "frameworks": {
-      "net45": {
-        "targetAlias": "net45",
-        "dependencies": {
-          "CSparse": {
-            "target": "Package",
-            "version": "[3.5.0, )"
-          },
-          "MathNet.Numerics": {
-            "target": "Package",
-            "version": "[4.15.0, )"
-          },
-          "Microsoft.NETFramework.ReferenceAssemblies": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[1.0.3, )",
-            "autoReferenced": true
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
-      },
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "Avalonia": {
+            "target": "Package",
+            "version": "[11.0.10, )"
+          },
           "CSparse": {
             "target": "Package",
             "version": "[3.5.0, )"

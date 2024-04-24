@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|d:\\projects\\apg truss\\apg_truss\\fealite2d\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|solutionrelative:fealite2d\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|d:\\projects\\apg truss\\apg_truss\\fealite2d\\fealite2d.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|solutionrelative:fealite2d\\fealite2d.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|d:\\projects\\apg truss\\apg_truss\\fealite2d\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|solutionrelative:fealite2d\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG TRUSS.csproj|d:\\projects\\apg truss\\apg_truss\\apg truss\\apg truss.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -84,20 +84,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FEALiTE2D",
               "DocumentMoniker": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\FEALiTE2D.csproj",
               "RelativeDocumentMoniker": "FEALiTE2D\\FEALiTE2D.csproj",
               "ToolTip": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\FEALiTE2D.csproj",
               "RelativeToolTip": "FEALiTE2D\\FEALiTE2D.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-04-24T02:43:49.954Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Node2D.cs",
               "DocumentMoniker": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\Elements\\Node2D.cs",
               "RelativeDocumentMoniker": "FEALiTE2D\\Elements\\Node2D.cs",

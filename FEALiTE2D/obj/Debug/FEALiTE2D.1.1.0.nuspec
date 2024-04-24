@@ -12,12 +12,8 @@
 - Additional meshing points at any location on the frame element.</releaseNotes>
     <copyright>Copyright © 2021 Mohamed Salah Ibrahim Civilms@outlook.com</copyright>
     <tags>engineering analysis beam frame finite-elements finite-element-analysis structural-engineering structural-analysis finite-element-methods civil-engineering truss 2d-frame structral</tags>
-    <repository type="git" url="https://github.com/FEALiTE/FEALiTE2D" commit="0ff42679da2ce4e5122952ade1e3e9b92b8ec224" />
+    <repository type="git" url="https://github.com/FEALiTE/FEALiTE2D" commit="b71c9b6a9287c7dfd71642b0ea40c53ea666ac9d" />
     <dependencies>
-      <group targetFramework=".NETFramework4.5">
-        <dependency id="CSparse" version="3.5.0" exclude="Build,Analyzers" />
-        <dependency id="MathNet.Numerics" version="4.15.0" exclude="Build,Analyzers" />
-      </group>
       <group targetFramework=".NETStandard2.0">
         <dependency id="CSparse" version="3.5.0" exclude="Build,Analyzers" />
         <dependency id="MathNet.Numerics" version="4.15.0" exclude="Build,Analyzers" />
@@ -26,8 +22,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\FEALiTE2D.dll" target="lib\net45\FEALiTE2D.dll" />
-    <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\FEALiTE2D.xml" target="lib\net45\FEALiTE2D.xml" />
     <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\netstandard2.0\FEALiTE2D.dll" target="lib\netstandard2.0\FEALiTE2D.dll" />
     <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\netstandard2.0\FEALiTE2D.xml" target="lib\netstandard2.0\FEALiTE2D.xml" />
   </files>

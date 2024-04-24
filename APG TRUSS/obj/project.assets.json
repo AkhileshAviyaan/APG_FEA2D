@@ -1361,6 +1361,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Avalonia": "11.0.10",
           "CSparse": "3.5.0",
           "MathNet.Numerics": "4.15.0",
           "SkiaSharp": "2.88.8"

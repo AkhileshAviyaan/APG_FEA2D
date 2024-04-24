@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A fast and reliable finite element analysis library for 2D frame, beam and truss " +
     "elements using C#.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+0ff42679da2ce4e5122952ade1e3e9b92b8ec224")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+b71c9b6a9287c7dfd71642b0ea40c53ea666ac9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("FEALiTE2D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FEALiTE2D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]

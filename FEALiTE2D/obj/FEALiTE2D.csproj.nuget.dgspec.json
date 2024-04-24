@@ -23,7 +23,6 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net45",
           "netstandard2.0"
         ],
         "sources": {
@@ -32,10 +31,6 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net45": {
-            "targetAlias": "net45",
-            "projectReferences": {}
-          },
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {}
@@ -53,29 +48,13 @@
         }
       },
       "frameworks": {
-        "net45": {
-          "targetAlias": "net45",
-          "dependencies": {
-            "CSparse": {
-              "target": "Package",
-              "version": "[3.5.0, )"
-            },
-            "MathNet.Numerics": {
-              "target": "Package",
-              "version": "[4.15.0, )"
-            },
-            "Microsoft.NETFramework.ReferenceAssemblies": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
-        },
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[11.0.10, )"
+            },
             "CSparse": {
               "target": "Package",
               "version": "[3.5.0, )"
