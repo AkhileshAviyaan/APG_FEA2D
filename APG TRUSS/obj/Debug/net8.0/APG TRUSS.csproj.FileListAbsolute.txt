@@ -255,3 +255,8 @@ D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\obj\Debug\net8.0\Avalonia\original.ref
 D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.csproj.Up2Date
 D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\obj\Debug\net8.0\APG TRUSS.genruntimeconfig.cache
 D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\obj\Debug\net8.0\ref\APG TRUSS.dll
+D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\bin\Debug\net8.0\CSparse.dll
+D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\bin\Debug\net8.0\MathNet.Numerics.dll
+D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\bin\Debug\net8.0\FEALiTE2D.dll
+D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\bin\Debug\net8.0\FEALiTE2D.pdb
+D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\bin\Debug\net8.0\FEALiTE2D.xml

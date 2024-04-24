@@ -36,7 +36,7 @@ namespace APG_TRUSS.Views
 			var paint = new SKPaint
 			{
 				Color = new SKColor(255, 255, 255, 70),
-				StrokeWidth = 2,
+				StrokeWidth = 1,
 				IsAntialias = true,
 				Style = SKPaintStyle.Stroke
 			};
@@ -59,7 +59,7 @@ namespace APG_TRUSS.Views
 			{
 				if (i == 0) sideExtent = sideExtentW;
 				canvas.DrawLine(sideExtent, 0, sideExtent, h - 4, paint);
-				canvas.DrawText($"{TransformCoord(sideExtentW, sideExtent):F2}", sideExtent + 2, h, paintText);
+				canvas.DrawText($"{TransformCoord(sideExtentW, sideExtent,spacing):F2}", sideExtent + 2, h, paintText);
 
 				sideExtent += spacing;
 			}
@@ -69,7 +69,7 @@ namespace APG_TRUSS.Views
 			{
 				if (i == 0) sideExtent = sideExtentH;
 				canvas.DrawLine(0 + 4, sideExtent, w, sideExtent, paint);
-				canvas.DrawText($"{TransformCoord(h - sideExtentH, sideExtent):F2}", 0, sideExtent - 2, paintText);
+				canvas.DrawText($"{TransformCoord(h - sideExtentH, sideExtent,spacing):F2}", 0, sideExtent - 2, paintText);
 				sideExtent += spacing;
 			}
 			//canvas.DrawLine((float)NewBoundStart.X, (float)NewBoundStart.Y, (float)NewBoundEnd.X, (float)NewBoundEnd.Y, paint);
@@ -77,18 +77,18 @@ namespace APG_TRUSS.Views
 			//canvas.DrawLine(0, 0,w,h, paint);
 			canvas.Restore();
 		}
-		public static float TransformCoord(float sideExtent, float actualHeight)
+		public static float TransformCoord(float sideExtent, float actualHeight,float spacing)
 		{
-			int intPart = (int)Math.Floor(Math.Abs(actualHeight - sideExtent) / 100);
-			float fullNumber = (Math.Abs(actualHeight - sideExtent) / 100);
+			int intPart = (int)Math.Floor(Math.Abs(actualHeight - sideExtent) / spacing);
+			float fullNumber = (Math.Abs(actualHeight - sideExtent) / spacing);
 			float remainingPart=fullNumber - (float)intPart;
 			if (remainingPart > 0.5) intPart++;
 			return intPart;
 		}
 		public Point DrawableCoord(Point point)
 		{
-			float X=TransformCoord(sideExtentW,(float)point.X);
-			float Y=TransformCoord(h - sideExtentH, (float)point.Y);
+			float X=TransformCoord(sideExtentW,(float)point.X,spacing);
+			float Y=TransformCoord(h - sideExtentH, (float)point.Y, spacing);
 			return new Point(X,Y);
 		}
 	}

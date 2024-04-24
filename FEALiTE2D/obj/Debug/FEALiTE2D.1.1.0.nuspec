@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FEALiTE2D</id>
+    <version>1.1.0</version>
+    <authors>Mohamed Salah Ibrahim</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/FEALiTE/FEALiTE2D</projectUrl>
+    <description>A fast and reliable finite element analysis library for 2D frame, beam and truss elements using C#.</description>
+    <releaseNotes>- Dxf Plotter.
+- Additional meshing points at any location on the frame element.</releaseNotes>
+    <copyright>Copyright © 2021 Mohamed Salah Ibrahim Civilms@outlook.com</copyright>
+    <tags>engineering analysis beam frame finite-elements finite-element-analysis structural-engineering structural-analysis finite-element-methods civil-engineering truss 2d-frame structral</tags>
+    <repository type="git" url="https://github.com/FEALiTE/FEALiTE2D" commit="0ff42679da2ce4e5122952ade1e3e9b92b8ec224" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="CSparse" version="3.5.0" exclude="Build,Analyzers" />
+        <dependency id="MathNet.Numerics" version="4.15.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="CSparse" version="3.5.0" exclude="Build,Analyzers" />
+        <dependency id="MathNet.Numerics" version="4.15.0" exclude="Build,Analyzers" />
+        <dependency id="SkiaSharp" version="2.88.8" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\FEALiTE2D.dll" target="lib\net45\FEALiTE2D.dll" />
+    <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\FEALiTE2D.xml" target="lib\net45\FEALiTE2D.xml" />
+    <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\netstandard2.0\FEALiTE2D.dll" target="lib\netstandard2.0\FEALiTE2D.dll" />
+    <file src="D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\netstandard2.0\FEALiTE2D.xml" target="lib\netstandard2.0\FEALiTE2D.xml" />
+  </files>
+</package>

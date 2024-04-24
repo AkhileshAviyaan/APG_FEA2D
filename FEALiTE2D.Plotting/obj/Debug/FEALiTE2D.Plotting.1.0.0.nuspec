@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FEALiTE2D.Plotting</id>
+    <version>1.0.0</version>
+    <authors>Mohamed Salah Ibrahim</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/FEALiTE/FEALiTE2D</projectUrl>
+    <description>A plotting library used by FEALiTE2D to plot internal forces diagrams and displacement diagrams for any load case or load combination in a dxf format.</description>
+    <copyright>Copyright © 2021 Mohamed Salah Ibrahim Civilms@outlook.com</copyright>
+    <tags>engineering analysis beam frame finite-elements finite-element-analysis structural-engineering structural-analysis finite-element-methods civil-engineering truss 2d-frame structral DXF CAD</tags>
+    <repository type="git" url="https://github.com/FEALiTE/FEALiTE2D" commit="db1aabac8fd559adebec5083a38de41af487381d" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="FEALiTE2D" version="1.1.0" exclude="Build,Analyzers" />
+        <dependency id="netDxf.netstandard" version="2.4.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\FEALITE\FEALiTE2D.Plotting\bin\Debug\netcoreapp3.1\FEALiTE2D.Plotting.dll" target="lib\netcoreapp3.1\FEALiTE2D.Plotting.dll" />
+  </files>
+</package>

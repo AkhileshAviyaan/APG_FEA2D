@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|d:\\projects\\apg truss\\apg_truss\\fealite2d\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|solutionrelative:fealite2d\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|d:\\projects\\apg truss\\apg_truss\\fealite2d\\fealite2d.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|solutionrelative:fealite2d\\fealite2d.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG TRUSS.csproj|d:\\projects\\apg truss\\apg_truss\\apg truss\\apg truss.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG TRUSS.csproj|solutionrelative:apg truss\\apg truss.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|d:\\projects\\apg truss\\apg_truss\\fealite2d\\crosssections\\circlularsection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|solutionrelative:fealite2d\\crosssections\\circlularsection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|d:\\projects\\apg truss\\apg_truss\\fealite2d\\elements\\drawelements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}|FEALiTE2D\\FEALiTE2D.csproj|solutionrelative:fealite2d\\elements\\drawelements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +55,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CirclularSection.cs",
+              "DocumentMoniker": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\CrossSections\\CirclularSection.cs",
+              "RelativeDocumentMoniker": "FEALiTE2D\\CrossSections\\CirclularSection.cs",
+              "ToolTip": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\CrossSections\\CirclularSection.cs",
+              "RelativeToolTip": "FEALiTE2D\\CrossSections\\CirclularSection.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T02:44:41.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "APG TRUSS",
+              "DocumentMoniker": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\APG TRUSS\\APG TRUSS.csproj",
+              "RelativeDocumentMoniker": "APG TRUSS\\APG TRUSS.csproj",
+              "ToolTip": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\APG TRUSS\\APG TRUSS.csproj",
+              "RelativeToolTip": "APG TRUSS\\APG TRUSS.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-24T02:43:57.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FEALiTE2D",
+              "DocumentMoniker": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\FEALiTE2D.csproj",
+              "RelativeDocumentMoniker": "FEALiTE2D\\FEALiTE2D.csproj",
+              "ToolTip": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\FEALiTE2D.csproj",
+              "RelativeToolTip": "FEALiTE2D\\FEALiTE2D.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-24T02:43:49.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Node2D.cs",
+              "DocumentMoniker": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\Elements\\Node2D.cs",
+              "RelativeDocumentMoniker": "FEALiTE2D\\Elements\\Node2D.cs",
+              "ToolTip": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\Elements\\Node2D.cs",
+              "RelativeToolTip": "FEALiTE2D\\Elements\\Node2D.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T02:43:34.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DrawElements.cs",
+              "DocumentMoniker": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\Elements\\DrawElements.cs",
+              "RelativeDocumentMoniker": "FEALiTE2D\\Elements\\DrawElements.cs",
+              "ToolTip": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\Elements\\DrawElements.cs",
+              "RelativeToolTip": "FEALiTE2D\\Elements\\DrawElements.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T02:42:40.913Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -16,11 +16,21 @@ using MatrixHelperList;
 using System.Runtime.CompilerServices;
 using Avalonia.Reactive;
 using Avalonia.Animation;
+using FEALiTE2D;
+using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
+using FEALiTE2D.Elements;
+using FEALiTE2D.Materials;
+using FEALiTE2D.CrossSections;
 
 namespace APG_TRUSS.Views
 {
 	public partial class CustomSkiaPage : UserControl, INotifyPropertyChanged
 	{
+
+
+		FEALiTE2D.Structure.Structure structure = new FEALiTE2D.Structure.Structure();
+
 		/// <summary>
 		/// Identifies the <seealso cref="Zoom"/> avalonia property.
 		/// </summary>
@@ -48,6 +58,18 @@ namespace APG_TRUSS.Views
 		/// </summary>
 		public double OffsetX => _offsetX;
 
+		public bool AddNodeOn = false;
+		public bool AddFrameOn = false;
+		public bool AddMemberSection = false;
+		public bool AddInternalHinge = false;
+		public bool AddSupport = false;
+		public bool AddNodalLoad = false;
+		public bool AddFrameLoad = false;
+		public ICommand NodeCommand { get;}
+		public void Node_Pressed()
+		{
+			AddNodeOn = true;
+		}
 		/// <summary>
 		/// Gets the pan offset for y axis.
 		/// </summary>
@@ -72,6 +94,7 @@ namespace APG_TRUSS.Views
 			var glyphs = text.Select(ch => Typeface.Default.GlyphTypeface.GetGlyph(ch)).ToArray();
 			_noSkia = new GlyphRun(Typeface.Default.GlyphTypeface, 12, text.AsMemory(), glyphs);
 			_grid = new();
+			NodeCommand = new RelayCommand(Node_Pressed);
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -122,6 +145,11 @@ namespace APG_TRUSS.Views
 			Point coord=_grid.DrawableCoord(e.GetPosition(this));
 			X=coord.X; 
 			Y=coord.Y;
+			if(AddNodeOn==true)
+			{
+				string nodename="n"+structure.Nodes.Count;
+				structure.AddNode(new Node2D(X, Y, nodename));
+			}
 		}
 
 		protected override void OnPointerReleased(PointerReleasedEventArgs e)

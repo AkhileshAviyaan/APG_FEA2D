@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using Avalonia.Input;
 
 namespace APG_TRUSS.Views
 {
@@ -7,6 +8,10 @@ namespace APG_TRUSS.Views
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
+		
+		public void Node_Pressed(object sender, PointerPressedEventArgs e)
+		{
 		}
 	}
 }

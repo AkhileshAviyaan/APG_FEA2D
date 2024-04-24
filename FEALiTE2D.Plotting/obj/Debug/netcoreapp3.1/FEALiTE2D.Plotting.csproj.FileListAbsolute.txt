@@ -1,0 +1,15 @@
+D:\FEALITE\FEALiTE2D.Plotting\bin\Debug\netcoreapp3.1\FEALiTE2D.Plotting.deps.json
+D:\FEALITE\FEALiTE2D.Plotting\bin\Debug\netcoreapp3.1\FEALiTE2D.Plotting.dll
+D:\FEALITE\FEALiTE2D.Plotting\bin\Debug\netcoreapp3.1\FEALiTE2D.Plotting.pdb
+D:\FEALITE\FEALiTE2D.Plotting\bin\Debug\netcoreapp3.1\FEALiTE2D.dll
+D:\FEALITE\FEALiTE2D.Plotting\bin\Debug\netcoreapp3.1\FEALiTE2D.pdb
+D:\FEALITE\FEALiTE2D.Plotting\bin\Debug\netcoreapp3.1\FEALiTE2D.xml
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.csproj.AssemblyReference.cache
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.GeneratedMSBuildEditorConfig.editorconfig
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.AssemblyInfoInputs.cache
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.AssemblyInfo.cs
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.csproj.CoreCompileInputs.cache
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.sourcelink.json
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2.2BD6C072.Up2Date
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.dll
+D:\FEALITE\FEALiTE2D.Plotting\obj\Debug\netcoreapp3.1\FEALiTE2D.Plotting.pdb

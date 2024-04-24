@@ -1,0 +1,30 @@
+D:\FEALITE\FEALiTE2D\bin\Debug\net45\FEALiTE2D.dll
+D:\FEALITE\FEALiTE2D\bin\Debug\net45\FEALiTE2D.pdb
+D:\FEALITE\FEALiTE2D\bin\Debug\net45\FEALiTE2D.xml
+D:\FEALITE\FEALiTE2D\bin\Debug\net45\CSparse.dll
+D:\FEALITE\FEALiTE2D\bin\Debug\net45\MathNet.Numerics.dll
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.csproj.AssemblyReference.cache
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.GeneratedMSBuildEditorConfig.editorconfig
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.AssemblyInfoInputs.cache
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.AssemblyInfo.cs
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.csproj.CoreCompileInputs.cache
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.sourcelink.json
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.csproj.Up2Date
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.dll
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.xml
+D:\FEALITE\FEALiTE2D\obj\Debug\net45\FEALiTE2D.pdb
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\FEALiTE2D.dll
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\FEALiTE2D.pdb
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\FEALiTE2D.xml
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\CSparse.dll
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\bin\Debug\net45\MathNet.Numerics.dll
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.csproj.AssemblyReference.cache
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.AssemblyInfoInputs.cache
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.AssemblyInfo.cs
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.csproj.CoreCompileInputs.cache
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.sourcelink.json
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.csproj.Up2Date
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.dll
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.xml
+D:\Projects\APG TRUSS\APG_TRUSS\FEALiTE2D\obj\Debug\net45\FEALiTE2D.pdb

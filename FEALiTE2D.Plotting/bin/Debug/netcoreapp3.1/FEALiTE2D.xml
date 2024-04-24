@@ -1,0 +1,1896 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FEALiTE2D</name>
+    </assembly>
+    <members>
+        <member name="T:FEALiTE2D.CrossSections.CirclularSection">
+            <summary>
+            Represents a Solid Circular Cross-Section.
+            </summary>
+            <seealso cref="T:FEALiTE2D.CrossSections.IFrame2DSection" />
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.CirclularSection.#ctor(System.Double,FEALiTE2D.Materials.IMaterial)">
+            <summary>
+            Creates new instance of a <see cref="T:FEALiTE2D.CrossSections.CirclularSection"/>.
+            </summary>
+            <param name="d">diameter of the <see cref="T:FEALiTE2D.CrossSections.CirclularSection"/>.</param>
+            <param name="material">Material of the cross-section.</param>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.CirclularSection.D">
+            <summary>
+            Diameter of the circular section.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.CirclularSection.SetSectionProperties(System.Double)">
+            <summary>
+            Sets the section properties.
+            </summary>
+            <param name="d">diameter of the <see cref="T:FEALiTE2D.CrossSections.CirclularSection"/>.</param>
+        </member>
+        <member name="T:FEALiTE2D.CrossSections.Generic2DSection">
+            <summary>
+            Creates a generic section (user defined section), the user will have to give all required section properties for the section.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.Generic2DSection.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,FEALiTE2D.Materials.IMaterial)">
+            <summary>
+            Creates a new instance of the <see cref="T:FEALiTE2D.CrossSections.Generic2DSection"/>
+            </summary>
+            <param name="A">Cross section area.</param>
+            <param name="Ax">Shear area in x-x direction.</param>
+            <param name="Ay">Shear area in y-y direction.</param>
+            <param name="Ix">Area moment of inertia about x axis.</param>
+            <param name="Iy">Area moment of inertia about y axis.</param>
+            <param name="J">Torsional constant.</param>
+            <param name="hmax">max. height.</param>
+            <param name="wmax">max. width.</param>
+            <param name="material">material.</param>
+        </member>
+        <member name="T:FEALiTE2D.CrossSections.HollowTube">
+            <summary>
+            Represent a solid tube with hole.
+            </summary>
+            <seealso cref="T:FEALiTE2D.CrossSections.IFrame2DSection" />
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.HollowTube.#ctor(System.Double,System.Double,FEALiTE2D.Materials.IMaterial)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FEALiTE2D.CrossSections.HollowTube"/> class.
+            </summary>
+            <param name="d">The diameter.</param>
+            <param name="thickness">The thickness.</param>
+            <param name="material">The material.</param>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.HollowTube.D">
+            <summary>
+            Gets or sets the diameter.
+            </summary>
+            <value>The d.</value>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.HollowTube.Thickness">
+            <summary>
+            Gets or sets the thickness.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.HollowTube.SetSectionProperties(System.Double,System.Double)">
+            <summary>
+            Sets the section properties.
+            </summary>
+            <param name="d">diameter</param>
+            <param name="t">thickness</param>
+        </member>
+        <member name="T:FEALiTE2D.CrossSections.IFrame2DSection">
+            <summary>
+            Represents a class for <see cref="T:FEALiTE2D.CrossSections.IFrame2DSection"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.Material">
+            <summary>
+            Material of the <see cref="T:FEALiTE2D.CrossSections.IFrame2DSection"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.Label">
+            <summary>
+            Label of <see cref="T:FEALiTE2D.CrossSections.IFrame2DSection"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.A">
+            <summary>
+            Cross-sectional area.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.Ax">
+            <summary>
+            Shear area of the cross section in x-x direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.Ay">
+            <summary>
+            Shear area of the cross section in y-y direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.Ix">
+            <summary>
+            Area moment of inertia about x axis.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.Iy">
+            <summary>
+            Area moment of inertia about y axis.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.J">
+            <summary>
+            Torsional constant.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.MaxHeight">
+            <summary>
+            Gets or sets the maximum height.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IFrame2DSection.MaxWidth">
+            <summary>
+            Gets or sets the maximum width.
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.CrossSections.IPESection">
+            <summary>
+            Represent an European I beams section.
+            </summary>
+            <seealso cref="T:FEALiTE2D.CrossSections.IFrame2DSection" />
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.IPESection.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,FEALiTE2D.Materials.IMaterial)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FEALiTE2D.CrossSections.IPESection"/> class.
+            </summary>
+            <param name="tf">flange thickness.</param>
+            <param name="tw">web thickness.</param>
+            <param name="b">flange width.</param>
+            <param name="h">total hight of the web.</param>
+            <param name="r">fillet radius</param>
+            <param name="material">the material.</param>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IPESection.tf">
+            <summary>
+            flange thickness.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IPESection.tw">
+            <summary>
+            web thickness.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IPESection.h">
+            <summary>
+            total hight of the web.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IPESection.b">
+            <summary>
+            flange width.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.IPESection.r">
+            <summary>
+            fillet radius
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.IPESection.SetSectionProperties(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Sets the section properties.
+            </summary>
+            <param name="tf">flange thickness.</param>
+            <param name="tw">web thickness.</param>
+            <param name="b">flange width.</param>
+            <param name="h">total hight of the web.</param>
+            <param name="r">fillet radius</param>
+        </member>
+        <member name="T:FEALiTE2D.CrossSections.RectangularSection">
+            <summary>
+            Represents a Solid Rectangular Cross-Section.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.RectangularSection.#ctor(System.Double,System.Double,FEALiTE2D.Materials.IMaterial)">
+            <summary>
+            Creates new instance of a <see cref="T:FEALiTE2D.CrossSections.RectangularSection"/>.
+            </summary>
+            <param name="b">Width of the <see cref="T:FEALiTE2D.CrossSections.RectangularSection"/>.</param>
+            <param name="t">Height of the <see cref="T:FEALiTE2D.CrossSections.RectangularSection"/>.</param>
+            <param name="material">Material of the rectangle section.</param>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.RectangularSection.b">
+            <summary>
+            Width of the Rectangle section.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.CrossSections.RectangularSection.t">
+            <summary>
+            Height of the Rectangle section.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.CrossSections.RectangularSection.SetSectionProperties(System.Double,System.Double)">
+            <summary>
+            Sets the section properties.
+            </summary>
+            <param name="b">The b.</param>
+            <param name="t">The t.</param>
+        </member>
+        <member name="T:FEALiTE2D.Elements.FrameElement2D">
+            <summary>
+            Represents a class for frame elements, each frame element has 3 dof at each node.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Elements.FrameElement2D"/> Class
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.#ctor(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Elements.FrameElement2D"/> Class
+            </summary>
+            <param name="label">name of the frame element</param>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.#ctor(FEALiTE2D.Elements.Node2D,FEALiTE2D.Elements.Node2D,System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Elements.FrameElement2D"/> Class
+            </summary>
+            <param name="startNode">Start node</param>
+            <param name="endNode">End node</param>
+            <param name="label">name of the frame</param>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.StartNode">
+            <summary>
+            Start node of the <see cref="T:FEALiTE2D.Elements.FrameElement2D"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.EndNode">
+            <summary>
+            End node of the <see cref="T:FEALiTE2D.Elements.FrameElement2D"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.CrossSection">
+            <summary>
+            Cross section of the <see cref="T:FEALiTE2D.Elements.FrameElement2D"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.Length">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.DOF">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.Label">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.Nodes">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.DegreeOfFreedoms">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.EndRelease">
+            <summary>
+            Gets or sets the end release condition of the <see cref="T:FEALiTE2D.Elements.FrameElement2D"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.Loads">
+            <summary>
+            Loads on the <see cref="T:FEALiTE2D.Elements.FrameElement2D"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.ParentStructure">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.GlobalEndForcesForLoadCase">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.MeshSegments">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.AdditionalMeshPoints">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.GetShapeFunctionAt(System.Double)">
+            <summary>
+            Get The shape function at a point along the frame elements, including displacement and rotation.
+            </summary>
+            <param name="x">distance measured from start node</param>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.GetConstitutiveMatrix">
+            <summary>
+            Get Constitutive matrix.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.GetBmatrixAt(System.Double)">
+            <summary>
+            Get strain gradient matrix.
+            </summary>
+            <param name="x">distance from start of the element</param>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.LocalCoordinateSystemMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.TransformationMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.LocalStiffnessMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.Kl1_1">
+            <summary>
+            calculate local stiffness matrix when the frame has no releases
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.Kl0_1">
+            <summary>
+            calculate local stiffness matrix when there is a release at it's start
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.Kl1_0">
+            <summary>
+            calculate local stiffness matrix when there is a release at it's end
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.Kl0_0">
+            <summary>
+            calculate local stiffness matrix when it's fully released.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.FrameElement2D.GlobalStiffnessMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.EvaluateGlobalFixedEndForces(FEALiTE2D.Loads.LoadCase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Elements.FrameElement2D.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Elements.Frame2DEndRelease">
+            <summary>
+            Frame end releases and partial releases.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Elements.Frame2DEndRelease.NoRelease">
+            <summary>
+            No release at start of end of the element.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Elements.Frame2DEndRelease.StartRelease">
+            <summary>
+            there is at start of the element.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Elements.Frame2DEndRelease.EndRelease">
+            <summary>
+            there is at end of the element.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Elements.Frame2DEndRelease.FullRelease">
+            <summary>
+            there is at both start and end of the element.
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Elements.IElement">
+            <summary>
+            Represents a class for <see cref="T:FEALiTE2D.Elements.IElement"/> interface
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.DOF">
+            <summary>
+            Gets the number of degrees of freedom of this element.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.Label">
+            <summary>
+            Name of the <see cref="T:FEALiTE2D.Elements.IElement"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.Nodes">
+            <summary>
+            Gets the nodes.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.DegreeOfFreedoms">
+            <summary>
+            Gets the coordinates numbers of degrees of freedom of the nodes connected to this element.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.Loads">
+            <summary>
+            Gets or sets the loads.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.CrossSection">
+            <summary>
+            Gets or sets the cross section for this element.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.Length">
+            <summary>
+            Length of the member.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.ParentStructure">
+            <summary>
+            Gets or sets the parent structure that this element is part of it.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.GlobalEndForcesForLoadCase">
+            <summary>
+            This is a dictionary for global fixed end forces for each <see cref="T:FEALiTE2D.Elements.IElement"/> at a load case.
+            this is used to store these values to reuse them later instead of recalling them.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.LocalCoordinateSystemMatrix">
+            <summary>
+            Gets the local coordinate system, This should be called after <see cref="M:FEALiTE2D.Elements.IElement.Initialize"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.TransformationMatrix">
+            <summary>
+            Gets the transformation matrix, This should be called after <see cref="M:FEALiTE2D.Elements.IElement.Initialize"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.LocalStiffnessMatrix">
+            <summary>
+            Gets the local stiffness matrix, This should be called after <see cref="M:FEALiTE2D.Elements.IElement.Initialize"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.GlobalStiffnessMatrix">
+            <summary>
+            Gets the global stiffness matrix, This should be called after <see cref="M:FEALiTE2D.Elements.IElement.Initialize"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.MeshSegments">
+            <summary>
+            A list of mesh segments of change in external forces and moments.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.IElement.AdditionalMeshPoints">
+            <summary>
+            A collection of additional locations on the <see cref="T:FEALiTE2D.Elements.FrameElement2D"/> to mesh the elements at these locations.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.IElement.Initialize">
+            <summary>
+            Initializes the <see cref="T:FEALiTE2D.Elements.IElement"/> to calculate its matrices or other needed properties,
+            so this will save time when we calculate all properties once and store them into variables instead of 
+            recalculating them every time they are called.
+            <para>You must  call this method before using it's properties like <see cref="P:FEALiTE2D.Elements.IElement.LocalStiffnessMatrix"/>, <see cref="P:FEALiTE2D.Elements.IElement.GlobalStiffnessMatrix"/>, etc. this may occur in test cases.</para>
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.IElement.EvaluateGlobalFixedEndForces(FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Evaluate the global fixed end forces of loads at given load case.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.IElement.GetShapeFunctionAt(System.Double)">
+            <summary>
+            Get The shape function at a point along the frame elements, including displacement and rotation.
+            </summary>
+            <param name="x">distance measured from start node</param>
+        </member>
+        <member name="T:FEALiTE2D.Elements.NodalDegreeOfFreedom">
+            <summary>
+            Represents an enum for possible degrees of freedom of a single <see cref="T:FEALiTE2D.Elements.Node2D"/>
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Elements.NodalDegreeOfFreedom.UX">
+            <summary>
+            Linear translation along the X axis
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Elements.NodalDegreeOfFreedom.UY">
+            <summary>
+            Linear translation along the Y axis
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Elements.NodalDegreeOfFreedom.RZ">
+            <summary>
+            Rotation around the Z axis
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Elements.NodalSpringSupport">
+            <summary>
+            A Class that Represents a nodal spring support that have three values of spring constants. 
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.NodalSpringSupport.#ctor">
+            <summary>
+            Create a new instance of <see cref="T:FEALiTE2D.Elements.NodalSpringSupport"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.NodalSpringSupport.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Create a new instance of <see cref="T:FEALiTE2D.Elements.NodalSpringSupport"/> class.
+            </summary>
+            <param name="kx">Spring constant for translation in X-Direction</param>
+            <param name="ky">Spring constant for translation in Y-Direction</param>
+            <param name="cz">Spring constant for rotation about Z-Direction</param>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSpringSupport.Kx">
+            <summary>
+            Spring constant for translation in X-Direction
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSpringSupport.Ky">
+            <summary>
+            Spring constant for translation in Y-Direction
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSpringSupport.Cz">
+            <summary>
+            Spring constant for rotation about Z-Direction
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSpringSupport.GlobalStiffnessMatrix">
+            <summary>
+            Gets the global stiffness matrix, This should be called after <see cref="M:FEALiTE2D.Elements.IElement.Initialize"/>
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Elements.NodalSupport">
+            <summary>
+            A Class that Represents a nodal rigid support that prevents motion or rotation in XY plan. 
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.NodalSupport.#ctor">
+            <summary>
+            Create a new instance of <see cref="T:FEALiTE2D.Elements.NodalSupport"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.NodalSupport.#ctor(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Create a new instance of <see cref="T:FEALiTE2D.Elements.NodalSupport"/> class.
+            </summary>
+            <param name="ux">translation in X-Direction</param>
+            <param name="uy">translation in Y-Direction</param>
+            <param name="rz">rotation about Z-Direction</param>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSupport.Ux">
+            <summary>
+            Get or set whether node can have a displacement in X-Direction
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSupport.Uy">
+            <summary>
+            Get or set whether node can have a displacement in Y-Direction
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSupport.Rz">
+            <summary>
+            Get or set whether node can have a rotation about Z-Direction
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.NodalSupport.RestraintCount">
+            <summary>
+            Get number of restrained degrees of freedom
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Elements.Node2D">
+            <summary>
+            This class represents a node element the can be in any arbitrary location in x-y plan.
+            Each node has 3 degrees of freedom (DOF) one displacement in x-direction, one displacement in y-direction and one rotation about z-direction (perpendicular to the plan)
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.Node2D.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Elements.Node2D"/> Class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.Node2D.#ctor(System.Double,System.Double,System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Elements.Node2D"/> Class.
+            </summary>
+            <param name="x">X-coordinate of the <see cref="T:FEALiTE2D.Elements.Node2D"/> Element.</param>
+            <param name="y">Y-coordinate of the <see cref="T:FEALiTE2D.Elements.Node2D"/> Element.</param>
+            <param name="label">name of the <see cref="T:FEALiTE2D.Elements.Node2D"/> element</param>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.X">
+            <summary> 
+            X-Coordinate of the <see cref="T:FEALiTE2D.Elements.Node2D"/> element.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.Y">
+            <summary>
+            Y-Coordinate of the <see cref="T:FEALiTE2D.Elements.Node2D"/> element.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.Label">
+            <summary>
+            A display name for the node that is set by the user.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.CoordNumbers">
+            <summary>
+            A list of dof numbers that is set by the program.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.RotaionAngle">
+            <summary>
+            An angle of rotation of the of local axes of the node around Z-axis.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.DOF">
+            <summary>
+            Gets number of degrees of freedom of the node.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.SupportDisplacementLoad">
+            <summary>
+            Gets or sets the nodal displacement.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.NodalLoads">
+            <summary>
+            Loads on the <see cref="T:FEALiTE2D.Elements.Node2D"/>.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.Node2D.DistanceBetween(FEALiTE2D.Elements.Node2D)">
+            <summary>
+            Distances between 2 nodes.
+            </summary>
+            <param name="other">The other node.</param>
+            <returns>Distances between 2 nodes</returns>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.ParentStructure">
+            <summary>
+            Gets or sets the parent structure that this element is part of it.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.TransformationMatrix">
+            <summary>
+            Transformation matrix of the Node due to a <see cref="P:FEALiTE2D.Elements.Node2D.RotaionAngle"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.IsFree">
+            <summary>
+            Gets whether the node is free or restrained.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.Node2D.Support">
+            <summary>
+            Gets or Sets the rigid support of the node.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.Node2D.IsRestrained(FEALiTE2D.Elements.NodalDegreeOfFreedom)">
+            <summary>
+            Determines whether the specified dof is a restraint.
+            </summary>
+            <param name="dof">The dof.</param>
+            <returns><c>true</c> if the specified dof is a restraint; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:FEALiTE2D.Elements.SpringElement2D">
+            <summary>
+            Represents a spring element/Fictitious bar in 2d space that has a spring stiffness and has 2 dof at each node. Spring may be longitudinal or rotational.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.SpringElement2D.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Elements.SpringElement2D"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Elements.SpringElement2D.#ctor(FEALiTE2D.Elements.Node2D,FEALiTE2D.Elements.Node2D,System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Elements.SpringElement2D"/> class.
+            </summary>
+            <param name="startNode">Start node</param>
+            <param name="endNode">End node</param>
+            <param name="label">name of the spring</param>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.K">
+            <summary>
+            Longitudinal spring stiffness, units are [force/length]
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.R">
+            <summary>
+            Rotational spring stiffness about z-direction, units are [force.length/radians]
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.StartNode">
+            <summary>
+            Start node of the <see cref="T:FEALiTE2D.Elements.SpringElement2D"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.EndNode">
+            <summary>
+            End node of the <see cref="T:FEALiTE2D.Elements.SpringElement2D"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.DOF">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.Label">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.Nodes">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.DegreeOfFreedoms">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.Loads">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.CrossSection">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.Length">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.ParentStructure">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.GlobalEndForcesForLoadCase">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.LocalCoordinateSystemMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.TransformationMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.LocalStiffnessMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.GlobalStiffnessMatrix">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.MeshSegments">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Elements.SpringElement2D.AdditionalMeshPoints">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Elements.SpringElement2D.EvaluateGlobalFixedEndForces(FEALiTE2D.Loads.LoadCase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Elements.SpringElement2D.GetShapeFunctionAt(System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Elements.SpringElement2D.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Helper.ExtensionMethods">
+            <summary>
+            some extension methods to facilitate the work
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Helper.ExtensionMethods.ScaleMatrix(CSparse.Storage.CompressedColumnStorage{System.Double},System.Double)">
+            <summary>
+            Scale a matrix by a factor
+            </summary>
+            <param name="matrix">the matrix to be scaled</param>
+            <param name="alpha">the scale factor</param>
+        </member>
+        <member name="M:FEALiTE2D.Helper.ExtensionMethods.ScaleMatrix(CSparse.Storage.DenseColumnMajorStorage{System.Double},System.Double)">
+            <summary>
+            Scale a matrix by a factor
+            </summary>
+            <param name="matrix">the matrix to be scaled</param>
+            <param name="alpha">the scale factor</param>
+        </member>
+        <member name="T:FEALiTE2D.Helper.LinearFunction">
+            <summary>
+            this class represents a linear equation such Y=mX+b where m is the slope and b is a constant.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Helper.LinearFunction.#ctor(System.Double,System.Double)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Helper.LinearFunction"/> using a slope and a constant
+            </summary>
+            <param name="m">the slope</param>
+            <param name="b">a constant</param>
+        </member>
+        <member name="M:FEALiTE2D.Helper.LinearFunction.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Helper.LinearFunction"/> using tow points
+            Y = mX+b
+            1- find the slope   y|
+                y2-y1            |   y1      |y2
+            m =--------          |-----|-----|------>x
+                x2-x1                x1       x2
+            </summary>
+            <param name="x1">x coordinate of first point</param>
+            <param name="x2">x coordinate of second point</param>
+            <param name="y1">y coordinate of first point</param>
+            <param name="y2">y coordinate of second point</param>
+        </member>
+        <member name="M:FEALiTE2D.Helper.LinearFunction.GetValueAt(System.Double)">
+            <summary>
+            get value at a distance
+            </summary>
+            <param name="x">distant from the left side</param>
+        </member>
+        <member name="T:FEALiTE2D.Loads.FramePointLoad">
+            <summary>
+            Represents a class for <see cref="T:FEALiTE2D.Loads.FramePointLoad"/>.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FramePointLoad.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Loads.FramePointLoad"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FramePointLoad.#ctor(System.Double,System.Double,System.Double,System.Double,FEALiTE2D.Loads.LoadDirection,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Loads.FramePointLoad"/> class.
+            </summary>
+            <param name="fx">force parallel to X direction.</param>
+            <param name="fy">force parallel to Y direction.</param>
+            <param name="mz">Moment parallel to Z direction.</param>
+            <param name="l1">distance from <see cref="P:FEALiTE2D.Elements.FrameElement2D.StartNode"/>.</param>
+            <param name="direction">load direction.</param>
+            <param name="loadCase">load case.</param>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FramePointLoad.Fx">
+            <summary>
+            Force in X-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FramePointLoad.Fy">
+            <summary>
+            Force in Y-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FramePointLoad.Mz">
+            <summary>
+            Moment in Z-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FramePointLoad.L1">
+            <summary>
+            Distance of the <see cref="T:FEALiTE2D.Loads.FramePointLoad"/> from the start node.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FramePointLoad.LoadDirection">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FramePointLoad.LoadCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FramePointLoad.GetGlobalFixedEndForces(FEALiTE2D.Elements.FrameElement2D)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FramePointLoad.GetLoadValueAt(FEALiTE2D.Elements.IElement,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Loads.FrameTrapezoidalLoad">
+            <summary>
+            Represents a trapezoidal loads on frame elements.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameTrapezoidalLoad.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Loads.FrameTrapezoidalLoad"/> class.
+            <para>The load is trapezoidally distributed along part of the span.</para>
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameTrapezoidalLoad.#ctor(System.Double,System.Double,System.Double,System.Double,FEALiTE2D.Loads.LoadDirection,FEALiTE2D.Loads.LoadCase,System.Double,System.Double)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Loads.FrameTrapezoidalLoad"/> class.
+            <para>The load is trapezoidally distributed along part of the span.</para>
+            </summary>
+            <param name="wx1">left load intensity in x direction.</param>
+            <param name="wx2">right load intensity in x direction.</param>
+            <param name="wy1">left load intensity in y direction.</param>
+            <param name="wy2">right load intensity in y direction.</param>
+            <param name="direction">load direction.</param>
+            <param name="loadCase">load case.</param>
+            <param name="l1">distance from start.</param>
+            <param name="l2">distance from end.</param>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.Wx1">
+            <summary>
+            Magnitude of the uniform load in X-direction (left).
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.Wx2">
+            <summary>
+            Magnitude of the uniform load in X-direction (right).
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.Wy1">
+            <summary>
+            Magnitude of the uniform load in Y-direction (left).
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.Wy2">
+            <summary>
+            Magnitude of the uniform load in Y-direction (right).
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.L1">
+            <summary>
+            Distance from start node.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.L2">
+            <summary>
+            Distance from the end node.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.LoadDirection">
+            <summary>
+            The direction of the load.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameTrapezoidalLoad.LoadCase">
+            <summary>
+            the load case.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameTrapezoidalLoad.GetGlobalFixedEndForces(FEALiTE2D.Elements.FrameElement2D)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameTrapezoidalLoad.GetLoadValueAt(FEALiTE2D.Elements.IElement,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Loads.FrameUniformLoad">
+            <summary>
+            Represents a uniform loads on frame elements.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameUniformLoad.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Loads.FrameUniformLoad"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameUniformLoad.#ctor(System.Double,System.Double,FEALiTE2D.Loads.LoadDirection,FEALiTE2D.Loads.LoadCase,System.Double,System.Double)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Loads.FrameUniformLoad"/> class.
+            <para>The load is uniformly distributed along part of the span.</para>
+            </summary>
+            <param name="wx">load intensity in x direction.</param>
+            <param name="wy">load intensity in y direction.</param>
+            <param name="direction">load direction.</param>
+            <param name="loadCase">load case.</param>
+            <param name="l1">distance from start.</param>
+            <param name="l2">distance from end.</param>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameUniformLoad.Wx">
+            <summary>
+            Magnitude of the uniform load in X-direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameUniformLoad.Wy">
+            <summary>
+            Magnitude of the uniform load in Y-direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameUniformLoad.L1">
+            <summary>
+            Distance from start.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameUniformLoad.L2">
+            <summary>
+            Distance from the end.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameUniformLoad.LoadDirection">
+            <summary>
+            The direction of the load.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.FrameUniformLoad.LoadCase">
+            <summary>
+            the load case.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameUniformLoad.GetGlobalFixedEndForces(FEALiTE2D.Elements.FrameElement2D)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.FrameUniformLoad.GetLoadValueAt(FEALiTE2D.Elements.IElement,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Loads.ILoad">
+            <summary>
+            Represents an interface for all loads.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.ILoad.LoadDirection">
+            <summary>
+            The direction of the load.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.ILoad.LoadCase">
+            <summary>
+            the load case.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.ILoad.GetGlobalFixedEndForces(FEALiTE2D.Elements.FrameElement2D)">
+            <summary>
+            Gets the global fixed end forces in global coordinates system.
+            </summary>
+            <param name="element">frame element</param>
+            <returns>global fixed end forces of this load</returns>
+        </member>
+        <member name="M:FEALiTE2D.Loads.ILoad.GetLoadValueAt(FEALiTE2D.Elements.IElement,System.Double)">
+            <summary>
+            Get the magnitude of a load at given distance in local coordinates system.
+            </summary>
+            <param name="element">the element which this load is applied into to process></param>
+            <param name="x">distance measured from start node of an element.</param>
+            <returns>load value</returns>
+        </member>
+        <member name="T:FEALiTE2D.Loads.LoadCase">
+            <summary>
+            Represent a class for load cases.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCase.#ctor">
+            <summary>
+            Creates new instance of a <see cref="T:FEALiTE2D.Loads.LoadCase"/>.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCase.#ctor(System.String,FEALiTE2D.Loads.LoadCaseType)">
+             <summary>
+             Creates new instance of a <see cref="T:FEALiTE2D.Loads.LoadCase"/>.
+             </summary>
+            <param name="label">load case label.</param>
+             <param name="type">Load case type.</param>
+        </member>
+        <member name="P:FEALiTE2D.Loads.LoadCase.Label">
+            <summary>
+            Name of the <see cref="T:FEALiTE2D.Loads.LoadCase"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.LoadCase.LoadCaseType">
+            <summary>
+            Type of the <see cref="T:FEALiTE2D.Loads.LoadCase"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.LoadCase.LoadCaseDuration">
+            <summary>
+            Duration of the <see cref="T:FEALiTE2D.Loads.LoadCase"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.LoadCase.IsLinearCase">
+            <summary>
+            Gets whether it's a linear load case or not.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCase.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCase.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCase.op_Equality(FEALiTE2D.Loads.LoadCase,FEALiTE2D.Loads.LoadCase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCase.op_Inequality(FEALiTE2D.Loads.LoadCase,FEALiTE2D.Loads.LoadCase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCase.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Loads.LoadCaseType">
+            <summary>
+            Represents load case type.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseType.SelfWeight">
+            <summary>
+            Self Weight Load Case
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseType.Dead">
+            <summary>
+            Dead Load Case
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseType.Live">
+            <summary>
+            Live Load Case
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseType.Wind">
+            <summary>
+            Wind Load Case
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseType.Seismic">
+            <summary>
+            Seismic Load Case
+            </summary> Wind,
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseType.Accidental">
+            <summary>
+            Accidental Load Case
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseType.Shrinkage">
+            <summary>
+            Shrinkage Load Case
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Loads.LoadCaseDuration">
+            <summary>
+            Represents Load Duration Classes.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseDuration.Permanent">
+            <summary>
+            load duration is more than 10 years.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseDuration.LongTerm">
+            <summary>
+            load duration is 6 months - 10 years.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseDuration.MediumTerm">
+            <summary>
+            load duration is 1 week - 6 months.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseDuration.ShortTerm">
+            <summary>
+            load duration is less than one week.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadCaseDuration.Instantaneous">
+            <summary>
+            load duration is Instantaneous.
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Loads.LoadCombination">
+            <summary>
+            A class for load combination results when more than one load case acts on the structure.
+            These two "factored loads" are combined (added) to determine the resultant loads.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCombination.#ctor">
+            <summary>
+            Create new instance of <see cref="T:FEALiTE2D.Loads.LoadCombination"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.LoadCombination.#ctor(System.String)">
+            <summary>
+            Create new instance of <see cref="T:FEALiTE2D.Loads.LoadCombination"/> class.
+            </summary>
+            <param name="name">name of the load combination</param>
+        </member>
+        <member name="P:FEALiTE2D.Loads.LoadCombination.Label">
+            <summary>
+            Name of the <see cref="T:FEALiTE2D.Loads.LoadCombination"/>
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Loads.LoadDirection">
+            <summary>
+            Represents the direction of the load whether it's in Global or Local X, Y, or Z.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadDirection.Global">
+            <summary>
+            Represent the coordinates in global axes (X and Y)
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Loads.LoadDirection.Local">
+            <summary>
+            Represent the coordinates in local axes of the element (x and y)
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Loads.NodalLoad">
+            <summary>
+            Represent a class for Nodal loads in Global or local coordinates system.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.NodalLoad.#ctor">
+            <summary>
+            Creates a new class of <see cref="T:FEALiTE2D.Loads.NodalLoad"/>.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.NodalLoad.#ctor(System.Double,System.Double,System.Double,FEALiTE2D.Loads.LoadDirection,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Creates a new class of <see cref="T:FEALiTE2D.Loads.NodalLoad"/>
+            </summary>
+            <param name="fx">force parallel to Global X direction.</param>
+            <param name="fy">force parallel to Global Y direction.</param>
+            <param name="mz">Moment parallel to Global Z direction.</param>
+            <param name="direction">load direction.</param>
+            <param name="loadCase">load case.</param>
+        </member>
+        <member name="P:FEALiTE2D.Loads.NodalLoad.Fx">
+            <summary>
+            Force in X-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.NodalLoad.Fy">
+            <summary>
+            Force in Y-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.NodalLoad.Mz">
+            <summary>
+            Moment in Z-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.NodalLoad.LoadDirection">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Loads.NodalLoad.LoadCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.NodalLoad.GetGlobalFixedEndForces(FEALiTE2D.Elements.Node2D)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.NodalLoad.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.NodalLoad.op_Equality(FEALiTE2D.Loads.NodalLoad,FEALiTE2D.Loads.NodalLoad)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.NodalLoad.op_Inequality(FEALiTE2D.Loads.NodalLoad,FEALiTE2D.Loads.NodalLoad)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.NodalLoad.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Loads.SupportDisplacementLoad">
+            <summary>
+            Represent a class for support displacement displacements in Global Coordinates system.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.SupportDisplacementLoad.#ctor">
+            <summary>
+            Creates a new class of <see cref="T:FEALiTE2D.Loads.SupportDisplacementLoad"/>.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Loads.SupportDisplacementLoad.#ctor(System.Double,System.Double,System.Double,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Creates a new class of <see cref="T:FEALiTE2D.Loads.SupportDisplacementLoad"/>
+            </summary>
+            <param name="ux">global displacement in X-Direction.</param>
+            <param name="uy">global displacement in Y-Direction.</param>
+            <param name="rz">global rotation about Z-Direction.</param>
+            <param name="loadCase">load case.</param>
+        </member>
+        <member name="P:FEALiTE2D.Loads.SupportDisplacementLoad.Ux">
+            <summary>
+            Displacement in X-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.SupportDisplacementLoad.Uy">
+            <summary>
+            Displacement in Y-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.SupportDisplacementLoad.Rz">
+            <summary>
+            rotation about Z-Direction.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Loads.SupportDisplacementLoad.LoadDirection">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Loads.SupportDisplacementLoad.LoadCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.SupportDisplacementLoad.GetGlobalFixedEndDisplacement(FEALiTE2D.Elements.Node2D)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.SupportDisplacementLoad.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.SupportDisplacementLoad.op_Equality(FEALiTE2D.Loads.SupportDisplacementLoad,FEALiTE2D.Loads.SupportDisplacementLoad)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.SupportDisplacementLoad.op_Inequality(FEALiTE2D.Loads.SupportDisplacementLoad,FEALiTE2D.Loads.SupportDisplacementLoad)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Loads.SupportDisplacementLoad.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Materials.GenericIsotropicMaterial">
+            <summary>
+            Represents an interface for <see cref="T:FEALiTE2D.Materials.GenericIsotropicMaterial"/> class
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.GenericIsotropicMaterial.Label">
+            <summary>
+            Name of the <see cref="T:FEALiTE2D.Materials.GenericIsotropicMaterial"/>
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.GenericIsotropicMaterial.E">
+            <summary>
+            Modulus of elasticity
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.GenericIsotropicMaterial.G">
+            <summary>
+            Shear modulus
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.GenericIsotropicMaterial.U">
+            <summary>
+            Poisson's ratio
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.GenericIsotropicMaterial.Alpha">
+            <summary>
+            Thermal expansion coefficient
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.GenericIsotropicMaterial.Gama">
+            <summary>
+            Unit weight
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.GenericIsotropicMaterial.MaterialType">
+            <summary>
+            Material type
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Materials.IMaterial">
+            <summary>
+            Represents an interface for <see cref="T:FEALiTE2D.Materials.IMaterial"/> class
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.IMaterial.E">
+            <summary>
+            Modulus of elasticity
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.IMaterial.G">
+            <summary>
+            Shear modulus
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.IMaterial.U">
+            <summary>
+            Poisson's ratio
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.IMaterial.Alpha">
+            <summary>
+            Thermal expansion coefficient
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.IMaterial.Gama">
+            <summary>
+            Unit weight
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.IMaterial.MaterialType">
+            <summary>
+            Material type
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Materials.IMaterial.Label">
+            <summary>
+            Name of the <see cref="T:FEALiTE2D.Materials.IMaterial"/>
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Materials.MaterialType">
+            <summary>
+            Material type
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Materials.MaterialType.Concrete">
+            <summary>
+            Concrete Material
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Materials.MaterialType.Steel">
+            <summary>
+            Steel Material
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Materials.MaterialType.Timber">
+            <summary>
+            Timber Material
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Materials.MaterialType.Aluminum">
+            <summary>
+            Aluminum Material
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Materials.MaterialType.Userdefined">
+            <summary>
+            Other Material
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Meshing.ILinearMesher">
+            <summary>
+            This interface represents a mesher interface for 1D elements.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Meshing.ILinearMesher.NumberSegements">
+            <summary>
+            Gets or sets the minimum number of segments that the <see cref="T:FEALiTE2D.Elements.IElement"/> be discretized into.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Meshing.ILinearMesher.MinDistance">
+            <summary>
+            Gets or sets the minimum length of segments that the <see cref="T:FEALiTE2D.Elements.IElement"/> be discretized into.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.ILinearMesher.SetupMeshSegments(FEALiTE2D.Elements.IElement)">
+            <summary>
+            This method should set locations of change in external forces and moments to properly calculate internal forces.
+            </summary>
+            <param name="element">an element to set up points on.</param>
+        </member>
+        <member name="T:FEALiTE2D.Meshing.LinearMesher">
+            <summary>
+            This class represents a mesher for 1D elements.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMesher.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Meshing.LinearMesher"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMesher.#ctor(System.Int32,System.Double)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Meshing.LinearMesher"/> class.
+            </summary>
+            <param name="n">minimum number of segments that the <see cref="T:FEALiTE2D.Elements.IElement"/> be discretized into.</param>
+            <param name="d">minimum length of segments that the <see cref="T:FEALiTE2D.Elements.IElement"/> be discretized into.</param>
+        </member>
+        <member name="P:FEALiTE2D.Meshing.LinearMesher.NumberSegements">
+            <inheritdoc/>
+        </member>
+        <member name="P:FEALiTE2D.Meshing.LinearMesher.MinDistance">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMesher.SetupMeshSegments(FEALiTE2D.Elements.IElement)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMesher.CheckBounds(System.Double,System.Double,System.Double)">
+            <summary>
+            Check a distance on an element is within its bounds.
+            </summary>
+            <param name="distance">a given distance</param>
+            <param name="upperBound">upper bound of the element which is its length</param>
+            <param name="lowerBound">lower bound of the element which is 0</param>
+            <returns></returns>
+        </member>
+        <member name="T:FEALiTE2D.Meshing.LinearMeshSegment">
+            <summary>
+            This class represents a small linear segment of an element that is bounded by two distances from start node of the element.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Meshing.LinearMeshSegment"/> class.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.ShearAt(System.Double)">
+            <summary>
+            Get shear value at a distance of the segment.
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.MomentAt(System.Double)">
+            <summary>
+            Get bending moment value at a distance of the segment.
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.AxialAt(System.Double)">
+            <summary>
+            Get axial force value at a distance of the segment.
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.GetInternalForceAt(System.Double)">
+            <summary>
+            Get internal forces at a distance of the segment.
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.SlopeAngleAt(System.Double)">
+            <summary>
+            Get slope angle of a point on a segment due to loads
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.VerticalDisplacementAt(System.Double)">
+            <summary>
+            Get Deflection of a point on a segment due to vertical loads 
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.AxialDisplacementAt(System.Double)">
+            <summary>
+            Get Axial displacement of a point on a segment due to vertical loads 
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="M:FEALiTE2D.Meshing.LinearMeshSegment.GetDisplacementAt(System.Double)">
+            <summary>
+            Get 3 components of displacement at a distance of the segment.
+            </summary>
+            <param name="x">a distance</param>
+        </member>
+        <member name="T:FEALiTE2D.Structure.AnalysisStatus">
+            <summary>
+            Analysis Result
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Structure.AnalysisStatus.Successful">
+            <summary>
+            Analysis completed successfully.
+            </summary>
+        </member>
+        <member name="F:FEALiTE2D.Structure.AnalysisStatus.Failure">
+            <summary>
+            Analysis completed with errors.
+            </summary>
+        </member>
+        <member name="T:FEALiTE2D.Structure.Assembler">
+            <summary>
+            Assemble global stiffness matrices of elements as well as global load vector.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Assembler.#ctor(FEALiTE2D.Structure.Structure)">
+            <summary>
+            Create a new instance of assembler class
+            </summary>
+            <param name="structure">a structure to assemble global stiffness matrices of elements as well as global load vector</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Assembler.AssembleGlobalStiffnessMatrix">
+            <summary>
+            Assemble structural stiffness matrix.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Assembler.AssembleGlobalEquivalentLoadVector(FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Assemble load vector for the give load case due to nodal loads..
+            </summary>
+            <param name="loadCase">load case</param>
+        </member>
+        <member name="T:FEALiTE2D.Structure.Displacement">
+            <summary>
+            Defines a displacement of 3 components (Ux, Uy, Rz)
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Displacement.Ux">
+            <summary>
+            Gets or sets the ux.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Displacement.Uy">
+            <summary>
+            Gets or sets the uy.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Displacement.Rz">
+            <summary>
+            Gets or sets the rz.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.op_Addition(FEALiTE2D.Structure.Displacement,FEALiTE2D.Structure.Displacement)">
+            <summary>
+            Implements the operator + on 2 Displacements.
+            </summary>
+            <param name="d1">first Displacement.</param>
+            <param name="d2">second Displacement.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.op_Subtraction(FEALiTE2D.Structure.Displacement,FEALiTE2D.Structure.Displacement)">
+            <summary>
+            Implements the operator - on 2 Displacements.
+            </summary>
+            <param name="d1">first displacement.</param>
+            <param name="d2">second displacement.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.op_Multiply(System.Double,FEALiTE2D.Structure.Displacement)">
+            <summary>
+            Implements the operator number*Displacement.
+            </summary>
+            <param name="factor">factor.</param>
+            <param name="d">Displacement.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.ToVector">
+            <summary>
+            Convert To vector.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.FromVector(System.Double[])">
+            <summary>
+            Create Displacement from a given vector.
+            </summary>
+            <param name="dis">a Vector containing displacement</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Displacement.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Structure.Force">
+            <summary>
+            Defines a force of 3 components (Fx, Fy, Mz)
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Force.Fx">
+            <summary>
+            Gets or sets the fx.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Force.Fy">
+            <summary>
+            Gets or sets the fy.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Force.Mz">
+            <summary>
+            Gets or sets the mz.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.op_Addition(FEALiTE2D.Structure.Force,FEALiTE2D.Structure.Force)">
+            <summary>
+            Implements the operator + on 2 forces.
+            </summary>
+            <param name="f1">first force.</param>
+            <param name="f2">second force.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.op_Subtraction(FEALiTE2D.Structure.Force,FEALiTE2D.Structure.Force)">
+            <summary>
+            Implements the operator - on 2 forces.
+            </summary>
+            <param name="f1">first force.</param>
+            <param name="f2">second force.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.op_Multiply(System.Double,FEALiTE2D.Structure.Force)">
+            <summary>
+            Implements the operator number*force.
+            </summary>
+            <param name="factor">factor.</param>
+            <param name="f">force.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.ToVector">
+            <summary>
+            Convert To vector.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.FromVector(System.Double[])">
+            <summary>
+            Create force from a given vector.
+            </summary>
+            <param name="f">a Vector containing force</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Force.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:FEALiTE2D.Structure.PostProcessor">
+            <summary>
+            This class represents a post-processor for <see cref="T:FEALiTE2D.Structure.Structure"/> class to retrieve elements data after the structure is solved. 
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.#ctor(FEALiTE2D.Structure.Structure)">
+            <summary>
+            Creates a new instance of <see cref="T:FEALiTE2D.Structure.PostProcessor"/> class.
+            </summary>
+            <param name="structure">a structure to extract data from.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetSupportReaction(FEALiTE2D.Elements.Node2D,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Get support reaction for a load case.
+            </summary>
+            <param name="node">node which is restrained</param>
+            <param name="loadCase">a load case</param>
+            <returns>support reaction</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetSupportReaction(FEALiTE2D.Elements.Node2D,FEALiTE2D.Loads.LoadCombination)">
+            <summary>
+            Get support reaction for a load combination of load cases.
+            </summary>
+            <param name="node">node which is restrained</param>
+            <param name="loadCombination">a load combination</param>
+            <returns>support reaction</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetNodeGlobalDisplacement(FEALiTE2D.Elements.Node2D,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Get Node's global displacement due to applied load in a load case.
+            </summary>
+            <param name="node">node which is has a free dof.</param>
+            <param name="loadCase">load case</param>
+            <returns>Nodal Displacement</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementLocalFixedEndForeces(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Get Local End forces of an element after the structure is solved.
+            </summary>
+            <param name="element">an element</param>
+            <param name="loadCase">a load case</param>
+            <returns>Local End forces of an element after the structure is solved.</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementGlobalFixedEndForeces(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Get Global End forces of an element after the structure is solved.
+            </summary>
+            <param name="element">an element</param>
+            <param name="loadCase">a load case</param>
+            <returns>Global End forces of an element after the structure is solved.</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementLocalEndDisplacement(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Get a local end displacement of an element at a given load case.
+            </summary>
+            <param name="element">an element to process</param>
+            <param name="loadCase">a load case to display displacement</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementInternalForces(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCase)">
+            <summary>
+            Get internal forces and local displacements of an element. note that segments length and count are based on the <see cref="T:FEALiTE2D.Meshing.ILinearMesher"/>
+            </summary>
+            <param name="element">an element to get its internal forces</param>
+            <param name="loadCase">a load case to get the internal forces in an element</param>
+            <returns>List of segments containing internal forces and displacements of an element.</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementInternalForces(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCombination)">
+            <summary>
+            Get internal forces and local displacements of an element. note that segments length and count are based on the <see cref="T:FEALiTE2D.Meshing.ILinearMesher"/>
+            </summary>
+            <param name="element">an element to get its internal forces</param>
+            <param name="loadCombination">a load combination</param>
+            <returns>List of segments containing internal forces and displacements of an element.</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementInternalForcesAt(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCase,System.Double)">
+            <summary>
+            Get internal forces of an element at a distance measured from start node.
+            </summary>
+            <param name="element">an element to get its internal forces</param>
+            <param name="loadCase">a load case to get the internal forces in an element</param>
+            <param name="x">distance measured from start node.</param>
+            <returns>internal forces of an element at a distance.</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementInternalForcesAt(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCombination,System.Double)">
+            <summary>
+            Get internal forces of an element at a distance measured from start node.
+            </summary>
+            <param name="element">an element to get its internal forces</param>
+            <param name="loadCombination">a load combination of load case to get the internal forces in an element</param>
+            <param name="x">distance measured from start node.</param>
+            <returns>internal forces of an element at a distance.</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementDisplacementAt(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCase,System.Double)">
+            <summary>
+            Get displacement of an element at a distance measured from start node.
+            </summary>
+            <param name="element">an element to get its displacement</param>
+            <param name="loadCase">a load case to get the displacement in an element</param>
+            <param name="x">distance measured from start node.</param>
+            <returns>displacement of an element at a distance.</returns>
+        </member>
+        <member name="M:FEALiTE2D.Structure.PostProcessor.GetElementDisplacementAt(FEALiTE2D.Elements.IElement,FEALiTE2D.Loads.LoadCombination,System.Double)">
+            <summary>
+            Get displacement of an element at a distance measured from start node.
+            </summary>
+            <param name="element">an element to get its displacement</param>
+            <param name="loadCombination">a load combination of load case to get the internal forces in an element</param>
+            <param name="x">distance measured from start node.</param>
+            <returns>displacement of an element at a distance.</returns>
+        </member>
+        <member name="T:FEALiTE2D.Structure.Structure">
+            <summary>
+            Represent a structural model that has many elements connected to each other through nodes.
+            These elements are subjected to external actions.
+            To solve a structural model, the model must have at least one degree of freedom.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.#ctor">
+            <summary>
+            Create a new instance of <see cref="T:FEALiTE2D.Structure.Structure"/>.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.Nodes">
+            <summary>
+            Represents a list of Nodes that connect fem elements together.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.Elements">
+            <summary>
+            Represents a list of fem elements.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.StructuralStiffnessMatrix">
+            <summary>
+            A dictionary of coordinates and assembled global stiffness matrices
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.FixedEndLoadsVectors">
+            <summary>
+            Assembled Fixed end forces of loads in a load case.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.DisplacementVectors">
+            <summary>
+            displacement of nodes due to loads in a load case.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.LoadCasesToRun">
+            <summary>
+            Gets or sets the load cases to be included in analysis.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.AnalysisStatus">
+            <summary>
+            Gets or sets the analysis result.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.Tolerance">
+            <summary>
+            Gets or sets the tolerance.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.nDOF">
+            <summary>
+            number of dof which is the sum of free dof in each node.
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.Results">
+            <summary>
+            Get analysis results
+            </summary>
+        </member>
+        <member name="P:FEALiTE2D.Structure.Structure.LinearMesher">
+            <summary>
+            Get or set Linear mesher class for <see cref="T:FEALiTE2D.Elements.IElement"/>.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.AddNode(FEALiTE2D.Elements.Node2D)">
+            <summary>
+            Adds a node to the structure, We check if the node is already added to avoid duplicate nodes.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.AddNode(FEALiTE2D.Elements.Node2D[])">
+            <summary>
+            Adds nodes to the structure, We check if the nodes are already added to avoid duplicate nodes.
+            </summary>
+            <param name="nodes">The nodes.</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.AddElement(FEALiTE2D.Elements.IElement,System.Boolean)">
+            <summary>
+            Adds elements to the structure.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="addNodes">Add the nodes of the element to Nodes list?</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.AddElement(System.Collections.Generic.IEnumerable{FEALiTE2D.Elements.IElement},System.Boolean)">
+            <summary>
+            Adds elements to the structure.
+            </summary>
+            <param name="elements">collection of elements.</param>
+            <param name="addNodes">Add the nodes of the element to Nodes list?</param>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.PrepareLoadsOnElements">
+            <summary>
+            Calculates fixed end forces and moments at each node of an element and add them to <see cref="P:FEALiTE2D.Elements.IElement.GlobalEndForcesForLoadCase"/> dictionary.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.SetUpMeshingSegments">
+            <summary>
+            Set up mesh segments of the element.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.ReNumberNodes">
+            <summary>
+             Order the nodes by number of dofs then renumber the node indexes according to that.
+            </summary>
+        </member>
+        <member name="M:FEALiTE2D.Structure.Structure.Solve">
+            <summary>
+            Solve the structure.
+            </summary>
+        </member>
+    </members>
+</doc>

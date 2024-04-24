@@ -7,6 +7,7 @@
 	xmlns:local="using:APG_TRUSS.Views"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	xmlns:paz="using:Avalonia.Controls.PanAndZoom"
+	xmlns:view="using:APG_TRUSS.Views"
 	xmlns:vm="using:APG_TRUSS.ViewModels"
 	Title="APG_TRUSS"
 	d:DesignHeight="450"
@@ -17,31 +18,57 @@
 	<Design.DataContext>
 		<vm:MainWindowViewModel />
 	</Design.DataContext>
-	<Grid ColumnDefinitions="Auto,*">
-		<StackPanel Grid.Column="0">
-			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_node.png" />
+	<Grid RowDefinitions="Auto,*">
+		<StackPanel
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			x:CompileBindings="False"
+			x:DataType="view:CustomSkiaPage"
+			Orientation="Horizontal">
+			<Button Command="{Binding #CustomSkia.Node_Pressed}">
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/1Node.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_member.png" />
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/2AddFrameElement.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_hinge.png" />
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/3MemberSection.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_hroller.png" />
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/4AddInternalHinge.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_delete.png" />
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/5FixedEnd.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_load.png" />
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/6HingeSupport.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/ic_add_load2.png" />
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/7Rollar.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/9NodalPointLoad.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/10PointLoad.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/11SupportDisplacement.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/12Distributed.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/13Moment.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/14Edit.png" />
+			</Button>
+			<Button>
+				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/15NoSupport.png" />
 			</Button>
 		</StackPanel>
-		<Grid Grid.Column="1" RowDefinitions="*,Auto,Auto">
+		<Grid Grid.Row="1" RowDefinitions="*,Auto,Auto">
 			<local:CustomSkiaPage
 				Name="CustomSkia"
 				Grid.Row="0"
