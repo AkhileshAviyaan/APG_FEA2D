@@ -11,7 +11,7 @@ namespace FEALiTE2D.Elements
     /// Represents a class for frame elements, each frame element has 3 dof at each node.
     /// </summary>
     [System.Serializable]
-    public class FrameElement2D : IElement
+    public partial class FrameElement2D : IElement
     {
         /// <summary>
         /// Creates a new instance of <see cref="FrameElement2D"/> Class

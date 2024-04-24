@@ -1356,22 +1356,6 @@
         "runtime": {
           "lib/net6.0/Tmds.DBus.Protocol.dll": {}
         }
-      },
-      "FEALiTE2D/1.1.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Avalonia": "11.0.10",
-          "CSparse": "3.5.0",
-          "MathNet.Numerics": "4.15.0",
-          "SkiaSharp": "2.88.8"
-        },
-        "compile": {
-          "bin/placeholder/FEALiTE2D.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FEALiTE2D.dll": {}
-        }
       }
     }
   },
@@ -4482,11 +4466,6 @@
         "tmds.dbus.protocol.0.15.0.nupkg.sha512",
         "tmds.dbus.protocol.nuspec"
       ]
-    },
-    "FEALiTE2D/1.1.0": {
-      "type": "project",
-      "path": "../FEALiTE2D/FEALiTE2D.csproj",
-      "msbuildProject": "../FEALiTE2D/FEALiTE2D.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4496,8 +4475,9 @@
       "Avalonia.Diagnostics >= 11.0.10",
       "Avalonia.Fonts.Inter >= 11.0.10",
       "Avalonia.Themes.Fluent >= 11.0.10",
+      "CSparse >= 3.5.0",
       "CommunityToolkit.Mvvm >= 8.2.2",
-      "FEALiTE2D >= 1.1.0",
+      "MathNet.Numerics >= 4.15.0",
       "SkiaSharp >= 2.88.8"
     ]
   },
@@ -4533,11 +4513,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\FEALiTE2D.csproj": {
-              "projectPath": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\FEALiTE2D\\FEALiTE2D.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -4575,9 +4551,17 @@
             "target": "Package",
             "version": "[11.0.10, )"
           },
+          "CSparse": {
+            "target": "Package",
+            "version": "[3.5.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.2, )"
+          },
+          "MathNet.Numerics": {
+            "target": "Package",
+            "version": "[4.15.0, )"
           },
           "SkiaSharp": {
             "target": "Package",

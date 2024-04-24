@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APG TRUSS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b71c9b6a9287c7dfd71642b0ea40c53ea666ac9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eca627ea51d2b1bd7967a7b9e4e960cfda7c8149")]
 [assembly: System.Reflection.AssemblyProductAttribute("APG TRUSS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APG TRUSS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

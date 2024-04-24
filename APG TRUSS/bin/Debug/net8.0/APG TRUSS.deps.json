@@ -13,8 +13,9 @@
           "Avalonia.Diagnostics": "11.0.10",
           "Avalonia.Fonts.Inter": "11.0.10",
           "Avalonia.Themes.Fluent": "11.0.10",
+          "CSparse": "3.5.0",
           "CommunityToolkit.Mvvm": "8.2.2",
-          "FEALiTE2D": "1.1.0",
+          "MathNet.Numerics": "4.15.0",
           "SkiaSharp": "2.88.8"
         },
         "runtime": {
@@ -899,16 +900,6 @@
             "fileVersion": "0.15.0.0"
           }
         }
-      },
-      "FEALiTE2D/1.1.0": {
-        "dependencies": {
-          "CSparse": "3.5.0",
-          "MathNet.Numerics": "4.15.0",
-          "SkiaSharp": "2.88.8"
-        },
-        "runtime": {
-          "FEALiTE2D.dll": {}
-        }
       }
     }
   },
@@ -1414,11 +1405,6 @@
       "sha512": "sha512-QVo/Y39nTYcCKBqrZuwHjXdwaky0yTQPIT3qUTEEK2MZfDtZWrJ2XyZ59zH8LBgB2fL5cWaTuP2pBTpGz/GeDQ==",
       "path": "tmds.dbus.protocol/0.15.0",
       "hashPath": "tmds.dbus.protocol.0.15.0.nupkg.sha512"
-    },
-    "FEALiTE2D/1.1.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

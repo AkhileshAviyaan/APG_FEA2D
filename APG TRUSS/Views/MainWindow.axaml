@@ -28,7 +28,7 @@
 			<Button Command="{Binding #CustomSkia.Node_Pressed}">
 				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/1Node.png" />
 			</Button>
-			<Button>
+			<Button Command="{Binding #CustomSkia.Frame_Pressed}">
 				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/2AddFrameElement.png" />
 			</Button>
 			<Button>
@@ -37,13 +37,13 @@
 			<Button>
 				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/4AddInternalHinge.png" />
 			</Button>
-			<Button>
+			<Button Command="{Binding #CustomSkia.Fixed_Pressed}">
 				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/5FixedEnd.png" />
 			</Button>
-			<Button>
+			<Button Command="{Binding #CustomSkia.Hinge_Pressed}">
 				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/6HingeSupport.png" />
 			</Button>
-			<Button>
+			<Button Command="{Binding #CustomSkia.Rollar_Pressed}">
 				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/7Rollar.png" />
 			</Button>
 			<Button>

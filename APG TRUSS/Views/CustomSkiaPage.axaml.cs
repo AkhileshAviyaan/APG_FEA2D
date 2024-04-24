@@ -1,27 +1,17 @@
 using System;
-using System.Diagnostics;
 using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Input;
 using Avalonia.Media;
-using Avalonia.Platform;
-using Avalonia.Rendering.SceneGraph;
-using Avalonia.Skia;
-using Avalonia.Threading;
 using SkiaSharp;
 using System.ComponentModel;
 using Avalonia.Media.Transformation;
-using MatrixHelperList;
-using System.Runtime.CompilerServices;
 using Avalonia.Reactive;
-using Avalonia.Animation;
-using FEALiTE2D;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using FEALiTE2D.Elements;
 using FEALiTE2D.Materials;
 using FEALiTE2D.CrossSections;
+using FEALiTE2D.Loads;
 
 namespace APG_TRUSS.Views
 {
@@ -30,7 +20,8 @@ namespace APG_TRUSS.Views
 
 
 		FEALiTE2D.Structure.Structure structure = new FEALiTE2D.Structure.Structure();
-
+		IMaterial material;
+		IFrame2DSection section;
 		/// <summary>
 		/// Identifies the <seealso cref="Zoom"/> avalonia property.
 		/// </summary>
@@ -65,11 +56,7 @@ namespace APG_TRUSS.Views
 		public bool AddSupport = false;
 		public bool AddNodalLoad = false;
 		public bool AddFrameLoad = false;
-		public ICommand NodeCommand { get;}
-		public void Node_Pressed()
-		{
-			AddNodeOn = true;
-		}
+		
 		/// <summary>
 		/// Gets the pan offset for y axis.
 		/// </summary>
@@ -84,6 +71,8 @@ namespace APG_TRUSS.Views
 		private double _zoomSpeed;
 		public readonly GlyphRun _noSkia;
 		private Grid _grid;
+		public Point OrgCoord;
+		public Point Coord;
 		public CustomSkiaPage()
 		{
 			_captured = false;
@@ -95,6 +84,18 @@ namespace APG_TRUSS.Views
 			_noSkia = new GlyphRun(Typeface.Default.GlyphTypeface, 12, text.AsMemory(), glyphs);
 			_grid = new();
 			NodeCommand = new RelayCommand(Node_Pressed);
+			FrameCommand=new RelayCommand(Frame_Pressed);
+			RollerCommand = new RelayCommand(Rollar_Pressed);
+			HingeCommand = new RelayCommand(Hinge_Pressed);
+			FixedCommand = new RelayCommand(Fixed_Pressed);
+
+			IMaterial material = new GenericIsotropicMaterial() { E = 30E6, U = 0.2, Label = "Steel", Alpha = 0.000012, Gama = 39885, MaterialType = MaterialType.Steel };
+			IFrame2DSection section = new Generic2DSection(0.075, 0.075, 0.075, 0.000480, 0.000480, 0.000480 * 2, 0.1, 0.1, material);
+
+			LoadCase loadCase = new LoadCase("live", LoadCaseType.Live);
+			structure.LoadCasesToRun.Add(loadCase);
+
+			structure.LinearMesher.NumberSegements = 20;
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -131,94 +132,12 @@ namespace APG_TRUSS.Views
 		}
 		public static readonly StyledProperty<IBrush> BackgroundProperty =
 			AvaloniaProperty.Register<CustomSkiaPage, IBrush>(nameof(Background));
-		protected override void OnPointerWheelChanged(PointerWheelEventArgs e)
-		{
-			var point = e.GetPosition(this);
-			var delta = e.Delta.Y;
-			bool skipTransitions = false;
-			double ratio = Math.Pow(_zoomSpeed, delta);
-			_matrix = MatrixHelper.ScaleAtPrepend(_matrix, ratio, ratio, point.X, point.Y);
-
-		}
-		protected override void OnPointerPressed(PointerPressedEventArgs e)
-		{
-			Point coord=_grid.DrawableCoord(e.GetPosition(this));
-			X=coord.X; 
-			Y=coord.Y;
-			if(AddNodeOn==true)
-			{
-				string nodename="n"+structure.Nodes.Count;
-				structure.AddNode(new Node2D(X, Y, nodename));
-			}
-		}
-
-		protected override void OnPointerReleased(PointerReleasedEventArgs e)
-		{
-			base.OnPointerReleased(e);
-		}
-
-		protected override void OnPointerMoved(PointerEventArgs e)
-		{
-			base.OnPointerMoved(e);
-		}
-
-
-		class CustomDrawOp : ICustomDrawOperation
-		{
-			private readonly IImmutableGlyphRunReference _noSkia;
-			private Matrix _matrix;
-			private SKCanvas canvas;
-			private CustomSkiaPage customSkiaPage;
-			public CustomDrawOp(Rect bounds, Matrix matrix,CustomSkiaPage page)
-			{
-				Bounds = bounds;
-				_matrix = matrix;
-				this.canvas = page.canvas;
-				customSkiaPage = page;
-			}
-
-			public void Dispose()
-			{
-				// No-op
-			}
-
-			public Rect Bounds { get; }
-			public bool HitTest(Point p) => false;
-			public bool Equals(ICustomDrawOperation other) => false;
-			public void Render(ImmediateDrawingContext context)
-			{
-				var leaseFeature = context.TryGetFeature<ISkiaSharpApiLeaseFeature>();
-				if (leaseFeature == null)
-					context.DrawGlyphRun(Brushes.Black, _noSkia);
-				else
-				{
-					using var lease = leaseFeature.Lease();
-					canvas = lease.SkCanvas;
-					customSkiaPage._grid.DrawGrid(canvas,Bounds, _matrix);
-				}
-			}
-
-
-		}
 
 		private void InvalidateProperties()
 		{
 			SetAndRaise(ZoomProperty, ref _zoom, _matrix.M11);
 			SetAndRaise(OffsetXProperty, ref _offsetX, _matrix.M31);
 			SetAndRaise(OffsetYProperty, ref _offsetY, _matrix.M32);
-		}
-		public override void Render(DrawingContext context)
-		{
-			var background = new SolidColorBrush(Color.FromArgb(100,33,33,33));
-			if (background != null)
-			{
-				var renderSize = Bounds.Size;
-				context.FillRectangle(background, new Rect(renderSize));
-			}
-			base.Render(context);
-			InvalidateProperties();
-			context.Custom(new CustomDrawOp(new Rect(0, 0, Bounds.Width, Bounds.Height), _matrix,this));
-			Dispatcher.UIThread.InvokeAsync(InvalidateVisual, DispatcherPriority.Background);
 		}
 	}
 }

@@ -5,8 +5,6 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APG TRUSS", "APG TRUSS\APG TRUSS.csproj", "{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FEALiTE2D", "FEALiTE2D\FEALiTE2D.csproj", "{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A242D7D-7205-40F4-B00F-AB861CE6AF1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

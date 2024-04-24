@@ -91,6 +91,12 @@ namespace APG_TRUSS.Views
 			float Y=TransformCoord(h - sideExtentH, (float)point.Y, spacing);
 			return new Point(X,Y);
 		}
+		public Point RealDisplayCoord(Point point)
+		{
+			float X =(float)point.X* spacing+sideExtentW;
+			float Y = h - sideExtentH-(float)point.Y* spacing;
+			return new Point(X, Y);
+		}
 	}
 
 }
