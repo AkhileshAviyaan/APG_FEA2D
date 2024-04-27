@@ -45,9 +45,14 @@ namespace APG_FEA2D.Views
 					foreach (var node in customSkiaPage.structure.Nodes)
 					{
 						node.Draw(customSkiaPage.canvas, customSkiaPage._grid);
-						if (node.Support != null)
+						if (node.Support is not null)
 						{
 							node.DrawSupport(customSkiaPage.canvas, customSkiaPage._grid);
+						}
+
+						if (node.NodalLoads.Count > 0)
+						{
+							node.DrawNodalLoad(customSkiaPage.canvas, customSkiaPage._grid);
 						}
 					}
 					foreach (FrameElement2D element in customSkiaPage.structure.Elements)

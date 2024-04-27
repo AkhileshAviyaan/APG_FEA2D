@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using ReactiveUI;
 using System.Windows.Input;
 using System.Reactive.Linq;
+using FEA2D.Loads;
 using System.Threading.Tasks;
 
 namespace APG_FEA2D.ViewModels
@@ -11,14 +12,18 @@ namespace APG_FEA2D.ViewModels
 	{
 		public MainWindowViewModel()
 		{
-			ShowDialog = new Interaction<NodalLoadViewModel, NodalLoadReturn?>();
+			ShowDialog = new Interaction<NodalLoadViewModel, NodalLoad?>();
 			NodalLoadCommand = new RelayCommand(NodalLoadCommandMethod);
 		}
 		public ICommand NodalLoadCommand { get; }
 		public async void NodalLoadCommandMethod()
 		{
-			await ShowDialog.Handle(new NodalLoadViewModel());
+			try
+			{
+				await ShowDialog.Handle(new NodalLoadViewModel());
+			}
+			catch { }
 		}
-		public Interaction<NodalLoadViewModel, NodalLoadReturn?> ShowDialog { get; }
+		public Interaction<NodalLoadViewModel, NodalLoad?> ShowDialog { get; }
 	}
 }

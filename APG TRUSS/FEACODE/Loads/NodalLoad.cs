@@ -1,4 +1,5 @@
 ﻿using FEA2D.Elements;
+using System;
 
 namespace FEA2D.Loads
 {
@@ -32,16 +33,49 @@ namespace FEA2D.Loads
             this.LoadCase = loadCase;
         }
 
+		public NodalLoad(double angle, double f)
+		{
+			this.Mz = 0;
+            this.F = f;
+            this.Angle = angle * Math.PI / 180;
+			this.LoadDirection = LoadDirection.Global;
+            this.CosAngle=(float)Math.Cos(Angle);
+            this.SinAngle=(float)Math.Sin(Angle);
+			this.CosPlusAngle = (float)Math.Cos(Angle+Math.PI/4);
+			this.SinPlusAngle = (float)Math.Sin(Angle + Math.PI / 4);
+			this.CosMinusAngle = (float)Math.Cos(Angle - Math.PI / 4);
+			this.SinMinusAngle = (float)Math.Sin(Angle - Math.PI / 4);
+			this.Fx= -f* Math.Cos(Angle);
+			this.Fy=-f * Math.Sin(Angle);
+			if (Math.Abs(Fx) < 1e-10) Fx = 0;
+			if (Math.Abs(Fy) < 1e-10) Fy = 0;
+		}
 
-        /// <summary>
-        /// Force in X-Direction.
-        /// </summary>
-        public double Fx { get; set; }
 
-        /// <summary>
-        /// Force in Y-Direction.
-        /// </summary>
-        public double Fy { get; set; }
+		/// <summary>
+		/// Force in X-Direction.
+		/// </summary>
+		public double Fx { get; set; }
+		public float CosAngle { get; set; }
+		public float SinAngle { get; set; }
+		public float CosPlusAngle { get; set; }
+		public float SinPlusAngle { get; set; }
+		public float CosMinusAngle { get; set; }
+		public float SinMinusAngle { get; set; }
+
+		/// <summary>
+		/// Total Force.
+		/// </summary>
+		public double F { get; set; }
+		/// <summary>
+		/// Force direction Angle.
+		/// </summary>
+		public double Angle { get; set; }
+
+		/// <summary>
+		/// Force in Y-Direction.
+		/// </summary>
+		public double Fy { get; set; }
 
         /// <summary>
         /// Moment in Z-Direction.

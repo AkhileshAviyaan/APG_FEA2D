@@ -14,10 +14,10 @@ namespace APG_FEA2D.ViewModels
 	public partial class NodalLoadViewModel:ObservableObject
 	{
 		[ObservableProperty]
-		public NodalLoadReturn _nodalValueReturn;
+		public NodalLoad _nodalValueReturn;
 
 		[ObservableProperty]
-		public string _rotation="10";
+		public string _rotation="90";
 
 		[ObservableProperty]
 		public string _load="10";
@@ -25,11 +25,11 @@ namespace APG_FEA2D.ViewModels
 		{
 			NodalLoadOkCommand = ReactiveCommand.Create(ReturnViewModel);
 		}
-		public NodalLoadReturn ReturnViewModel()
+		public NodalLoad ReturnViewModel()
 		{
-			return new NodalLoadReturn(_rotation, _load);
+			return new NodalLoad(double.Parse(_rotation), double.Parse(_load));
 		}
-		public ReactiveCommand<Unit, NodalLoadReturn?> NodalLoadOkCommand { get; }
+		public ReactiveCommand<Unit, NodalLoad?> NodalLoadOkCommand { get; }
 
 	}
 }
