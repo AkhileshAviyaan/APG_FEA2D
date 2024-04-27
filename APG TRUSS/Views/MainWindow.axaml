@@ -25,12 +25,15 @@
 			x:CompileBindings="False"
 			x:DataType="view:CustomSkiaPage"
 			Orientation="Horizontal">
-			<Button>
+			<Button Command="{Binding #CustomSkia.RunCommand}">
 				<StackPanel Orientation="Horizontal">
 					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/0Solve.png" />
 					<Label>Run</Label>
 				</StackPanel>
 			</Button>
+			<Button Content="AFD" />
+			<Button Content="SFD" />
+			<Button Content="BMD" />
 			<Button Command="{Binding #CustomSkia.Node_Pressed}">
 				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/1Node.png" />
 			</Button>

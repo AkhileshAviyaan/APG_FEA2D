@@ -34,6 +34,7 @@ namespace APG_FEA2D.Views
 			RollerCommand = new RelayCommand(Rollar_Pressed);
 			HingeCommand = new RelayCommand(Hinge_Pressed);
 			FixedCommand = new RelayCommand(Fixed_Pressed);
+			RunCommand = new RelayCommand(Run_Pressed);
 
 			 material = new GenericIsotropicMaterial() { E = 30E6, U = 0.2, Label = "Steel", Alpha = 0.000012, Gama = 39885, MaterialType = MaterialType.Steel };
 			 section = new Generic2DSection(0.075, 0.075, 0.075, 0.000480, 0.000480, 0.000480 * 2, 0.1, 0.1, material);
