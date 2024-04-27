@@ -1,10 +1,10 @@
-﻿using FEALiTE2D.Elements;
-using FEALiTE2D.Loads;
+﻿using FEA2D.Elements;
+using FEA2D.Loads;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FEALiTE2D.Structure
+namespace FEA2D.Structures
 {
     /// <summary>
     /// This class represents a post-processor for <see cref="Structure"/> class to retrieve elements data after the structure is solved. 
@@ -216,12 +216,12 @@ namespace FEALiTE2D.Structure
         }
 
         /// <summary>
-        /// Get internal forces and local displacements of an element. note that segments length and count are based on the <see cref="FEALiTE2D.Meshing.ILinearMesher"/>
+        /// Get internal forces and local displacements of an element. note that segments length and count are based on the <see cref="FEA2D.Meshing.ILinearMesher"/>
         /// </summary>
         /// <param name="element">an element to get its internal forces</param>
         /// <param name="loadCase">a load case to get the internal forces in an element</param>
         /// <returns>List of segments containing internal forces and displacements of an element.</returns>
-        public List<FEALiTE2D.Meshing.LinearMeshSegment> GetElementInternalForces(IElement element, LoadCase loadCase)
+        public List<FEA2D.Meshing.LinearMeshSegment> GetElementInternalForces(IElement element, LoadCase loadCase)
         {
             double len = element.Length;
 
@@ -253,7 +253,7 @@ namespace FEALiTE2D.Structure
                 else
                 {
                     // get a reference to previous segment
-                    FEALiTE2D.Meshing.LinearMeshSegment pS = element.MeshSegments[i - 1];
+                    FEA2D.Meshing.LinearMeshSegment pS = element.MeshSegments[i - 1];
                     segment.Displacement1.Ux = pS.AxialDisplacementAt(pS.x2 - pS.x1);
                     segment.Displacement1.Uy = pS.VerticalDisplacementAt(pS.x2 - pS.x1);
                     segment.Displacement1.Rz = pS.SlopeAngleAt(pS.x2 - pS.x1);
@@ -380,17 +380,17 @@ namespace FEALiTE2D.Structure
         }
 
         /// <summary>
-        /// Get internal forces and local displacements of an element. note that segments length and count are based on the <see cref="FEALiTE2D.Meshing.ILinearMesher"/>
+        /// Get internal forces and local displacements of an element. note that segments length and count are based on the <see cref="FEA2D.Meshing.ILinearMesher"/>
         /// </summary>
         /// <param name="element">an element to get its internal forces</param>
         /// <param name="loadCombination">a load combination</param>
         /// <returns>List of segments containing internal forces and displacements of an element.</returns>
-        public List<FEALiTE2D.Meshing.LinearMeshSegment> GetElementInternalForces(IElement element, LoadCombination loadCombination)
+        public List<FEA2D.Meshing.LinearMeshSegment> GetElementInternalForces(IElement element, LoadCombination loadCombination)
         {
-            var list = new List<FEALiTE2D.Meshing.LinearMeshSegment>();
+            var list = new List<FEA2D.Meshing.LinearMeshSegment>();
             for (int i = 0; i < element.MeshSegments.Count; i++)
             {
-                FEALiTE2D.Meshing.LinearMeshSegment temp = new FEALiTE2D.Meshing.LinearMeshSegment();
+                FEA2D.Meshing.LinearMeshSegment temp = new FEA2D.Meshing.LinearMeshSegment();
                 var cSegment = element.MeshSegments[i];
                 temp.x1 = cSegment.x1;
                 temp.x2 = cSegment.x2;

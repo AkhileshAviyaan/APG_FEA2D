@@ -1,4 +1,4 @@
-﻿namespace FEALiTE2D.Loads
+﻿namespace FEA2D.Loads
 {
     /// <summary>
     /// Represent a class for load cases.

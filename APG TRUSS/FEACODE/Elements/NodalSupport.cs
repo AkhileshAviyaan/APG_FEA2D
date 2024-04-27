@@ -1,6 +1,6 @@
 ﻿using Avalonia.Controls;
 
-namespace FEALiTE2D.Elements
+namespace FEA2D.Elements
 {
     public enum SupportName
     {

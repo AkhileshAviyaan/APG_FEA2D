@@ -1,6 +1,6 @@
-﻿using FEALiTE2D.Structure;
+﻿using FEA2D.Structures;
 
-namespace FEALiTE2D.Meshing
+namespace FEA2D.Meshing
 {
     /// <summary>
     /// This class represents a small linear segment of an element that is bounded by two distances from start node of the element.

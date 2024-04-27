@@ -1,6 +1,6 @@
-﻿using FEALiTE2D.Elements;
+﻿using FEA2D.Elements;
 
-namespace FEALiTE2D.Loads
+namespace FEA2D.Loads
 {
     /// <summary>
     /// Represent a class for Nodal loads in Global or local coordinates system.

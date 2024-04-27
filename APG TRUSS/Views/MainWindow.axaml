@@ -1,15 +1,15 @@
 <Window
-	x:Class="APG_TRUSS.Views.MainWindow"
+	x:Class="APG_FEA2D.Views.MainWindow"
 	xmlns="https://github.com/avaloniaui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:app="using:APG_TRUSS"
+	xmlns:app="using:APG_FEA2D"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-	xmlns:local="using:APG_TRUSS.Views"
+	xmlns:local="using:APG_FEA2D.Views"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	xmlns:paz="using:Avalonia.Controls.PanAndZoom"
-	xmlns:view="using:APG_TRUSS.Views"
-	xmlns:vm="using:APG_TRUSS.ViewModels"
-	Title="APG_TRUSS"
+	xmlns:view="using:APG_FEA2D.Views"
+	xmlns:vm="using:APG_FEA2D.ViewModels"
+	Title="APG_FEA2D"
 	d:DesignHeight="450"
 	d:DesignWidth="800"
 	x:DataType="vm:MainWindowViewModel"
@@ -26,46 +26,46 @@
 			x:DataType="view:CustomSkiaPage"
 			Orientation="Horizontal">
 			<Button Command="{Binding #CustomSkia.Node_Pressed}">
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/1Node.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/1Node.png" />
 			</Button>
 			<Button Command="{Binding #CustomSkia.Frame_Pressed}">
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/2AddFrameElement.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/2AddFrameElement.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/3MemberSection.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/3MemberSection.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/4AddInternalHinge.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/4AddInternalHinge.png" />
 			</Button>
 			<Button Command="{Binding #CustomSkia.Fixed_Pressed}">
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/5FixedEnd.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/5FixedEnd.png" />
 			</Button>
 			<Button Command="{Binding #CustomSkia.Hinge_Pressed}">
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/6HingeSupport.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/6HingeSupport.png" />
 			</Button>
 			<Button Command="{Binding #CustomSkia.Rollar_Pressed}">
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/7Rollar.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/7Rollar.png" />
+			</Button>
+			<Button x:DataType="vm:MainWindowViewModel" Command="{Binding NodalLoadCommand}">
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/9NodalPointLoad.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/9NodalPointLoad.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/10PointLoad.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/10PointLoad.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/11SupportDisplacement.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/11SupportDisplacement.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/12Distributed.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/12Distributed.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/13Moment.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/13Moment.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/14Edit.png" />
 			</Button>
 			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/14Edit.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG TRUSS/AssetsPng/15NoSupport.png" />
+				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/15NoSupport.png" />
 			</Button>
 		</StackPanel>
 		<Grid Grid.Row="1" RowDefinitions="*,Auto,Auto">
@@ -75,8 +75,27 @@
 				HorizontalAlignment="Stretch"
 				VerticalAlignment="Stretch"
 				Background="Black" />
-			<TextBox Grid.Row="1" Text="{Binding #CustomSkia.X}" />
-			<TextBox Grid.Row="2" Text="{Binding #CustomSkia.Y}" />
+			<StackPanel Grid.Row="2">
+				<StackPanel Orientation="Horizontal">
+					<TextBox
+						Grid.Row="1"
+						Width="200"
+						Text="{Binding #CustomSkia.X}" />
+					<TextBox
+						Grid.Row="2"
+						Width="200"
+						Text="{Binding #CustomSkia.Y}" />
+				</StackPanel>
+
+				<StackPanel Orientation="Horizontal">
+					<Label Width="200">Info</Label>
+					<TextBox
+						Grid.Row="2"
+						Width="200"
+						Text="{Binding #CustomSkia.Info}" />
+				</StackPanel>
+			</StackPanel>
+
 		</Grid>
 	</Grid>
 </Window>

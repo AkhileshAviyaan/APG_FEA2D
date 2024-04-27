@@ -1,6 +1,6 @@
 ﻿using MathNet.Numerics.Integration;
 
-namespace FEALiTE2D.Loads
+namespace FEA2D.Loads
 {
     /// <summary>
     /// Represents a uniform loads on frame elements.
@@ -66,7 +66,7 @@ namespace FEALiTE2D.Loads
         public LoadCase LoadCase { get; set; }
 
         /// <inheritdoc/>
-        public double[] GetGlobalFixedEndForces(FEALiTE2D.Elements.FrameElement2D element)
+        public double[] GetGlobalFixedEndForces(FEA2D.Elements.FrameElement2D element)
         {
             double[] fem = new double[6];
             double wx = this.Wx,
@@ -115,7 +115,7 @@ namespace FEALiTE2D.Loads
         }
 
         /// <inheritdoc/>
-        public ILoad GetLoadValueAt(FEALiTE2D.Elements.IElement element, double x)
+        public ILoad GetLoadValueAt(FEA2D.Elements.IElement element, double x)
         {
             FrameUniformLoad load = null;
             double l = element.Length;

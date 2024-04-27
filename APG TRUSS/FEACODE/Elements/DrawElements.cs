@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using SkiaSharp;
 using Avalonia;
 using Avalonia.Controls;
-using APG_TRUSS.Views;
-namespace FEALiTE2D.Elements
+using APG_FEA2D.Views;
+namespace FEA2D.Elements
 {
 	public partial class Node2D
 	{
-		public void Draw(SKCanvas canvas, APG_TRUSS.Views.Grid grid)
+		public void Draw(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
 		{
 			var paint = new SKPaint
 			{
@@ -24,7 +24,7 @@ namespace FEALiTE2D.Elements
 			canvas.DrawCircle((float)pointRealCoord.X,(float)pointRealCoord.Y, 3.5F, paint);
 			canvas.DrawText(this.Label.Substring(1,1), (float)pointRealCoord.X+10, (float)pointRealCoord.Y+10,paint);
 		}
-		public void DrawSupport(SKCanvas canvas, APG_TRUSS.Views.Grid grid)
+		public void DrawSupport(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
 		{
 			var paint = new SKPaint
 			{
@@ -56,7 +56,7 @@ namespace FEALiTE2D.Elements
 	}
 	public partial class FrameElement2D
 	{
-		public void Draw(SKCanvas canvas, APG_TRUSS.Views.Grid grid)
+		public void Draw(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
 		{
 			var paint = new SKPaint
 			{

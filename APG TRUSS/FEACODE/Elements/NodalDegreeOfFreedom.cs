@@ -1,7 +1,7 @@
-﻿namespace FEALiTE2D.Elements
+﻿namespace FEA2D.Elements
 {
     /// <summary>
-    /// Represents an enum for possible degrees of freedom of a single <see cref="FEALiTE2D.Elements.Node2D"/>
+    /// Represents an enum for possible degrees of freedom of a single <see cref="FEA2D.Elements.Node2D"/>
     /// </summary>
     public enum NodalDegreeOfFreedom
     {

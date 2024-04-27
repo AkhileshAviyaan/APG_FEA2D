@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace APG_TRUSS.ViewModels
+using ReactiveUI;
+namespace APG_FEA2D.ViewModels
 {
-	public class ViewModelBase : ObservableObject
+	public class ViewModelBase : ReactiveObject
 	{
 	}
 }

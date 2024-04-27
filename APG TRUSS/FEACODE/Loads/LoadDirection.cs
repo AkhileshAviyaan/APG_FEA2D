@@ -1,4 +1,4 @@
-﻿namespace FEALiTE2D.Loads
+﻿namespace FEA2D.Loads
 {
     /// <summary>
     /// Represents the direction of the load whether it's in Global or Local X, Y, or Z.

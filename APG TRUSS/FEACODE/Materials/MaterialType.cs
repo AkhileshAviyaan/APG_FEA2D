@@ -1,4 +1,4 @@
-﻿namespace FEALiTE2D.Materials
+﻿namespace FEA2D.Materials
 {
     /// <summary>
     /// Material type

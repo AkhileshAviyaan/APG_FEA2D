@@ -1,7 +1,7 @@
-﻿using FEALiTE2D.Materials;
+﻿using FEA2D.Materials;
 using static System.Math;
 
-namespace FEALiTE2D.CrossSections
+namespace FEA2D.CrossSections
 {
     /// <summary>
     /// Represents a Solid Rectangular Cross-Section.

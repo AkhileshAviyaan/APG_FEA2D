@@ -1,12 +1,12 @@
 ﻿using CSparse.Double;
-using FEALiTE2D.Loads;
-using FEALiTE2D.Elements;
+using FEA2D.Loads;
+using FEA2D.Elements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using FEALiTE2D.Helper;
+using FEA2D.Helper;
 
-namespace FEALiTE2D.Structure
+namespace FEA2D.Structures
 {
     /// <summary>
     /// Assemble global stiffness matrices of elements as well as global load vector.

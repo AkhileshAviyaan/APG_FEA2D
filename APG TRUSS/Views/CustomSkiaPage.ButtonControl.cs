@@ -1,7 +1,7 @@
 ﻿using System.Windows.Input;
-using FEALiTE2D.Elements;
+using FEA2D.Elements;
 
-namespace APG_TRUSS.Views
+namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
 	{

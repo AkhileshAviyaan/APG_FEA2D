@@ -1,17 +1,36 @@
-using Avalonia.Controls;
-using Avalonia.Input;
+using ReactiveUI;
+using System.Threading.Tasks;
+using APG_FEA2D.ViewModels;
+using Avalonia.ReactiveUI;
+using APG_FEA2D.Views;
+using APG_FEA2D.ViewModels;
+using System;
+using Microsoft.VisualBasic;
 
-namespace APG_TRUSS.Views
+
+using Avalonia.ReactiveUI;
+using ReactiveUI;
+using System.Threading.Tasks;
+namespace APG_FEA2D.Views
 {
-	public partial class MainWindow : Window
+	public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
 	{
+		public NodalLoadReturn nodalLoad;
 		public MainWindow()
 		{
 			InitializeComponent();
+			this.WhenActivated(action =>
+						   action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
 		}
-		
-		public void Node_Pressed(object sender, PointerPressedEventArgs e)
+
+		private async Task DoShowDialogAsync(IInteractionContext<NodalLoadViewModel,
+										NodalLoadReturn?> interaction)
 		{
+			var dialog = new NodalLoadView();
+			dialog.DataContext = interaction.Input;
+
+			interaction.SetOutput(await dialog.ShowDialog<NodalLoadReturn?>(this));
+
 		}
 	}
 }

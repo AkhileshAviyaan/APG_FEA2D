@@ -1,7 +1,8 @@
 ﻿using Avalonia;
+using Avalonia.ReactiveUI;
 using System;
-
-namespace APG_TRUSS
+using ReactiveUI;
+namespace APG_FEA2D
 {
 	internal sealed class Program
 	{
@@ -14,11 +15,11 @@ namespace APG_TRUSS
 
 		// Avalonia configuration, don't remove; also used by visualdesigner.
 		public static AppBuilder BuildAvaloniaApp()
-			=> AppBuilder.Configure<App>()
-				.UsePlatformDetect()
-				.WithInterFont()
-				.UseSkia()
-				.LogToTrace();
+	=> AppBuilder.Configure<App>()
+		.UsePlatformDetect()
+		.WithInterFont()
+		.LogToTrace()
+		.UseReactiveUI();
 
 
 

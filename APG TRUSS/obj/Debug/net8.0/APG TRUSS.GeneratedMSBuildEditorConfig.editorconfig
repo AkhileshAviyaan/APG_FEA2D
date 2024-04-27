@@ -13,15 +13,15 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = APG_TRUSS
-build_property.ProjectDir = D:\Projects\APG TRUSS\APG_TRUSS\APG TRUSS\
+build_property.ProjectDir = D:\APG_FEA2D\APG TRUSS\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/Projects/APG TRUSS/APG_TRUSS/APG TRUSS/App.axaml]
+[D:/APG_FEA2D/APG TRUSS/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Projects/APG TRUSS/APG_TRUSS/APG TRUSS/Views/CustomSkiaPage.axaml]
+[D:/APG_FEA2D/APG TRUSS/Views/CustomSkiaPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Projects/APG TRUSS/APG_TRUSS/APG TRUSS/Views/MainWindow.axaml]
+[D:/APG_FEA2D/APG TRUSS/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

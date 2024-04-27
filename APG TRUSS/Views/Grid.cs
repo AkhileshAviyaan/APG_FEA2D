@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace APG_TRUSS.Views
+namespace APG_FEA2D.Views
 {
 	public class Grid
 	{

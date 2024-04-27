@@ -1,9 +1,9 @@
-using APG_TRUSS.ViewModels;
+using APG_FEA2D.ViewModels;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using System;
 
-namespace APG_TRUSS
+namespace APG_FEA2D
 {
 	public class ViewLocator : IDataTemplate
 	{

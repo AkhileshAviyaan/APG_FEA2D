@@ -1,11 +1,12 @@
 ﻿using CSparse.Double;
-using FEALiTE2D.CrossSections;
-using FEALiTE2D.Loads;
+using FEA2D.CrossSections;
+using FEA2D.Loads;
 using System.Linq;
 using System.Collections.Generic;
 using static System.Math;
+using FEA2D.Structures;
 
-namespace FEALiTE2D.Elements
+namespace FEA2D.Elements
 {
     /// <summary>
     /// Represents a class for frame elements, each frame element has 3 dof at each node.
@@ -101,7 +102,7 @@ namespace FEALiTE2D.Elements
         public IList<ILoad> Loads { get; set; }
 
         /// <inheritdoc/>
-        public Structure.Structure ParentStructure { get; set; }
+        public Structure ParentStructure { get; set; }
 
         /// <inheritdoc/>
         public Dictionary<LoadCase, double[]> GlobalEndForcesForLoadCase { get; private set; }

@@ -1,4 +1,4 @@
-﻿namespace FEALiTE2D.Loads
+﻿namespace FEA2D.Loads
 {
     /// <summary>
     /// Represents a class for <see cref="FramePointLoad"/>.
@@ -19,7 +19,7 @@
         /// <param name="fx">force parallel to X direction.</param>
         /// <param name="fy">force parallel to Y direction.</param>
         /// <param name="mz">Moment parallel to Z direction.</param>
-        /// <param name="l1">distance from <see cref="FEALiTE2D.Elements. FrameElement2D.StartNode"/>.</param>
+        /// <param name="l1">distance from <see cref="FEA2D.Elements. FrameElement2D.StartNode"/>.</param>
         /// <param name="direction">load direction.</param>
         /// <param name="loadCase">load case.</param>
         public FramePointLoad(double fx, double fy, double mz, double l1, LoadDirection direction, LoadCase loadCase)
@@ -59,7 +59,7 @@
         public LoadCase LoadCase { get; set; }
 
         /// <inheritdoc/>
-        public double[] GetGlobalFixedEndForces(FEALiTE2D.Elements.FrameElement2D element)
+        public double[] GetGlobalFixedEndForces(FEA2D.Elements.FrameElement2D element)
         {
             double[] fem = new double[6];
             double fx = this.Fx,

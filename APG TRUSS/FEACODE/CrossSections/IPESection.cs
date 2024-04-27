@@ -1,12 +1,12 @@
-﻿using FEALiTE2D.Materials;
+﻿using FEA2D.Materials;
 using System;
 
-namespace FEALiTE2D.CrossSections
+namespace FEA2D.CrossSections
 {
     /// <summary>
     /// Represent an European I beams section.
     /// </summary>
-    /// <seealso cref="FEALiTE2D.CrossSections.IFrame2DSection" />
+    /// <seealso cref="FEA2D.CrossSections.IFrame2DSection" />
     [System.Serializable]
     public class IPESection : IFrame2DSection
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FEALiTE2D.Loads
+namespace FEA2D.Loads
 {
     /// <summary>
     /// A class for load combination results when more than one load case acts on the structure.

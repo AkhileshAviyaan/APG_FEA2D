@@ -1,8 +1,9 @@
-﻿using FEALiTE2D.CrossSections;
-using FEALiTE2D.Loads;
+﻿using FEA2D.CrossSections;
+using FEA2D.Loads;
 using System.Collections.Generic;
+using FEA2D.Structures;
 
-namespace FEALiTE2D.Elements
+namespace FEA2D.Elements
 {
     /// <summary>
     /// Represents a class for <see cref="IElement"/> interface
@@ -47,7 +48,7 @@ namespace FEALiTE2D.Elements
         /// <summary>
         /// Gets or sets the parent structure that this element is part of it.
         /// </summary>
-        Structure.Structure ParentStructure { get; set; }
+        Structure ParentStructure { get; set; }
 
         /// <summary>
         /// This is a dictionary for global fixed end forces for each <see cref="IElement"/> at a load case.
@@ -78,7 +79,7 @@ namespace FEALiTE2D.Elements
         /// <summary>
         /// A list of mesh segments of change in external forces and moments.
         /// </summary>
-       List<FEALiTE2D.Meshing.LinearMeshSegment> MeshSegments { get; }
+       List<FEA2D.Meshing.LinearMeshSegment> MeshSegments { get; }
 
         /// <summary>
         /// A collection of additional locations on the <see cref="FrameElement2D"/> to mesh the elements at these locations.

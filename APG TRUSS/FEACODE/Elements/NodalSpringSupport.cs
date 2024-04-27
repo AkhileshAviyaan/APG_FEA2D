@@ -1,4 +1,4 @@
-﻿namespace FEALiTE2D.Elements
+﻿namespace FEA2D.Elements
 {
     /// <summary>
     /// A Class that Represents a nodal spring support that have three values of spring constants. 

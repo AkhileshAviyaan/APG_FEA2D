@@ -1,4 +1,4 @@
-﻿namespace FEALiTE2D.Structure
+﻿namespace FEA2D.Structures
 {
     /// <summary>
     /// Analysis Result

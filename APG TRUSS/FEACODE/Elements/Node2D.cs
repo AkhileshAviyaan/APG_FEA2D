@@ -1,7 +1,9 @@
-﻿using FEALiTE2D.Loads;
+﻿using FEA2D.Loads;
 using System.Collections.Generic;
 using static System.Math;
-namespace FEALiTE2D.Elements
+using FEA2D.Structures;
+
+namespace FEA2D.Elements
 {
 	/// <summary>
 	/// This class represents a node element the can be in any arbitrary location in x-y plan.
@@ -101,7 +103,7 @@ namespace FEALiTE2D.Elements
         /// <summary>
         /// Gets or sets the parent structure that this element is part of it.
         /// </summary>
-        public Structure.Structure ParentStructure { get; set; }
+        public Structure ParentStructure { get; set; }
 
         /// <summary>
         /// Transformation matrix of the Node due to a <see cref="RotaionAngle"/>.

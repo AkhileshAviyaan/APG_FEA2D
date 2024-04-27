@@ -1,8 +1,8 @@
 <Application
-	x:Class="APG_TRUSS.App"
+	x:Class="APG_FEA2D.App"
 	xmlns="https://github.com/avaloniaui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:local="using:APG_TRUSS"
+	xmlns:local="using:APG_FEA2D"
 	RequestedThemeVariant="Dark">
 	<!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
 

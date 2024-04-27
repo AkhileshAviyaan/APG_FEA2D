@@ -1,8 +1,8 @@
-﻿using FEALiTE2D.Helper;
+﻿using FEA2D.Helper;
 using MathNet.Numerics.Integration;
 using System;
 
-namespace FEALiTE2D.Loads
+namespace FEA2D.Loads
 {
     /// <summary>
     /// Represents a trapezoidal loads on frame elements.
@@ -83,7 +83,7 @@ namespace FEALiTE2D.Loads
         public LoadCase LoadCase { get; set; }
 
         /// <inheritdoc/>
-        public double[] GetGlobalFixedEndForces(FEALiTE2D.Elements.FrameElement2D element)
+        public double[] GetGlobalFixedEndForces(FEA2D.Elements.FrameElement2D element)
         {
             double wx1 = this.Wx1,
                    wy1 = this.Wy1,

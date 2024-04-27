@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\APG TRUSS\\APG_TRUSS\\APG TRUSS\\APG TRUSS.csproj": {}
+    "D:\\APG_FEA2D\\APG TRUSS\\APG TRUSS.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\APG TRUSS\\APG_TRUSS\\APG TRUSS\\APG TRUSS.csproj": {
+    "D:\\APG_FEA2D\\APG TRUSS\\APG TRUSS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\APG TRUSS\\APG TRUSS.csproj",
+        "projectUniqueName": "D:\\APG_FEA2D\\APG TRUSS\\APG TRUSS.csproj",
         "projectName": "APG TRUSS",
-        "projectPath": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\APG TRUSS\\APG TRUSS.csproj",
+        "projectPath": "D:\\APG_FEA2D\\APG TRUSS\\APG TRUSS.csproj",
         "packagesPath": "C:\\Users\\1akhi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\APG TRUSS\\APG_TRUSS\\APG TRUSS\\obj\\",
+        "outputPath": "D:\\APG_FEA2D\\APG TRUSS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

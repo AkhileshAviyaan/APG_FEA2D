@@ -3,10 +3,10 @@ using Avalonia.Rendering.SceneGraph;
 using Avalonia.Skia;
 using Avalonia.Threading;
 using Avalonia;
-using FEALiTE2D.Elements;
+using FEA2D.Elements;
 using Avalonia.Platform;
 
-namespace APG_TRUSS.Views
+namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
 	{

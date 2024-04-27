@@ -1,12 +1,14 @@
 ﻿using CSparse.Double;
-using FEALiTE2D.CrossSections;
-using FEALiTE2D.Loads;
-using FEALiTE2D.Meshing;
+using FEA2D.CrossSections;
+using FEA2D.Loads;
+using FEA2D.Meshing;
 using System;
 using System.Collections.Generic;
 using static System.Math;
+using FEA2D.Structures;
 
-namespace FEALiTE2D.Elements
+
+namespace FEA2D.Elements
 {
     /// <summary>
     /// Represents a spring element/Fictitious bar in 2d space that has a spring stiffness and has 2 dof at each node. Spring may be longitudinal or rotational.
@@ -95,7 +97,7 @@ namespace FEALiTE2D.Elements
         public double Length => Sqrt(Pow(EndNode.X - StartNode.X, 2) + Pow(EndNode.Y - StartNode.Y, 2));
 
         /// <inheritdoc/>
-        public Structure.Structure ParentStructure { get; set; }
+        public Structure ParentStructure { get; set; }
 
         /// <inheritdoc/>
         public Dictionary<LoadCase, double[]> GlobalEndForcesForLoadCase { get; private set; }

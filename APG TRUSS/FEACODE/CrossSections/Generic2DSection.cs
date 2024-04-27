@@ -1,7 +1,7 @@
-﻿using FEALiTE2D.Elements;
-using FEALiTE2D.Materials;
+﻿using FEA2D.Elements;
+using FEA2D.Materials;
 
-namespace FEALiTE2D.CrossSections
+namespace FEA2D.CrossSections
 {
     /// <summary>
     /// Creates a generic section (user defined section), the user will have to give all required section properties for the section.

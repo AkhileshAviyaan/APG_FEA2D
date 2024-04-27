@@ -1,6 +1,6 @@
-﻿using FEALiTE2D.Materials;
+﻿using FEA2D.Materials;
 
-namespace FEALiTE2D.CrossSections
+namespace FEA2D.CrossSections
 {
     /// <summary>
     /// Represents a class for <see cref="IFrame2DSection"/>.

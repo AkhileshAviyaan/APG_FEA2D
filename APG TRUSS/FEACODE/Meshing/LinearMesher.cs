@@ -1,16 +1,16 @@
-﻿using FEALiTE2D.Elements;
-using FEALiTE2D.Loads;
+﻿using FEA2D.Elements;
+using FEA2D.Loads;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace FEALiTE2D.Meshing
+namespace FEA2D.Meshing
 {
     /// <summary>
     /// This class represents a mesher for 1D elements.
     /// </summary>
     [System.Serializable]
-    public class LinearMesher : FEALiTE2D.Meshing.ILinearMesher
+    public class LinearMesher : FEA2D.Meshing.ILinearMesher
     {
         /// <summary>
         /// Creates a new instance of <see cref="LinearMesher"/> class.

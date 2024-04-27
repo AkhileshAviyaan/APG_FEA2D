@@ -1,11 +1,11 @@
-﻿using FEALiTE2D.Materials;
+﻿using FEA2D.Materials;
 using static System.Math;
-namespace FEALiTE2D.CrossSections
+namespace FEA2D.CrossSections
 {
     /// <summary>
     /// Represents a Solid Circular Cross-Section.
     /// </summary>
-    /// <seealso cref="FEALiTE2D.CrossSections.IFrame2DSection" />
+    /// <seealso cref="FEA2D.CrossSections.IFrame2DSection" />
     [System.Serializable]
     public class CirclularSection : IFrame2DSection
     {

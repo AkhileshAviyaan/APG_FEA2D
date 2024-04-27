@@ -1,11 +1,11 @@
 ﻿using Avalonia.Input;
-using FEALiTE2D.Elements;
+using FEA2D.Elements;
 using MatrixHelperList;
 using System;
 using System.Linq;
 using Avalonia;
 using Avalonia.Reactive;
-namespace APG_TRUSS.Views
+namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
 	{
@@ -27,12 +27,30 @@ namespace APG_TRUSS.Views
 			Node2D node2D = list.Where(p => (p.X == point.X & p.Y == point.Y)).FirstOrDefault();
 			return node2D;
 		}
+		public void InfoUpdate()
+		{
+			if(IsNodePressed is true)
+			{
+				Info = "Node Pressed";
+			}
+			else
+			{
+				Info = "";
+			}
+		}
 		protected override void OnPointerPressed(PointerPressedEventArgs e)
 		{
+			IsNodePressed = false;
 			OrgCoord = e.GetPosition(this);
 			Coord = _grid.DrawableCoord(OrgCoord);
 			X = Coord.X;
 			Y = Coord.Y;
+			var point = NodeSearch(Coord);
+			if(point is not null)
+			{
+				IsNodePressed = true;
+			}
+			InfoUpdate();
 			if (AddNodeOn == true)
 			{
 				string nodename = "n" + structure.Nodes.Count;
@@ -42,23 +60,26 @@ namespace APG_TRUSS.Views
 			if (AddSupport == true)
 			{
 				var nodalPoint = NodeSearch(Coord);
-				if(nodalPoint!=null) nodalPoint.Support=new NodalSupport(supportType);
+				if (nodalPoint != null) nodalPoint.Support = new NodalSupport(supportType);
 				AddSupport = false;
 			}
 			if (AddFrameOn == true)
 			{
-				var point=NodeSearch(Coord);
-				if(point!=null) nodeCountForFrame++;
-				if (nodeCountForFrame == 1) firstPoint = point;
-				if (nodeCountForFrame == 2)
+				if (point != null)
 				{
-					secondPoint = NodeSearch(Coord);
-					string framename = "e" + structure.Elements.Count;
-					structure.Elements.Add(new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section });
+					nodeCountForFrame++;
+					if (nodeCountForFrame == 1) firstPoint = point;
+					if (nodeCountForFrame == 2)
+					{
+						secondPoint = NodeSearch(Coord);
+						string framename = "e" + structure.Elements.Count;
+						structure.Elements.Add(new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section });
 
-					AddFrameOn = false;
-					nodeCountForFrame = 0;
+						AddFrameOn = false;
+						nodeCountForFrame = 0;
+					}
 				}
+
 			}
 		}
 

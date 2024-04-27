@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FEALiTE2D.Helper
+namespace FEA2D.Helper
 {
     /// <summary>
     /// some extension methods to facilitate the work

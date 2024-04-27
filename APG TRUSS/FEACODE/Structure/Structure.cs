@@ -1,11 +1,11 @@
 ﻿using CSparse;
-using FEALiTE2D.Elements;
-using FEALiTE2D.Loads;
+using FEA2D.Elements;
+using FEA2D.Loads;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FEALiTE2D.Structure
+namespace FEA2D.Structures
 {
     /// <summary>
     /// Represent a structural model that has many elements connected to each other through nodes.
@@ -25,7 +25,7 @@ namespace FEALiTE2D.Structure
             this.LoadCasesToRun = new List<LoadCase>();
             this.FixedEndLoadsVectors = new Dictionary<LoadCase, double[]>();
             this.DisplacementVectors = new Dictionary<LoadCase, double[]>();
-            this.LinearMesher = new FEALiTE2D.Meshing.LinearMesher();
+            this.LinearMesher = new FEA2D.Meshing.LinearMesher();
 
         }
 
@@ -82,7 +82,7 @@ namespace FEALiTE2D.Structure
         /// <summary>
         /// Get or set Linear mesher class for <see cref="IElement"/>.
         /// </summary>
-        public FEALiTE2D.Meshing.ILinearMesher LinearMesher { get; set; }
+        public FEA2D.Meshing.ILinearMesher LinearMesher { get; set; }
 
         /// <summary>
         /// Adds a node to the structure, We check if the node is already added to avoid duplicate nodes.
@@ -217,7 +217,7 @@ namespace FEALiTE2D.Structure
         public void Solve()
         {
             Console.WriteLine(" ================= FEALiTE Analysis Solver ================= ");
-            Console.WriteLine(" FEALiTE2D V1.0.0 - Copyright (C) 2021 Mohamed S. Ibrahim");
+            Console.WriteLine(" FEA2D V1.0.0 - Copyright (C) 2021 Mohamed S. Ibrahim");
             Console.WriteLine(" Linear Analysis of 1D structures.");
             Console.WriteLine($" Analysis Start: {DateTime.Now}.");
 

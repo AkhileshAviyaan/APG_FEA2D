@@ -1,5 +1,5 @@
 ﻿
-namespace FEALiTE2D.Helper
+namespace FEA2D.Helper
 {
     /// <summary>
     /// this class represents a linear equation such Y=mX+b where m is the slope and b is a constant.

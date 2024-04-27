@@ -1,4 +1,4 @@
-﻿namespace FEALiTE2D.Materials
+﻿namespace FEA2D.Materials
 {
     /// <summary>
     /// Represents an interface for <see cref="GenericIsotropicMaterial"/> class

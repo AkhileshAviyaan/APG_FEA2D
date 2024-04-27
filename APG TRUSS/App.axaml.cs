@@ -1,12 +1,12 @@
-using APG_TRUSS.ViewModels;
-using APG_TRUSS.Views;
+using APG_FEA2D.ViewModels;
+using APG_FEA2D.Views;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 
-namespace APG_TRUSS
+namespace APG_FEA2D
 {
 	public partial class App : Application
 	{
