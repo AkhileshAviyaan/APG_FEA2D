@@ -12,20 +12,23 @@ namespace APG_FEA2D.ViewModels
 	{
 		public MainWindowViewModel()
 		{
-			ShowDialog = new Interaction<NodalLoadViewModel, NodalLoad?>();
+			NodalLoadDialog = new Interaction<NodalLoadViewModel, NodalLoad?>();
 			NodalLoadCommand = new RelayCommand(NodalLoadCommandMethod);
+			SupportDisplacementLoadCommand = new RelayCommand(SupportDisplacementLoadCommandMethod);
+			SupportDisplacementLoadDialog = new Interaction<SupportDisplacementLoadViewModel, SupportDisplacementLoad?>();
 		}
 		public ICommand NodalLoadCommand { get; }
+		public ICommand SupportDisplacementLoadCommand { get; }
 		public async void NodalLoadCommandMethod()
 		{
-			try
-			{
-				var result = await ShowDialog.Handle(new NodalLoadViewModel());
-			}
-			catch (ReactiveUI.UnhandledInteractionException _)
-			{
-			}
+			var result = await NodalLoadDialog.Handle(new NodalLoadViewModel());
+
 		}
-		public Interaction<NodalLoadViewModel, NodalLoad?> ShowDialog { get; }
+		public async void SupportDisplacementLoadCommandMethod()
+		{
+			var result = await SupportDisplacementLoadDialog.Handle(new SupportDisplacementLoadViewModel());
+		}
+		public Interaction<NodalLoadViewModel, NodalLoad?> NodalLoadDialog { get; }
+		public Interaction<SupportDisplacementLoadViewModel, SupportDisplacementLoad?> SupportDisplacementLoadDialog { get; }
 	}
 }

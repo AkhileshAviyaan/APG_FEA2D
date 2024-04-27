@@ -61,7 +61,7 @@
 			<Button>
 				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/10PointLoad.png" />
 			</Button>
-			<Button>
+			<Button x:DataType="vm:MainWindowViewModel" Command="{Binding SupportDisplacementLoadCommand}">
 				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/11SupportDisplacement.png" />
 			</Button>
 			<Button>
@@ -85,24 +85,26 @@
 				VerticalAlignment="Stretch"
 				Background="Black" />
 			<StackPanel Grid.Row="2">
-				<StackPanel Orientation="Horizontal">
-					<TextBox
+				<Grid ColumnDefinitions="Auto,Auto" >
+					<TextBlock
 						Grid.Row="1"
+						Grid.Column="0"
 						Width="200"
-						Text="{Binding #CustomSkia.X}" />
-					<TextBox
+						Text="{Binding #CustomSkia.X, StringFormat='X:{0}'}" />
+					<TextBlock
 						Grid.Row="2"
+						Grid.Column="1"
 						Width="200"
-						Text="{Binding #CustomSkia.Y}" />
-				</StackPanel>
+						Text="{Binding #CustomSkia.Y, StringFormat='Y:{0}'}" />
+				</Grid>
 
-				<StackPanel Orientation="Horizontal">
+				<Grid ColumnDefinitions="Auto,*" >
 					<Label Width="200">Info</Label>
-					<TextBox
+					<TextBlock
 						Grid.Row="2"
-						Width="200"
+						Grid.Column="1"
 						Text="{Binding #CustomSkia.Info}" />
-				</StackPanel>
+				</Grid>
 			</StackPanel>
 
 		</Grid>

@@ -31,10 +31,16 @@ namespace FEA2D.Loads
             this.LoadCase = loadCase;
         }
 
-        /// <summary>
-        /// Displacement in X-Direction.
-        /// </summary>
-        public double Ux { get; set; }
+		public SupportDisplacementLoad(string ux, string uy, string rz)
+		{
+			this.Ux = double.Parse(ux);
+			this.Uy = double.Parse(uy);
+			this.Rz = double.Parse(rz);
+		}
+		/// <summary>
+		/// Displacement in X-Direction.
+		/// </summary>
+		public double Ux { get; set; }
 
         /// <summary>
         /// Displacement in Y-Direction.

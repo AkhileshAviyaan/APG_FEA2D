@@ -28,3 +28,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [D:/APG_FEA2D/APG TRUSS/Views/NodalLoadView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/APG_FEA2D/APG TRUSS/Views/SupportDisplacementLoadView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
