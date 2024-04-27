@@ -31,22 +31,24 @@ namespace APG_FEA2D.Views
 		{
 			if(IsNodePressed is true)
 			{
-				Info = "Node Pressed";
+				Info = $"Node {searchedPoint.Label} Pressed";
 			}
 			else
 			{
 				Info = "";
 			}
 		}
+		public Node2D searchedPoint;
 		protected override void OnPointerPressed(PointerPressedEventArgs e)
 		{
 			IsNodePressed = false;
+
 			OrgCoord = e.GetPosition(this);
 			Coord = _grid.DrawableCoord(OrgCoord);
 			X = Coord.X;
 			Y = Coord.Y;
-			var point = NodeSearch(Coord);
-			if(point is not null)
+			searchedPoint = NodeSearch(Coord);
+			if(searchedPoint is not null)
 			{
 				IsNodePressed = true;
 			}
@@ -65,12 +67,13 @@ namespace APG_FEA2D.Views
 			}
 			if (AddFrameOn == true)
 			{
-				if (point != null)
+				if (searchedPoint is not null)
 				{
 					nodeCountForFrame++;
-					if (nodeCountForFrame == 1) firstPoint = point;
+					if (nodeCountForFrame == 1) { firstPoint = searchedPoint; firstPoint.IsNodeSelected = true; }
 					if (nodeCountForFrame == 2)
 					{
+						firstPoint.IsNodeSelected = false;
 						secondPoint = NodeSearch(Coord);
 						string framename = "e" + structure.Elements.Count;
 						structure.Elements.Add(new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section });
@@ -79,10 +82,9 @@ namespace APG_FEA2D.Views
 						nodeCountForFrame = 0;
 					}
 				}
-
 			}
-		}
 
+		}
 		protected override void OnPointerReleased(PointerReleasedEventArgs e)
 		{
 			base.OnPointerReleased(e);

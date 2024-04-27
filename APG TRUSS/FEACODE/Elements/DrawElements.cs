@@ -20,8 +20,23 @@ namespace FEA2D.Elements
 				IsAntialias = true,
 				Style = SKPaintStyle.Fill
 			};
+			var paintWhenSelected = new SKPaint
+			{
+				Color = SKColors.Green,
+				StrokeWidth = 1,
+				IsAntialias = true,
+				Style = SKPaintStyle.Fill
+			};
+			
 			Point pointRealCoord=grid.RealDisplayCoord(new Point(this.X, this.Y));
-			canvas.DrawCircle((float)pointRealCoord.X,(float)pointRealCoord.Y, 3.5F, paint);
+			if(this.IsNodeSelected is true)
+			{
+				canvas.DrawCircle((float)pointRealCoord.X, (float)pointRealCoord.Y, 3.5F, paintWhenSelected);
+			}
+			else
+			{
+				canvas.DrawCircle((float)pointRealCoord.X, (float)pointRealCoord.Y, 3.5F, paint);
+			}
 			canvas.DrawText(this.Label.Substring(1,1), (float)pointRealCoord.X+10, (float)pointRealCoord.Y+10,paint);
 		}
 		public void DrawSupport(SKCanvas canvas, APG_FEA2D.Views.Grid grid)

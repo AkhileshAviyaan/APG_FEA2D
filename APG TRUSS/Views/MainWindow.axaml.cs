@@ -11,6 +11,7 @@ using Microsoft.VisualBasic;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
 using System.Threading.Tasks;
+using FEA2D.Loads;
 namespace APG_FEA2D.Views
 {
 	public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
@@ -28,9 +29,21 @@ namespace APG_FEA2D.Views
 		{
 			var dialog = new NodalLoadView();
 			dialog.DataContext = interaction.Input;
+			if (CustomSkia.IsNodePressed is false) 
+			{
+				CustomSkia.Info = "Please Select Node First";
+				return;
+			}
+			nodalLoad = await dialog.ShowDialog<NodalLoadReturn?>(this);
+			CustomSkia.searchedPoint.NodalLoads.Add(loadCalculation());
+			interaction.SetOutput(nodalLoad);
 
-			interaction.SetOutput(await dialog.ShowDialog<NodalLoadReturn?>(this));
-
+		}
+		public NodalLoad loadCalculation()
+		{
+			double x=nodalLoad.Load*Math.Cos(nodalLoad.Rotation*Math.PI/180);
+			double y=-nodalLoad.Load*Math.Sin(nodalLoad.Rotation*Math.PI/180);
+			return new NodalLoad(x, y, 0, LoadDirection.Local, CustomSkia.loadCase);
 		}
 	}
 }

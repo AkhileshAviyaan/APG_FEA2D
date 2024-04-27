@@ -52,11 +52,12 @@ namespace FEA2D.Elements
         /// A display name for the node that is set by the user.
         /// </summary>
         public string Label { get; set; }
+        public bool IsNodeSelected { get; set; } = false;
 
-        /// <summary>
-        /// A list of dof numbers that is set by the program.
-        /// </summary>
-        public List<int> CoordNumbers { get; internal set; }
+		/// <summary>
+		/// A list of dof numbers that is set by the program.
+		/// </summary>
+		public List<int> CoordNumbers { get; internal set; }
 
         /// <summary>
         /// An angle of rotation of the of local axes of the node around Z-axis.

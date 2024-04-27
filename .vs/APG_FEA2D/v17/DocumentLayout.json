@@ -1,7 +1,64 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\APG_FEA2D\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\feacode\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\feacode\\elements\\node2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\feacode\\elements\\drawelements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\feacode\\elements\\drawelements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\feacode\\elements\\nodalspringsupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\feacode\\elements\\nodalspringsupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.render.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.render.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.properties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.properties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.buttoncontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.buttoncontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\viewmodels\\nodalloadreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\viewmodels\\nodalloadreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\nodalloadview.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\nodalloadview.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +91,186 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Node2D.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Elements\\Node2D.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\FEACODE\\Elements\\Node2D.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Elements\\Node2D.cs",
+              "RelativeToolTip": "APG TRUSS\\FEACODE\\Elements\\Node2D.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAwGkAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:25:10.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DrawElements.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Elements\\DrawElements.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\FEACODE\\Elements\\DrawElements.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Elements\\DrawElements.cs",
+              "RelativeToolTip": "APG TRUSS\\FEACODE\\Elements\\DrawElements.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAcwCIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:23:42.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomSkiaPage.Properties.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.Properties.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\CustomSkiaPage.Properties.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.Properties.cs",
+              "RelativeToolTip": "APG TRUSS\\Views\\CustomSkiaPage.Properties.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAYwBYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:02:13.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomSkiaPage.ButtonControl.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.ButtonControl.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\CustomSkiaPage.ButtonControl.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.ButtonControl.cs",
+              "RelativeToolTip": "APG TRUSS\\Views\\CustomSkiaPage.ButtonControl.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:02:11.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "APG TRUSS\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T03:54:40.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomSkiaPage.MouseControl.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
+              "RelativeToolTip": "APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAowCEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:02:18.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomSkiaPage.axaml.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.axaml.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\CustomSkiaPage.axaml.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.axaml.cs",
+              "RelativeToolTip": "APG TRUSS\\Views\\CustomSkiaPage.axaml.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAC4AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:12:48.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\MainWindow.axaml.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\MainWindow.axaml.cs",
+              "RelativeToolTip": "APG TRUSS\\Views\\MainWindow.axaml.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAewB0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T03:54:51.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomSkiaPage.Render.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.Render.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\CustomSkiaPage.Render.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.Render.cs",
+              "RelativeToolTip": "APG TRUSS\\Views\\CustomSkiaPage.Render.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAkwEUAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:20:37.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NodalSpringSupport.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Elements\\NodalSpringSupport.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\FEACODE\\Elements\\NodalSpringSupport.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Elements\\NodalSpringSupport.cs",
+              "RelativeToolTip": "APG TRUSS\\FEACODE\\Elements\\NodalSpringSupport.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAUwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:25:44.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NodalLoadReturn.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\ViewModels\\NodalLoadReturn.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\ViewModels\\NodalLoadReturn.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\ViewModels\\NodalLoadReturn.cs",
+              "RelativeToolTip": "APG TRUSS\\ViewModels\\NodalLoadReturn.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T04:15:13.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\MainWindow.axaml",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\MainWindow.axaml",
+              "RelativeToolTip": "APG TRUSS\\Views\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-27T03:54:16.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CustomSkiaPage.axaml",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.axaml",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\CustomSkiaPage.axaml",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.axaml",
+              "RelativeToolTip": "APG TRUSS\\Views\\CustomSkiaPage.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-27T04:12:36.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NodalLoadView.axaml.cs",
+              "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\NodalLoadView.axaml.cs",
+              "RelativeDocumentMoniker": "APG TRUSS\\Views\\NodalLoadView.axaml.cs",
+              "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\NodalLoadView.axaml.cs",
+              "RelativeToolTip": "APG TRUSS\\Views\\NodalLoadView.axaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T03:54:12.29Z",
+              "EditorCaption": ""
             }
           ]
         }
