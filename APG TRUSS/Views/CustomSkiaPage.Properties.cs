@@ -5,21 +5,16 @@ using FEA2D.CrossSections;
 using FEA2D.Materials;
 using SkiaSharp;
 using Avalonia.Controls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel;
 using FEA2D.Structures;
+using FEA2D.Loads;
 namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
 	{
 
-		public Structure structure = new Structure();
-		IMaterial material;
-		IFrame2DSection section;
+
+
 		/// <summary>
 		/// Identifies the <seealso cref="Zoom"/> avalonia property.
 		/// </summary>

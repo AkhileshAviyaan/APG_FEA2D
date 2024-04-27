@@ -28,7 +28,7 @@ namespace FEA2D.Structures
             this.LinearMesher = new FEA2D.Meshing.LinearMesher();
 
         }
-
+        public bool AlreadyRun=false;
         /// <summary>
         /// Represents a list of Nodes that connect fem elements together.
         /// </summary>
@@ -277,6 +277,7 @@ namespace FEA2D.Structures
 
             this.Results = new PostProcessor(this);
             this.SetUpMeshingSegments();
+            this.AlreadyRun = true;
         }
 
     }

@@ -42,7 +42,6 @@ namespace APG_FEA2D.Views
 		protected override void OnPointerPressed(PointerPressedEventArgs e)
 		{
 			IsNodePressed = false;
-
 			OrgCoord = e.GetPosition(this);
 			Coord = _grid.DrawableCoord(OrgCoord);
 			X = Coord.X;
@@ -59,15 +58,14 @@ namespace APG_FEA2D.Views
 				structure.AddNode(new Node2D(X, Y, nodename));
 				AddNodeOn = false;
 			}
-			if (AddSupport == true)
+			if (AddSupport == true && IsNodePressed is true)
 			{
-				var nodalPoint = NodeSearch(Coord);
-				if (nodalPoint != null) nodalPoint.Support = new NodalSupport(supportType);
+				searchedPoint.Support = new NodalSupport(supportType);
 				AddSupport = false;
 			}
 			if (AddFrameOn == true)
 			{
-				if (searchedPoint is not null)
+				if (IsNodePressed is true)
 				{
 					nodeCountForFrame++;
 					if (nodeCountForFrame == 1) { firstPoint = searchedPoint; firstPoint.IsNodeSelected = true; }
@@ -76,8 +74,7 @@ namespace APG_FEA2D.Views
 						firstPoint.IsNodeSelected = false;
 						secondPoint = NodeSearch(Coord);
 						string framename = "e" + structure.Elements.Count;
-						structure.Elements.Add(new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section });
-
+						structure.AddElement(new[] { new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section } });
 						AddFrameOn = false;
 						nodeCountForFrame = 0;
 					}

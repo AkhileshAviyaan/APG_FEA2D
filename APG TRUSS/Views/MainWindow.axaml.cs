@@ -33,11 +33,15 @@ namespace APG_FEA2D.Views
 			if (CustomSkia.IsNodePressed is false) 
 			{
 				CustomSkia.Info = "Please Select Node First";
+				interaction.SetOutput(new NodalLoad());
 				return;
 			}
 			nodalLoad = await dialog.ShowDialog<NodalLoad?>(this);
-			nodalLoad.LoadCase = CustomSkia.loadCase;
-			if (nodalLoad is not null) CustomSkia.searchedPoint.NodalLoads.Add(nodalLoad);
+			if (nodalLoad is not null)
+			{
+				nodalLoad.LoadCase = CustomSkia.loadCase;
+				CustomSkia.searchedPoint.NodalLoads.Add(nodalLoad);
+			}
 			interaction.SetOutput(nodalLoad);
 		}
 	}

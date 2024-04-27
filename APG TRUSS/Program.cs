@@ -20,8 +20,5 @@ namespace APG_FEA2D
 		.WithInterFont()
 		.LogToTrace()
 		.UseReactiveUI();
-
-
-
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using FEA2D.Elements;
 using FEA2D.Structures;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -41,7 +42,7 @@ namespace APG_FEA2D.Views
 		public void Run_Pressed()
 		{
 			if (this.structure.Nodes.Count <2 && this.structure.Elements.Count < 1) return;
-
+			if (this.structure.AlreadyRun is true) { Info = "Analysis AlreadyRun"; return; }
 			int restrainCount = 0;
 			foreach (var node in this.structure.Nodes)
 			{
@@ -55,13 +56,11 @@ namespace APG_FEA2D.Views
 				Info = "Cannot Be Solved";
 				return;
 			}
-			try
-			{
+
 				this.structure.Solve();
-			}
-			catch
-			{
-				if (structure.AnalysisStatus is not FEA2D.Structures.AnalysisStatus.Failure)
+				var R1 = structure.Results.GetSupportReaction(firstPoint, loadCase);
+
+				if (structure.AnalysisStatus is FEA2D.Structures.AnalysisStatus.Failure)
 				{
 					Info = "Analysis Failure";
 					return;
@@ -70,8 +69,6 @@ namespace APG_FEA2D.Views
 				{
 					Info = "Analysis Successful";
 				}
-			}
-			
 		}
 	}
 }

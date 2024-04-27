@@ -20,9 +20,11 @@ namespace APG_FEA2D.ViewModels
 		{
 			try
 			{
-				await ShowDialog.Handle(new NodalLoadViewModel());
+				var result = await ShowDialog.Handle(new NodalLoadViewModel());
 			}
-			catch { }
+			catch (ReactiveUI.UnhandledInteractionException _)
+			{
+			}
 		}
 		public Interaction<NodalLoadViewModel, NodalLoad?> ShowDialog { get; }
 	}

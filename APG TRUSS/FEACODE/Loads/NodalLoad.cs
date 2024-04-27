@@ -39,6 +39,7 @@ namespace FEA2D.Loads
             this.F = f;
             this.Angle = angle * Math.PI / 180;
 			this.LoadDirection = LoadDirection.Global;
+
             this.CosAngle=(float)Math.Cos(Angle);
             this.SinAngle=(float)Math.Sin(Angle);
 			this.CosPlusAngle = (float)Math.Cos(Angle+Math.PI/4);
