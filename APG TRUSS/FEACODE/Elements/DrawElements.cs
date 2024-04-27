@@ -98,10 +98,10 @@ namespace FEA2D.Elements
 
 				// Calculate arrow points
 				var startPoint = new SKPoint(x, y);
-				var endPoint = new SKPoint(startPoint.X + arrowLength*load.CosAngle, startPoint.Y-arrowLength*load.SinAngle);
-				var arrowOneSide = new SKPoint(startPoint.X + arrowWidth*load.CosPlusAngle, startPoint.Y - arrowWidth*load.SinPlusAngle);
-				var arrowAnotherSide = new SKPoint(startPoint.X + arrowWidth*load.CosMinusAngle, startPoint.Y - arrowWidth * load.SinMinusAngle);
-			
+				var endPoint = new SKPoint(startPoint.X + arrowLength * load.CosAngle, startPoint.Y - arrowLength * load.SinAngle);
+				var arrowOneSide = new SKPoint(startPoint.X + arrowWidth * load.CosPlusAngle, startPoint.Y - arrowWidth * load.SinPlusAngle);
+				var arrowAnotherSide = new SKPoint(startPoint.X + arrowWidth * load.CosMinusAngle, startPoint.Y - arrowWidth * load.SinMinusAngle);
+
 				// Define arrow path
 				var path1 = new SKPath();
 				path1.MoveTo(arrowOneSide);
@@ -126,15 +126,15 @@ namespace FEA2D.Elements
 					textPaint.IsAntialias = true;
 					textPaint.Color = SKColors.Yellow;
 					var textWidth = textPaint.MeasureText(text);
-					var textX=0f;
-					var textY=0f;
+					var textX = 0f;
+					var textY = 0f;
 
-					if(load.SinAngle>=0 && load.CosAngle > 0)
+					if (load.SinAngle >= 0 && load.CosAngle > 0)
 					{
 						textX = endPoint.X + textWidth * 0.5f;
 						textY = endPoint.Y - textWidth * 0.5f;
 					}
-					else if(load.SinAngle>0 && load.CosAngle < 0)
+					else if (load.SinAngle > 0 && load.CosAngle < 0)
 					{
 						textX = endPoint.X - textWidth * 0.5f;
 						textY = endPoint.Y - textWidth * 0.5f;
@@ -149,9 +149,10 @@ namespace FEA2D.Elements
 						textX = endPoint.X + textWidth * 0.5f;
 						textY = endPoint.Y + textWidth * 0.5f;
 					}
-					
+
 					canvas.DrawText(text, textX, textY, textPaint);
 				}
+
 			}
 		}
 	}
