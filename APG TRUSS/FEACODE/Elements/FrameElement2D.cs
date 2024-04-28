@@ -424,8 +424,13 @@ namespace FEA2D.Elements
                         break;
                     }
             }
-            this.GlobalEndForcesForLoadCase.Add(loadCase, f);
-        }
+            if(this.GlobalEndForcesForLoadCase.ContainsKey(loadCase) is true)
+                this.GlobalEndForcesForLoadCase.Clear();
+
+			this.GlobalEndForcesForLoadCase.Add(loadCase, f);
+			
+
+		}
 
         /// <inheritdoc/>
         public void Initialize()

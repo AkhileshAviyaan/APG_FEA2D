@@ -241,8 +241,12 @@ namespace FEA2D.Structures
             {
                 LoadCase currentLC = this.LoadCasesToRun[i];
                 double[] loadVec = assembler.AssembleGlobalEquivalentLoadVector(currentLC);
+                if (this.FixedEndLoadsVectors.ContainsKey(currentLC) is true)
+                {
+                    this.FixedEndLoadsVectors.Clear();
+				}
                 this.FixedEndLoadsVectors.Add(currentLC, loadVec);
-            }
+			}
 
             CSparse.Factorization.ISparseFactorization<double> cholesky = null;
 
@@ -265,8 +269,12 @@ namespace FEA2D.Structures
 
                 cholesky.Solve(FixedEndLoadsVectors[currentLC], displacementVector);
 
-                this.DisplacementVectors.Add(currentLC, displacementVector);
-            }
+                if(this.DisplacementVectors.ContainsKey(currentLC) is true)
+                {
+                    this.DisplacementVectors.Clear();
+				}
+					this.DisplacementVectors.Add(currentLC, displacementVector);
+			}
 
             AnalysisStatus = AnalysisStatus.Successful;
 
@@ -277,7 +285,7 @@ namespace FEA2D.Structures
 
             this.Results = new PostProcessor(this);
             this.SetUpMeshingSegments();
-            this.AlreadyRun = true;
+            //this.AlreadyRun = true;
         }
 
     }
