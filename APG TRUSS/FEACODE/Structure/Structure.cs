@@ -13,7 +13,7 @@ namespace FEA2D.Structures
     /// To solve a structural model, the model must have at least one degree of freedom.
     /// </summary>
     [System.Serializable]
-    public class Structure
+    public partial class Structure
     {
         /// <summary>
         /// Create a new instance of <see cref="Structure"/>.
