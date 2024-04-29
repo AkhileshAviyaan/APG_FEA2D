@@ -47,15 +47,25 @@ namespace APG_FEA2D.Views
 					customSkiaPage._grid.DrawGrid(customSkiaPage.canvas, Bounds, _matrix);
 					foreach (var node in customSkiaPage.structure.Nodes)
 					{
-						node.Draw(customSkiaPage.canvas, customSkiaPage._grid);
+						node.DrawNode(customSkiaPage.canvas, customSkiaPage._grid);
 						if (node.Support is not null)
 						{
 							node.DrawSupport(customSkiaPage.canvas, customSkiaPage._grid);
+							if (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Successful)
+							{
+								node.force = customSkiaPage.structure.Results.GetSupportReaction(node, customSkiaPage.loadCase);
+								node.DrawReaction(customSkiaPage.canvas, customSkiaPage._grid);
+							}
 						}
 
 						if (node.NodalLoads.Count > 0)
 						{
 							node.DrawNodalLoad(customSkiaPage.canvas, customSkiaPage._grid);
+						}
+						if(node.SupportDisplacementLoad.Count > 0)
+						{
+							//TO DO
+							//node.DrawSupportDisplacementLoad();
 						}
 					}
 					foreach (FrameElement2D element in customSkiaPage.structure.Elements)

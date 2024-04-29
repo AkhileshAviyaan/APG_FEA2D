@@ -10,6 +10,7 @@ using APG_FEA2D.Views;
 using DynamicData;
 using System;
 using System.Numerics;
+using System.Net;
 namespace FEA2D.Elements
 {
 	public partial class Node2D
@@ -23,7 +24,7 @@ namespace FEA2D.Elements
 			x = (float)pointRealCoord.X;
 			y = (float)pointRealCoord.Y;
 		}
-		public void Draw(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
+		public void DrawNode(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
 		{
 			var paintForArc = new SKPaint
 			{
@@ -166,21 +167,157 @@ namespace FEA2D.Elements
 
 			}
 		}
-		public void DrawMoment(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
+		public void DrawReaction(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
 		{
+			float arrowLength = 50;
+			float arrowWidth = 10;
 			var paint = new SKPaint
 			{
-				Color = SKColors.Yellow,
+				Color = SKColors.Green,
 				StrokeWidth = 1,
 				IsAntialias = true,
 				Style = SKPaintStyle.Stroke
 			};
-			float radius = 50;
-			float startAngle = 220;
-			float sweepAngle = -200;
 
-			//float startAngle = -30;
-			//float sweepAngle = 200;
+			RPoint(grid.RealDisplayCoord(new Point(this.X, this.Y)));
+			double rotationAngle = 0;
+
+			if (this.force.Fx != 0 && Math.Abs(this.force.Fx) > 1e-3)
+			{
+				if (this.force.Fx > 0)
+				{
+					rotationAngle = Math.PI;
+				}
+				else
+				{
+					rotationAngle = 0;
+				}
+				this.DrawForce(this.force.Fy,rotationAngle, canvas, grid);
+			}
+			if (this.force.Fy != 0 && Math.Abs(this.force.Fy) > 1e-3)
+			{
+				if (this.force.Fy > 0)
+				{
+					rotationAngle = 3*Math.PI/2;
+				}
+				else
+				{
+					rotationAngle = Math.PI/2;
+				}
+			this.DrawForce(this.force.Fy,rotationAngle,canvas,grid);
+			}
+
+			this.DrawMoment(canvas,grid);
+
+		}
+		public void DrawForce(double force,double rotationAngle, SKCanvas canvas, APG_FEA2D.Views.Grid grid)
+		{
+
+			var paint = new SKPaint
+			{
+				Color = SKColors.Green,
+				StrokeWidth = 1,
+				IsAntialias = true,
+				Style = SKPaintStyle.Stroke
+			};
+			float arrowLength = 50;
+			float arrowWidth = 10;
+			float CosAngle = 0;
+			float SinAngle = 0;
+			float CosPlusAngle = 0;
+			float SinPlusAngle = 0;
+			float CosMinusAngle = 0;
+			float SinMinusAngle = 0;
+			CosAngle = (float)Math.Cos(rotationAngle);
+			SinAngle = (float)Math.Sin(rotationAngle);
+			CosPlusAngle = (float)Math.Cos(rotationAngle + Math.PI / 4);
+			SinPlusAngle = (float)Math.Sin(rotationAngle + Math.PI / 4);
+			CosMinusAngle = (float)Math.Cos(rotationAngle - Math.PI / 4);
+			SinMinusAngle = (float)Math.Sin(rotationAngle - Math.PI / 4);
+			// Calculate arrow points
+			var startPoint = new SKPoint(x, y);
+			var endPoint = new SKPoint(startPoint.X + arrowLength * CosAngle, startPoint.Y - arrowLength * SinAngle);
+			var arrowOneSide = new SKPoint(startPoint.X + arrowWidth * CosPlusAngle, startPoint.Y - arrowWidth * SinPlusAngle);
+			var arrowAnotherSide = new SKPoint(startPoint.X + arrowWidth * CosMinusAngle, startPoint.Y - arrowWidth * SinMinusAngle);
+
+			// Define arrow path
+			var path1 = new SKPath();
+			path1.MoveTo(arrowOneSide);
+			path1.LineTo(startPoint);
+			path1.LineTo(arrowAnotherSide);
+
+			var path2 = new SKPath();
+			path2.MoveTo(startPoint);
+			path2.LineTo(endPoint);
+
+
+			// Draw arrow
+			canvas.DrawPath(path1, paint);
+			canvas.DrawPath(path2, paint);
+
+			float textSize = 10;
+			// Draw text at the tail end of arrow
+			var text = $"{Math.Abs(force):f3}";
+			using (var textPaint = new SKPaint())
+			{
+				textPaint.TextSize = textSize;
+				textPaint.IsAntialias = true;
+				textPaint.Color = SKColors.Yellow;
+				var textWidth = textPaint.MeasureText(text);
+				var textX = 0f;
+				var textY = 0f;
+
+				if (SinAngle >= 0 && CosAngle > 0)
+				{
+					textX = endPoint.X + textWidth * 0.5f;
+					textY = endPoint.Y - textWidth * 0.5f;
+				}
+				else if (SinAngle > 0 && CosAngle < 0)
+				{
+					textX = endPoint.X - textWidth * 0.5f;
+					textY = endPoint.Y - textWidth * 0.5f;
+				}
+				else if (SinAngle < 0 && CosAngle < 0)
+				{
+					textX = endPoint.X - textWidth * 0.5f;
+					textY = endPoint.Y + textWidth * 0.5f;
+				}
+				else if (SinAngle < 0 && CosAngle > 0)
+				{
+					textX = endPoint.X + textWidth * 0.5f;
+					textY = endPoint.Y + textWidth * 0.5f;
+				}
+
+				canvas.DrawText(text, textX, textY, textPaint);
+			}
+		}
+		public void DrawMoment(SKCanvas canvas, APG_FEA2D.Views.Grid grid)
+		{
+			var paint = new SKPaint
+			{
+				Color = SKColors.Green,
+				StrokeWidth = 1,
+				IsAntialias = true,
+				Style = SKPaintStyle.Stroke
+			};
+			float radius = 25;
+			float startAngle = 0;
+			float sweepAngle = 0;
+			if (this.force.Mz == 0) return;
+			if (this.Support.Rz is false) return ;
+			if (this.force.Mz > 0)
+			{
+
+				startAngle = 220;
+				sweepAngle = -200;
+			}
+			else
+			{
+				sweepAngle = 200;
+				startAngle = -30;
+
+			}
+
 			var arcPath = new SKPath();
 			var rect = new SKRect(x - radius, y - radius, x + radius, y + radius);
 			arcPath.AddArc(rect, startAngle, sweepAngle);
@@ -210,6 +347,20 @@ namespace FEA2D.Elements
 			arrowPath.LineTo(headAnotherEndX, headAnotherEndY);
 			canvas.DrawPath(arrowPath, paint);
 			canvas.DrawPath(arcPath, paint);
+			float textSize = 10;
+			// Draw text at the tail end of arrow
+			var text = $"{Math.Abs(this.force.Mz):f3}";
+			using (var textPaint = new SKPaint())
+			{
+				textPaint.TextSize = textSize;
+				textPaint.IsAntialias = true;
+				textPaint.Color = SKColors.Yellow;
+				var textWidth = textPaint.MeasureText(text);
+
+
+
+				canvas.DrawText(text, x, y + radius + 3f, textPaint);
+			}
 		}
 	}
 	public partial class FrameElement2D

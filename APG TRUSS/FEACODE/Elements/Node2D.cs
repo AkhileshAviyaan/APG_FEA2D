@@ -64,10 +64,16 @@ namespace FEA2D.Elements
         /// </summary>
         public double RotaionAngle { get; set; }
 
-        /// <summary>
-        /// Gets number of degrees of freedom of the node.
-        /// </summary>
-        public int DOF
+		/// <summary>
+		/// Force associated with node
+		/// </summary>
+		public Force force { get; set; }
+
+
+		/// <summary>
+		/// Gets number of degrees of freedom of the node.
+		/// </summary>
+		public int DOF
         {
             get
             {

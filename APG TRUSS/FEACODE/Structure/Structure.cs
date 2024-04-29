@@ -34,10 +34,11 @@ namespace FEA2D.Structures
         /// </summary>
         public List<Node2D> Nodes { get; set; }
 
-        /// <summary>
-        /// Represents a list of fem elements.
-        /// </summary>
-        public List<IElement> Elements { get; set; }
+
+		/// <summary>
+		/// Represents a list of fem elements.
+		/// </summary>
+		public List<IElement> Elements { get; set; }
 
         /// <summary>
         /// A dictionary of coordinates and assembled global stiffness matrices
@@ -62,7 +63,7 @@ namespace FEA2D.Structures
         /// <summary>
         /// Gets or sets the analysis result.
         /// </summary>
-        public AnalysisStatus AnalysisStatus { get; private set; }
+        public AnalysisStatus AnalysisStatus { get; private set; } = AnalysisStatus.Failure;
 
         /// <summary>
         /// Gets or sets the tolerance.
