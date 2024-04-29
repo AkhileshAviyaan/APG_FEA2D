@@ -16,7 +16,7 @@ namespace APG_FEA2D.Views
 		public double zoom;
 		public float w;
 		public float h;
-		float spacing;
+		public float spacing;
 		int wNo;
 		int hNo;
 		float sideExtentW;

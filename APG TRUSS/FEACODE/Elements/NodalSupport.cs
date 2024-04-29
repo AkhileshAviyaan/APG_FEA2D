@@ -32,8 +32,8 @@ namespace FEA2D.Elements
         {
             if( a == SupportName.Roller)
             {
-				this.Ux = true;
-				this.Uy = false;
+				this.Ux = false;
+				this.Uy = true;
 				this.Rz = false;
 			}
 			if (a == SupportName.Hinge)

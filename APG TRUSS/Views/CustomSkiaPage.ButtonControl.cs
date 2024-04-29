@@ -9,6 +9,33 @@ namespace APG_FEA2D.Views
 	public partial class CustomSkiaPage
 	{
 		public SupportName supportType;
+
+		public ICommand AFDCommand { get; }
+		public void AFD_Pressed()
+		{
+			AFDOn = true;
+		}
+		public ICommand SFDCommand { get; }
+		public void SFD_Pressed()
+		{
+			SFDOn = true;
+		}
+		public ICommand BMDCommand { get; }
+		public void BMD_Pressed()
+		{
+			BMDOn = true;
+		}
+		public ICommand DisplacementCommand { get; }
+		public void Displacement_Pressed()
+		{
+			DisplacementOn = true;
+		}
+
+		public ICommand ScaledDisplacementCommand { get; }
+		public void ScaledDisplacement_Pressed()
+		{
+			ScaledDisplacementOn = true;
+		}
 		public ICommand NodeCommand { get; }
 		public void Node_Pressed()
 		{

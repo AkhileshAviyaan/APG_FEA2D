@@ -49,6 +49,11 @@ namespace APG_FEA2D.Views
 		public bool AddSupport = false;
 		public bool AddNodalLoad = false;
 		public bool AddFrameLoad = false;
+		public bool AFDOn = false;
+		public bool SFDOn = false;
+		public bool BMDOn = false;
+		public bool DisplacementOn = false;
+		public bool ScaledDisplacementOn = false;
 
 		/// <summary>
 		/// Gets the pan offset for y axis.

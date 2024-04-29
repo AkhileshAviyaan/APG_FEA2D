@@ -31,9 +31,11 @@
 					<Label>Run</Label>
 				</StackPanel>
 			</Button>
-			<Button Content="AFD" />
+			<Button Command="{Binding #CustomSkia.AFDCommand}" Content="AFD" />
 			<Button Content="SFD" />
 			<Button Content="BMD" />
+			<Button Content="DEF" />
+			<Button Content="SC-DEF" />
 			<Button Command="{Binding #CustomSkia.Node_Pressed}">
 				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/1Node.png" />
 			</Button>
@@ -85,7 +87,7 @@
 				VerticalAlignment="Stretch"
 				Background="Black" />
 			<StackPanel Grid.Row="2">
-				<Grid ColumnDefinitions="Auto,Auto" >
+				<Grid ColumnDefinitions="Auto,Auto">
 					<TextBlock
 						Grid.Row="1"
 						Grid.Column="0"
@@ -98,7 +100,7 @@
 						Text="{Binding #CustomSkia.Y, StringFormat='Y:{0}'}" />
 				</Grid>
 
-				<Grid ColumnDefinitions="Auto,*" >
+				<Grid ColumnDefinitions="Auto,*">
 					<Label Width="200">Info</Label>
 					<TextBlock
 						Grid.Row="2"
