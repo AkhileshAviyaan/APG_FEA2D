@@ -107,7 +107,7 @@ namespace APG_FEA2D.Views
 			}
 			ButtonName button = PanButton;
 			PointerPointProperties properties = e.GetCurrentPoint(this).Properties;
-			if ((properties.IsMiddleButtonPressed && button == ButtonName.Middle))
+			if ((properties.IsRightButtonPressed && button == ButtonName.Right))
 			{
 				if (IsPanning == false)
 				{

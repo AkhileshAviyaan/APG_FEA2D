@@ -11,6 +11,8 @@ using FEA2D.Loads;
 using Avalonia.Data;
 using PanAndZoom;
 using APG_FEA2D.Helper;
+using System.Collections.Generic;
+using Avalonia.Automation.Peers;
 namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
@@ -21,7 +23,7 @@ namespace APG_FEA2D.Views
 		/// Identifies the <seealso cref="PanButton"/> avalonia property.
 		/// </summary>
 		public static readonly StyledProperty<ButtonName> PanButtonProperty =
-			AvaloniaProperty.Register<CustomSkiaPage, ButtonName>(nameof(CustomSkiaPage), ButtonName.Middle, false, BindingMode.TwoWay);
+			AvaloniaProperty.Register<CustomSkiaPage, ButtonName>(nameof(CustomSkiaPage), ButtonName.Right, false, BindingMode.TwoWay);
 		/// <summary>
 		/// Identifies the <seealso cref="Zoom"/> avalonia property.
 		/// </summary>
@@ -64,11 +66,10 @@ namespace APG_FEA2D.Views
 		public bool AddSupport = false;
 		public bool AddNodalLoad = false;
 		public bool AddFrameLoad = false;
-		public bool AFDOn = false;
-		public bool SFDOn = false;
-		public bool BMDOn = false;
-		public bool DisplacementOn = false;
-		public bool ScaledDisplacementOn = false;
+
+
+		public Dictionary<string, int> DiagramModeDictionary = new Dictionary<string, int>() { { "None", 0 },{"AFD",1}, { "SFD", 2 }, { "BMD", 3 }, { "Displacement", 4 },{"Slope",5} };
+
 
 		/// <summary>
 		/// Gets the pan offset for y axis.

@@ -9,42 +9,55 @@ namespace APG_FEA2D.Views
 	public partial class CustomSkiaPage
 	{
 		public SupportName supportType;
-
+		public string DiagramMode;
+		public ICommand NoneCommand { get; }
+		public void None_Pressed()
+		{
+			DiagramMode = "None";
+		}
 		public ICommand AFDCommand { get; }
 		public void AFD_Pressed()
 		{
-			AFDOn = true;
+			DiagramMode = "AFD";
+
 		}
 		public ICommand SFDCommand { get; }
 		public void SFD_Pressed()
 		{
-			SFDOn = true;
+			DiagramMode = "SFD";
+
 		}
 		public ICommand BMDCommand { get; }
 		public void BMD_Pressed()
 		{
-			BMDOn = true;
+			DiagramMode = "BMD";
+
 		}
-		public ICommand DisplacementCommand { get; }
-		public void Displacement_Pressed()
+		public ICommand DISPLACEMENTCommand { get; }
+		public void DISPLACEMENT_Pressed()
 		{
-			DisplacementOn = true;
+			DiagramMode = "Displacement";
+
 		}
 
-		public ICommand ScaledDisplacementCommand { get; }
-		public void ScaledDisplacement_Pressed()
+		public ICommand SLOPECommand { get; }
+		public void SLOPE_Pressed()
 		{
-			ScaledDisplacementOn = true;
+			DiagramMode = "Slope";
 		}
 		public ICommand NodeCommand { get; }
 		public void Node_Pressed()
 		{
 			AddNodeOn = true;
+			AddFrameOn = false;
+			AddSupport = false;
 		}
 		public ICommand FrameCommand { get; }
 		public void Frame_Pressed()
 		{
 			AddFrameOn = true;
+			AddSupport = false;
+			AddNodeOn = false;
 		}
 
 		public ICommand RollerCommand { get; }
@@ -52,18 +65,25 @@ namespace APG_FEA2D.Views
 		{
 			supportType = SupportName.Roller;
 			AddSupport = true;
+			AddNodeOn = false;
+			AddFrameOn = false;
+
 		}
 		public ICommand HingeCommand { get; }
 		public void Hinge_Pressed()
 		{
 			supportType = SupportName.Hinge;
 			AddSupport = true;
+			AddNodeOn = false;
+			AddFrameOn = false;
 		}
 		public ICommand FixedCommand { get; }
 		public void Fixed_Pressed()
 		{
 			supportType = SupportName.Fixed;
 			AddSupport = true;
+			AddNodeOn = false;
+			AddFrameOn = false;
 		}
 		public ICommand RunCommand { get; }
 		public void Run_Pressed()

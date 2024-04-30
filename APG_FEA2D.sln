@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APG_FEA2D", "APG TRUSS\APG_FEA2D.csproj", "{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureTest", "StructureTest\StructureTest.csproj", "{0EBBC693-DBAB-41AD-8CF0-5BD5AFB48E9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructureTest", "StructureTest\StructureTest.csproj", "{0EBBC693-DBAB-41AD-8CF0-5BD5AFB48E9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

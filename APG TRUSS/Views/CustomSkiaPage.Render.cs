@@ -72,9 +72,36 @@ namespace APG_FEA2D.Views
 					{
 						element.Draw(customSkiaPage.canvas, customSkiaPage._grid);
 					}
-					if (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Successful && customSkiaPage.AFDOn is true)
+					if (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Successful && customSkiaPage.DiagramMode is not null)
+
 					{
-						customSkiaPage.structure.DrawAFD(customSkiaPage.canvas, customSkiaPage._grid);
+
+						int drawCase = customSkiaPage.DiagramModeDictionary[customSkiaPage.DiagramMode];
+						if (drawCase == 0)
+						{
+							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "None");
+						}
+						else if (drawCase == 1)
+						{
+							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Fx");
+						}
+						else if (drawCase == 2)
+						{
+							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Fy");
+						}
+						else if (drawCase == 3)
+						{
+							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Mz");
+						}
+						else if (drawCase == 4)
+						{
+							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Ux");
+						}
+						else if (drawCase == 5)
+						{
+							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Rz");
+						}
+						//customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid);
 					}
 				}
 			}

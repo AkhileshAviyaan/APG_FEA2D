@@ -31,11 +31,12 @@
 					<Label>Run</Label>
 				</StackPanel>
 			</Button>
+			<Button Command="{Binding #CustomSkia.NoneCommand}" Content="None" />
 			<Button Command="{Binding #CustomSkia.AFDCommand}" Content="AFD" />
-			<Button Content="SFD" />
-			<Button Content="BMD" />
-			<Button Content="DEF" />
-			<Button Content="SC-DEF" />
+			<Button Command="{Binding #CustomSkia.SFDCommand}" Content="SFD" />
+			<Button Command="{Binding #CustomSkia.BMDCommand}" Content="BMD" />
+			<Button Command="{Binding #CustomSkia.DISPLACEMENTCommand}" Content="DEF" />
+			<Button Command="{Binding #CustomSkia.SLOPECommand}" Content="SLOPE" />
 			<Button Command="{Binding #CustomSkia.Node_Pressed}">
 				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/1Node.png" />
 			</Button>

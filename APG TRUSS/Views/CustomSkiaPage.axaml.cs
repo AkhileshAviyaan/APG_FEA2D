@@ -39,11 +39,12 @@ namespace APG_FEA2D.Views
 			FixedCommand = new RelayCommand(Fixed_Pressed);
 			RunCommand = new RelayCommand(Run_Pressed);
 
+			NoneCommand= new RelayCommand(None_Pressed);
 			AFDCommand = new RelayCommand(AFD_Pressed);
 			SFDCommand = new RelayCommand(SFD_Pressed);
 			BMDCommand = new RelayCommand(BMD_Pressed);
-			DisplacementCommand = new RelayCommand(Displacement_Pressed);
-			ScaledDisplacementCommand = new RelayCommand(ScaledDisplacement_Pressed);
+			DISPLACEMENTCommand = new RelayCommand(DISPLACEMENT_Pressed);
+			SLOPECommand = new RelayCommand(SLOPE_Pressed);
 
 			structure = new Structure();
 			material = new GenericIsotropicMaterial() { E = 2E11, U = 0.2, Label = "Steel", Alpha = 0, Gama = 0, MaterialType = MaterialType.Steel };
