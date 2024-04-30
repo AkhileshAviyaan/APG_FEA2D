@@ -8,13 +8,20 @@ using Avalonia.Controls;
 using System.ComponentModel;
 using FEA2D.Structures;
 using FEA2D.Loads;
+using Avalonia.Data;
+using PanAndZoom;
+using APG_FEA2D.Helper;
 namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
 	{
 
 
-
+		/// <summary>
+		/// Identifies the <seealso cref="PanButton"/> avalonia property.
+		/// </summary>
+		public static readonly StyledProperty<ButtonName> PanButtonProperty =
+			AvaloniaProperty.Register<CustomSkiaPage, ButtonName>(nameof(CustomSkiaPage), ButtonName.Middle, false, BindingMode.TwoWay);
 		/// <summary>
 		/// Identifies the <seealso cref="Zoom"/> avalonia property.
 		/// </summary>
@@ -37,6 +44,14 @@ namespace APG_FEA2D.Views
 		/// </summary>
 		public double Zoom => _zoom;
 
+		/// <summary>
+		/// Gets or sets pan input button.
+		/// </summary>
+		public ButtonName PanButton
+		{
+			get => GetValue(PanButtonProperty);
+			set => SetValue(PanButtonProperty, value);
+		}
 		/// <summary>
 		/// Gets the pan offset for x axis.
 		/// </summary>
@@ -72,12 +87,16 @@ namespace APG_FEA2D.Views
 		public Point OrgCoord;
 		public Point Coord;
 		public event PropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
 
 		public bool IsNodePressed = false;
 		private string _info;
 		public string Info
 		{
-			get { return _info; }
+			get=> _info;
 			set
 			{
 				_info = value;
@@ -85,10 +104,6 @@ namespace APG_FEA2D.Views
 			}
 		}
 
-		protected virtual void OnPropertyChanged(string propertyName)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-		}
 		private double _zoom = 2;
 		private double _x;
 		public double X

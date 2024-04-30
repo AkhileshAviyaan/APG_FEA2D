@@ -5,6 +5,9 @@ using System;
 using System.Linq;
 using Avalonia;
 using Avalonia.Reactive;
+using PanAndZoom;
+using APG_FEA2D.Helper;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
@@ -29,7 +32,7 @@ namespace APG_FEA2D.Views
 		}
 		public void InfoUpdate()
 		{
-			if(IsNodePressed is true)
+			if (IsNodePressed is true)
 			{
 				Info = $"Node {searchedPoint.Label} Pressed";
 			}
@@ -39,6 +42,28 @@ namespace APG_FEA2D.Views
 			}
 		}
 		public Node2D searchedPoint;
+		public bool IsPanning = false;
+
+		public Point2D _previousPoint;
+		public Point2D _toPan;
+		public Point2D PreviousPoint
+		{
+			get => _previousPoint;
+			set
+			{
+				_previousPoint = value;
+				OnPropertyChanged(nameof(PreviousPoint));
+			}
+		}
+		public Point2D ToPan
+		{
+			get => _toPan;
+			set
+			{
+				_toPan = value;
+				OnPropertyChanged(nameof(ToPan));
+			}
+		}
 		protected override void OnPointerPressed(PointerPressedEventArgs e)
 		{
 			IsNodePressed = false;
@@ -47,7 +72,7 @@ namespace APG_FEA2D.Views
 			X = Coord.X;
 			Y = Coord.Y;
 			searchedPoint = NodeSearch(Coord);
-			if(searchedPoint is not null)
+			if (searchedPoint is not null)
 			{
 				IsNodePressed = true;
 			}
@@ -80,16 +105,40 @@ namespace APG_FEA2D.Views
 					}
 				}
 			}
-
+			ButtonName button = PanButton;
+			PointerPointProperties properties = e.GetCurrentPoint(this).Properties;
+			if ((properties.IsMiddleButtonPressed && button == ButtonName.Middle))
+			{
+				if (IsPanning == false)
+				{
+					PreviousPoint =(Point2D) e.GetPosition(this);
+					IsPanning = true;
+				}
+			}
+			else { return; }
 		}
 		protected override void OnPointerReleased(PointerReleasedEventArgs e)
 		{
 			base.OnPointerReleased(e);
+			if(IsPanning == false) { return; }
+			IsPanning = false;
 		}
 
 		protected override void OnPointerMoved(PointerEventArgs e)
 		{
 			base.OnPointerMoved(e);
+			if (IsPanning is not true)
+			{
+				return;
+			}
+			var point = e.GetPosition(this);
+			double x = point.X;
+			double y = point.Y;
+			var dx = x - PreviousPoint.X;
+			var dy = y - PreviousPoint.Y;
+			ToPan = (Point2D)new Point(dx, dy);
+			PreviousPoint = (Point2D)new Point(point.X, point.Y);
+			IsPanning = true;
 		}
 	}
 }

@@ -108,8 +108,13 @@
 						Grid.Column="1"
 						Text="{Binding #CustomSkia.Info}" />
 				</Grid>
+				<Grid ColumnDefinitions="*,*,*,*">
+					<TextBlock Grid.Column="0" Text="{Binding #CustomSkia.PreviousPoint.X, StringFormat='CurrentX:{0}'}" />
+					<TextBlock Grid.Column="1" Text="{Binding #CustomSkia.PreviousPoint.Y, StringFormat='CurrentY:{0}'}" />
+					<TextBlock Grid.Column="2" Text="{Binding #CustomSkia.ToPan.X, StringFormat='dx:{0}'}" />
+					<TextBlock Grid.Column="3" Text="{Binding #CustomSkia.ToPan.Y, StringFormat='dy:{0}'}" />
+				</Grid>
 			</StackPanel>
-
 		</Grid>
 	</Grid>
 </Window>
