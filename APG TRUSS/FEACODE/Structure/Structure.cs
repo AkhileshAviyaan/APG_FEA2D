@@ -40,7 +40,7 @@ namespace FEA2D.Structures
 		/// </summary>
 		public List<IElement> Elements { get; set; }
 
-        /// <summary>
+        /// <summary> 
         /// A dictionary of coordinates and assembled global stiffness matrices
         /// </summary>
         public CSparse.Double.SparseMatrix StructuralStiffnessMatrix { get; set; }
