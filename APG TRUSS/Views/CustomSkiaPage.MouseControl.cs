@@ -8,6 +8,8 @@ using Avalonia.Reactive;
 using PanAndZoom;
 using APG_FEA2D.Helper;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Drawing;
+using System.Reactive.Concurrency;
 namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage
@@ -24,7 +26,7 @@ namespace APG_FEA2D.Views
 		int nodeCountForFrame = 0;
 		Node2D firstPoint;
 		Node2D secondPoint;
-		public Node2D NodeSearch(Point point)
+		public Node2D NodeSearch(Avalonia.Point point)
 		{
 			var list = structure.Nodes;
 			Node2D node2D = list.Where(p => (p.X == point.X & p.Y == point.Y)).FirstOrDefault();
@@ -120,10 +122,11 @@ namespace APG_FEA2D.Views
 		protected override void OnPointerReleased(PointerReleasedEventArgs e)
 		{
 			base.OnPointerReleased(e);
-			if(IsPanning == false) { return; }
+			PreviousPoint = new Point2D(CurrentMovingPoint.X, CurrentMovingPoint.Y);
+			if (IsPanning == false) { return; }
 			IsPanning = false;
 		}
-
+		public Point2D CurrentMovingPoint;
 		protected override void OnPointerMoved(PointerEventArgs e)
 		{
 			base.OnPointerMoved(e);
@@ -131,13 +134,12 @@ namespace APG_FEA2D.Views
 			{
 				return;
 			}
-			var point = e.GetPosition(this);
-			double x = point.X;
-			double y = point.Y;
+			CurrentMovingPoint = (Point2D) e.GetPosition(this);
+			double x = CurrentMovingPoint.X;
+			double y = CurrentMovingPoint.Y;
 			var dx = x - PreviousPoint.X;
 			var dy = y - PreviousPoint.Y;
-			ToPan = (Point2D)new Point(dx, dy);
-			PreviousPoint = (Point2D)new Point(point.X, point.Y);
+			ToPan = (Point2D)new Avalonia.Point(dx, dy);
 			IsPanning = true;
 		}
 	}
