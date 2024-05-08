@@ -94,12 +94,12 @@
 						Grid.Row="1"
 						Grid.Column="0"
 						Width="200"
-						Text="{Binding #CustomSkia.X, StringFormat='X:{0}'}" />
+						Text="{Binding #CustomSkia.X, StringFormat='X:{0:F2}'}" />
 					<TextBlock
 						Grid.Row="2"
 						Grid.Column="1"
 						Width="200"
-						Text="{Binding #CustomSkia.Y, StringFormat='Y:{0}'}" />
+						Text="{Binding #CustomSkia.Y, StringFormat='Y:{0:F2}'}" />
 				</Grid>
 
 				<Grid ColumnDefinitions="Auto,*">

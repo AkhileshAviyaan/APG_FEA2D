@@ -96,10 +96,10 @@ namespace FEA2D.Structures
 					}
 				}
 				int segmentNo = this.LinearMesher.NumberSegements;
-				double slopeAngle = Math.Atan((element.EndNode.Y - element.StartNode.Y) / (element.EndNode.X - element.StartNode.X));
+				double slopeAngle = Math.Atan2((element.EndNode.Y - element.StartNode.Y) , (element.EndNode.X - element.StartNode.X));
 				double elementPerpendicularSlopeAngle = Math.Atan(-1 / Math.Tan(slopeAngle));
 				Point segmentStartPointInPixel = _grid.RealDisplayCoord(new Point(element.StartNode.X, element.StartNode.Y));
-				double delL = element.Length / segmentNo * _grid.spacing;
+				double delL = element.Length / segmentNo * _grid.spacing /Grid.SpacingEquivalentInGrid;
 				Point delPointChange = new Point(delL * Math.Cos(slopeAngle), -delL * Math.Sin(slopeAngle));
 				for (int i = 0; i < segmentNo; i++)
 				{

@@ -16,7 +16,7 @@ namespace APG_FEA2D.Views
         public double zoom;
         public float w;
         public float h;
-        public float spacing;
+        public float spacing = 100;
         int wNo;
         int hNo;
         float sideExtentW;
@@ -26,7 +26,22 @@ namespace APG_FEA2D.Views
         public float OriginY = 0;
         public float DelX = 0;
         public float DelY = 0;
-
+        public static float SpacingEquivalentInGrid=1;
+        public float[] SpacingEquivalentInGridList = new float[]
+        {
+            50,
+            25,
+            10,
+            5,
+            2,
+            1,
+            0.5f,
+            0.25f,
+            0.1f,
+            0.05f,
+            0.025f,
+            0.01f
+        };
         public void DrawGrid(SKCanvas canvas, Rect Bounds, Matrix matrix)
         {
             w = (float)Bounds.Width;
@@ -51,7 +66,6 @@ namespace APG_FEA2D.Views
                 Style = SKPaintStyle.Stroke
             };
 
-            spacing = 100;
             if (OriginX == 0 && OriginY == 0)
             {
                 OriginX = w / 2;
@@ -112,7 +126,7 @@ namespace APG_FEA2D.Views
                     else intPart--;
                 }
             };
-            return intPart;
+            return SpacingEquivalentInGrid* intPart;
         }
         public Point DrawableCoord(Point point)
         {
@@ -122,8 +136,8 @@ namespace APG_FEA2D.Views
         }
         public Point RealDisplayCoord(Point point)
         {
-            float X = (float)point.X * spacing + OriginX;
-            float Y = OriginY - (float)point.Y * spacing;
+            float X = (float)point.X/ SpacingEquivalentInGrid * spacing + OriginX;
+            float Y = OriginY - (float)point.Y * spacing/ SpacingEquivalentInGrid;
             return new Point(X, Y);
         }
     }

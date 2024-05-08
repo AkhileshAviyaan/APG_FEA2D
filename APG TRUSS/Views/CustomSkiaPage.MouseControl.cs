@@ -15,13 +15,47 @@ namespace APG_FEA2D.Views
 {
     public partial class CustomSkiaPage
     {
+        int spacingIndexForGrid = 5;
         protected override void OnPointerWheelChanged(PointerWheelEventArgs e)
         {
             var point = e.GetPosition(this);
-            var delta = e.Delta.Y;
-            bool skipTransitions = false;
+            var delta = (float)e.Delta.Y;
             double ratio = Math.Pow(_zoomSpeed, delta);
             _matrix = MatrixHelper.ScaleAtPrepend(_matrix, ratio, ratio, point.X, point.Y);
+            this._grid.spacing += delta * 20;
+
+            if (this._grid.spacing < 80)
+            {
+                spacingIndexForGrid--;
+                if (spacingIndexForGrid >= 0)
+                {
+                    Grid.SpacingEquivalentInGrid = this._grid.SpacingEquivalentInGridList[spacingIndexForGrid];
+                    this._grid.spacing = 160;
+                }
+
+                else
+                {
+                    this._grid.spacing = 80;
+                    spacingIndexForGrid = 0;
+                }
+            }
+
+            if (this._grid.spacing > 160)
+            {
+
+                spacingIndexForGrid++;
+                if (spacingIndexForGrid < this._grid.SpacingEquivalentInGridList.Length)
+                {
+                    Grid.SpacingEquivalentInGrid = this._grid.SpacingEquivalentInGridList[spacingIndexForGrid];
+                    this._grid.spacing = 80;
+                }
+                else
+                {
+                    this._grid.spacing = 160;
+                    spacingIndexForGrid = this._grid.SpacingEquivalentInGridList.Length - 1;
+                }
+            }
+
 
         }
         int nodeCountForFrame = 0;
