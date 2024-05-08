@@ -8,6 +8,8 @@ using Avalonia.Platform;
 using FEA2D.Structures;
 using System;
 using SkiaSharp;
+using Avalonia.Media.TextFormatting;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace APG_FEA2D.Views
 {
@@ -44,7 +46,7 @@ namespace APG_FEA2D.Views
 				{
 					using var lease = leaseFeature.Lease();
 					customSkiaPage.canvas = lease.SkCanvas;
-					customSkiaPage._grid.DrawGrid(customSkiaPage.canvas, Bounds, _matrix);
+                    customSkiaPage._grid.DrawGrid(customSkiaPage.canvas, Bounds, _matrix);
 					foreach (var node in customSkiaPage.structure.Nodes)
 					{
 						node.DrawNode(customSkiaPage.canvas, customSkiaPage._grid);
@@ -105,7 +107,6 @@ namespace APG_FEA2D.Views
 					}
 				}
 			}
-
 		}
 		public override void Render(DrawingContext context)
 		{
@@ -113,6 +114,7 @@ namespace APG_FEA2D.Views
 			if (background != null)
 			{
 				var renderSize = Bounds.Size;
+
 				context.FillRectangle(background, new Rect(renderSize));
 			}
 			base.Render(context);

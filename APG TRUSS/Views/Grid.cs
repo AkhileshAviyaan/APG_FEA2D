@@ -22,62 +22,123 @@ namespace APG_FEA2D.Views
 		float sideExtentW;
 		float sideExtentH;
 		float sideExtent;
-		public void DrawGrid(SKCanvas canvas, Rect Bounds, Matrix matrix)
-		{
-			canvas.Save();
-			offsetX = matrix.M31;
-			offsetY = matrix.M32;
-			zoom = matrix.M11;
-			 w = (float)Bounds.Width;
-			 h = (float)Bounds.Height;
-			//Point NewBoundStart = MatrixHelper.TransformPoint(matrix, new Point(0, 0));
-			//Point NewBoundEnd=MatrixHelper.TransformPoint(matrix, new Point(w, h));
+       public float OriginX=0;
+       public float OriginY=0;
+        public float DelX=0;
+        public float DelY=0;
 
-			var paint = new SKPaint
-			{
-				Color = new SKColor(255, 255, 255, 70),
-				StrokeWidth = 1,
-				IsAntialias = true,
-				Style = SKPaintStyle.Stroke
-			};
-			var paintText = new SKPaint
-			{
-				Color = new SKColor(255, 255, 255, 70),
-				StrokeWidth = 1,
-				IsAntialias = true,
-				Style = SKPaintStyle.Stroke
-			};
+        public void DrawGrid(SKCanvas canvas, Rect Bounds, Matrix matrix)
+        {
+            w = (float)Bounds.Width;
+            h = (float)Bounds.Height;
+            canvas.Save();
+            offsetX = matrix.M31;
+            offsetY = matrix.M32;
+            zoom = matrix.M11;
 
-			 spacing = 100;
-			 wNo = (int)(w / spacing);
-			 hNo = (int)(h / spacing);
-			 sideExtentW = (w - (float)(wNo * spacing)) / 2;
-			 sideExtentH = (h - (float)(hNo * spacing)) / 2;
-			 sideExtent = 0;
-			//vertical line
-			for (int i = 0; i <= wNo; i++)
-			{
-				if (i == 0) sideExtent = sideExtentW;
-				canvas.DrawLine(sideExtent, 0, sideExtent, h - 4, paint);
-				canvas.DrawText($"{TransformCoord(sideExtentW, sideExtent,spacing):F2}", sideExtent + 2, h, paintText);
+            var paint = new SKPaint
+            {
+                Color = new SKColor(255, 255, 255, 70),
+                StrokeWidth = 1,
+                IsAntialias = true,
+                Style = SKPaintStyle.Stroke
+            };
+            var paintText = new SKPaint
+            {
+                Color = new SKColor(255, 255, 255, 70),
+                StrokeWidth = 1,
+                IsAntialias = true,
+                Style = SKPaintStyle.Stroke
+            };
 
-				sideExtent += spacing;
-			}
+            spacing = 100;
+            if (OriginX == 0 && OriginY == 0)
+            {
+                OriginX = w / 2;
+                OriginY = h / 2;
+            }
 
-			//horizontal line
-			for (int i = 0; i <= hNo; i++)
-			{
-				if (i == 0) sideExtent = sideExtentH;
-				canvas.DrawLine(0 + 4, sideExtent, w, sideExtent, paint);
-				canvas.DrawText($"{TransformCoord(h - sideExtentH, sideExtent,spacing):F2}", 0, sideExtent - 2, paintText);
-				sideExtent += spacing;
-			}
-			//canvas.DrawLine((float)NewBoundStart.X, (float)NewBoundStart.Y, (float)NewBoundEnd.X, (float)NewBoundEnd.Y, paint);
-			//canvas.DrawRect((float)NewBoundStart.X, (float)NewBoundStart.Y, (float)NewBoundEnd.X- (float)NewBoundStart.X, (float)NewBoundEnd.Y- (float)NewBoundStart.Y, paint);
-			//canvas.DrawLine(0, 0,w,h, paint);
-			canvas.Restore();
-		}
-		public static float TransformCoord(float sideExtent, float actualHeight,float spacing)
+            //vertical line
+            for (float i=OriginX;i<w;i+=spacing)
+            {
+                canvas.DrawLine(i, 0, i, h - 4, paint);
+            }
+
+            //horizontal line
+            for (float i = OriginY; i < h; i+=spacing)
+            {
+                canvas.DrawLine(0 + 4, i, w, i, paint);
+            }
+            //vertical line
+            for (float i = OriginX; i > 0; i -= spacing)
+            {
+                canvas.DrawLine(i, 0, i, h - 4, paint);
+            }
+
+            //horizontal line
+            for (float i = OriginY; i > 0; i -= spacing)
+            {
+                canvas.DrawLine(0 + 4, i, w, i, paint);
+            }
+            canvas.Restore();
+        }
+
+        //public void DrawGrid(SKCanvas canvas, Rect Bounds, Matrix matrix)
+        //{
+        //	canvas.Save();
+        //	offsetX = matrix.M31;
+        //	offsetY = matrix.M32;
+        //	zoom = matrix.M11;
+        //	 w = (float)Bounds.Width;
+        //	 h = (float)Bounds.Height;
+        //	//Point NewBoundStart = MatrixHelper.TransformPoint(matrix, new Point(0, 0));
+        //	//Point NewBoundEnd=MatrixHelper.TransformPoint(matrix, new Point(w, h));
+
+        //	var paint = new SKPaint
+        //	{
+        //		Color = new SKColor(255, 255, 255, 70),
+        //		StrokeWidth = 1,
+        //		IsAntialias = true,
+        //		Style = SKPaintStyle.Stroke
+        //	};
+        //	var paintText = new SKPaint
+        //	{
+        //		Color = new SKColor(255, 255, 255, 70),
+        //		StrokeWidth = 1,
+        //		IsAntialias = true,
+        //		Style = SKPaintStyle.Stroke
+        //	};
+
+        //	 spacing = 100;
+        //	 wNo = (int)(w / spacing);
+        //	 hNo = (int)(h / spacing);
+        //	 sideExtentW = (w - (float)(wNo * spacing)) / 2;
+        //	 sideExtentH = (h - (float)(hNo * spacing)) / 2;
+        //	 sideExtent = 0;
+        //	//vertical line
+        //	for (int i = 0; i <= wNo; i++)
+        //	{
+        //		if (i == 0) sideExtent = sideExtentW;
+        //		canvas.DrawLine(sideExtent, 0, sideExtent, h - 4, paint);
+        //		canvas.DrawText($"{TransformCoord(sideExtentW, sideExtent,spacing):F2}", sideExtent + 2, h, paintText);
+
+        //		sideExtent += spacing;
+        //	}
+
+        //	//horizontal line
+        //	for (int i = 0; i <= hNo; i++)
+        //	{
+        //		if (i == 0) sideExtent = sideExtentH;
+        //		canvas.DrawLine(0 + 4, sideExtent, w, sideExtent, paint);
+        //		canvas.DrawText($"{TransformCoord(h - sideExtentH, sideExtent,spacing):F2}", 0, sideExtent - 2, paintText);
+        //		sideExtent += spacing;
+        //	}
+        //	//canvas.DrawLine((float)NewBoundStart.X, (float)NewBoundStart.Y, (float)NewBoundEnd.X, (float)NewBoundEnd.Y, paint);
+        //	//canvas.DrawRect((float)NewBoundStart.X, (float)NewBoundStart.Y, (float)NewBoundEnd.X- (float)NewBoundStart.X, (float)NewBoundEnd.Y- (float)NewBoundStart.Y, paint);
+        //	//canvas.DrawLine(0, 0,w,h, paint);
+        //	canvas.Restore();
+        //}
+        public static float TransformCoord(float sideExtent, float actualHeight,float spacing)
 		{
 			int intPart = (int)Math.Floor(Math.Abs(actualHeight - sideExtent) / spacing);
 			float fullNumber = (Math.Abs(actualHeight - sideExtent) / spacing);
