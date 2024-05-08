@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APG_FEA2D")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9984c9579e9deae4f2eb81c74d48fdb380c3dc86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd80d6e4b5e7d1eb582b415b969c5bc9cf5c12c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("APG_FEA2D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APG_FEA2D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
