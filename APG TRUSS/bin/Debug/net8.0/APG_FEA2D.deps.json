@@ -16,6 +16,7 @@
           "Avalonia.Themes.Fluent": "11.0.10",
           "CSparse": "3.5.0",
           "CommunityToolkit.Mvvm": "8.2.2",
+          "Math.Spatial": "1.4.0",
           "MathNet.Numerics": "4.15.0",
           "ReactiveUI": "19.6.1",
           "SkiaSharp": "2.88.8"
@@ -368,6 +369,14 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Math.Spatial/1.4.0": {
+        "runtime": {
+          "lib/net5.0/Math.Spatial.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
           }
         }
       },
@@ -1145,6 +1154,13 @@
       "sha512": "sha512-ulEewLMk+dNmbmpy15ny/YusI6JNUWqchF080TV2jgfFBXPXjWm767JleDi/S7hp8eDeEN6GYIIxpvNr5fLvIw==",
       "path": "harfbuzzsharp.nativeassets.win32/7.3.0",
       "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.nupkg.sha512"
+    },
+    "Math.Spatial/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MLQ8Muu6u0BHvVfb4/bXI/a7G0Vqk7eMEWZAIPntoRdqH1+d3tfVvTfsbxpWL+ebu9qJOpLhDMstYFokQVXXSw==",
+      "path": "math.spatial/1.4.0",
+      "hashPath": "math.spatial.1.4.0.nupkg.sha512"
     },
     "MathNet.Numerics/4.15.0": {
       "type": "package",

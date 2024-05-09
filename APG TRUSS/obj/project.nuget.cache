@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lojEnBGmqSAQE4olrdAXbxPl4Gnz2Wds+BhwxbX0Itiy8JjRPep+u8nH3V8DNbgWQe5sNUd1covLtGpgW9bqwQ==",
+  "dgSpecHash": "ib0JnqwPBWPlbhkLbBn31jjZQNz7VWhLVhClBU1U0C+5TLNwyqnqIb6jQU6X1XwsAiTkh88WxSEwgHLoQnQLxA==",
   "success": true,
   "projectFilePath": "D:\\APG_FEA2D\\APG TRUSS\\APG_FEA2D.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\1akhi\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0\\harfbuzzsharp.nativeassets.macos.7.3.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\harfbuzzsharp.nativeassets.webassembly\\7.3.0\\harfbuzzsharp.nativeassets.webassembly.7.3.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\7.3.0\\harfbuzzsharp.nativeassets.win32.7.3.0.nupkg.sha512",
+    "C:\\Users\\1akhi\\.nuget\\packages\\math.spatial\\1.4.0\\math.spatial.1.4.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",

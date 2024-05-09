@@ -8,9 +8,11 @@ using Avalonia.Reactive;
 using PanAndZoom;
 using APG_FEA2D.Helper;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Drawing;
 using System.Reactive.Concurrency;
 using System.Runtime.InteropServices;
+using Spatial;
+using Avalonia.Controls.Shapes;
+using System.Xml.Linq;
 namespace APG_FEA2D.Views
 {
     public partial class CustomSkiaPage
@@ -103,6 +105,7 @@ namespace APG_FEA2D.Views
         }
         float OriginXWhenPressed;
         float OriginYWhenPressed;
+        FrameElement2D frameGet = new();
         protected override void OnPointerPressed(PointerPressedEventArgs e)
         {
             IsNodePressed = false;
@@ -111,11 +114,33 @@ namespace APG_FEA2D.Views
             X = Coord.X;
             Y = Coord.Y;
             searchedPoint = NodeSearch(Coord);
+            ButtonName button = PanButton;
+            PointerPointProperties properties = e.GetCurrentPoint(this).Properties;
             if (searchedPoint is not null)
             {
                 IsNodePressed = true;
             }
             InfoUpdate();
+            if ((properties.IsLeftButtonPressed) && AddNodeOn == false && AddFrameOn == false && AddSupport == false)
+            {
+                foreach (FrameElement2D frame in this.structure.Elements)
+                {
+                    frameGet = GetFrame(frame, new Point2D((float)OrgCoord.X, (float)OrgCoord.Y));
+                    if (frameGet is not null)
+                    {
+                        Info = frameGet.Label + " is pressed";
+                        frameGet.IsFrameTouched = true;
+                        NearestDistance = 10;
+                    }
+                }
+            }
+            if (Info == "")
+            {
+                foreach (FrameElement2D frame in this.structure.Elements)
+                {
+                    frame.IsFrameTouched = false;
+                }
+            }
             if (AddNodeOn == true)
             {
                 string nodename = "n" + structure.Nodes.Count;
@@ -144,19 +169,53 @@ namespace APG_FEA2D.Views
                     }
                 }
             }
-            ButtonName button = PanButton;
-            PointerPointProperties properties = e.GetCurrentPoint(this).Properties;
             if ((properties.IsRightButtonPressed && button == ButtonName.Right))
             {
                 if (IsPanning == false)
                 {
+
                     PreviousPoint = (Point2D)e.GetPosition(this);
                     IsPanning = true;
                     OriginXWhenPressed = this._grid.OriginX;
                     OriginYWhenPressed = this._grid.OriginY;
                 }
             }
-            else { return; }
+        }
+        public float NearestDistance = 10;
+        FrameElement2D GetFrame(FrameElement2D frame, Point2D pressedPoint)
+        {
+            var startPoint = this._grid.RealDisplayCoord(new Avalonia.Point(frame.StartNode.X, frame.StartNode.Y));
+            var endPoint = this._grid.RealDisplayCoord(new Avalonia.Point(frame.EndNode.X, frame.EndNode.Y));
+            var frameLength = Math.Sqrt(Math.Pow(endPoint.Y - startPoint.Y, 2) + Math.Pow(endPoint.X - startPoint.X, 2));
+            var nearestPoint = pressedPoint.NearestOnLine((Point2D)startPoint, (Point2D)endPoint);
+            float distanceEnd1 = pressedPoint.DistanceTo((Point2D)startPoint);
+            float distanceEnd2 = pressedPoint.DistanceTo((Point2D)endPoint);
+            float distanceEnd = Math.Min(distanceEnd1, distanceEnd2);
+            float distanceMid = 5 * (float)frameLength;
+            int segmentNo = 20;
+            double slopeAngle = Math.Atan2((endPoint.Y - startPoint.Y), (endPoint.X - startPoint.X));
+            double delL = frameLength / segmentNo;
+            Point delPointChange = new Point(delL * Math.Cos(slopeAngle), -delL * Math.Sin(slopeAngle));
+            float MinDistance = 5 * (float)frameLength;
+            for (int i = 0; i < segmentNo; i++)
+            {
+                startPoint += delPointChange;
+                distanceMid = pressedPoint.DistanceTo((Point2D)startPoint);
+                if (MinDistance > distanceMid)
+                {
+                    MinDistance = distanceMid;
+                }
+            }
+            MinDistance = Math.Min(MinDistance, distanceEnd);
+            if (MinDistance < 10)
+            {
+                if (NearestDistance > MinDistance)
+                {
+                    NearestDistance = MinDistance;
+                }
+                return frame;
+            }
+            return null;
         }
         protected override void OnPointerReleased(PointerReleasedEventArgs e)
         {

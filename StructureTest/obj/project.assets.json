@@ -502,6 +502,15 @@
           }
         }
       },
+      "Math.Spatial/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Math.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Math.Spatial.dll": {}
+        }
+      },
       "MathNet.Numerics/4.15.0": {
         "type": "package",
         "compile": {
@@ -1850,6 +1859,7 @@
           "Avalonia.Themes.Fluent": "11.0.10",
           "CSparse": "3.5.0",
           "CommunityToolkit.Mvvm": "8.2.2",
+          "Math.Spatial": "1.4.0",
           "MathNet.Numerics": "4.15.0",
           "ReactiveUI": "19.6.1",
           "SkiaSharp": "2.88.8"
@@ -2608,6 +2618,21 @@
         "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x86/native/libHarfBuzzSharp.dll"
+      ]
+    },
+    "Math.Spatial/1.4.0": {
+      "sha512": "MLQ8Muu6u0BHvVfb4/bXI/a7G0Vqk7eMEWZAIPntoRdqH1+d3tfVvTfsbxpWL+ebu9qJOpLhDMstYFokQVXXSw==",
+      "type": "package",
+      "path": "math.spatial/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Math.Spatial.dll",
+        "lib/net5.0/Math.Spatial.dll",
+        "lib/netstandard2.0/Math.Spatial.dll",
+        "lib/netstandard2.1/Math.Spatial.dll",
+        "math.spatial.1.4.0.nupkg.sha512",
+        "math.spatial.nuspec"
       ]
     },
     "MathNet.Numerics/4.15.0": {

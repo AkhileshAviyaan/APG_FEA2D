@@ -34,7 +34,7 @@ namespace FEA2D.Elements
         {
             this.Label = label;
         }
-
+        public bool IsFrameTouched=false;
         /// <summary>
         /// Creates a new instance of <see cref="FrameElement2D"/> Class
         /// </summary>

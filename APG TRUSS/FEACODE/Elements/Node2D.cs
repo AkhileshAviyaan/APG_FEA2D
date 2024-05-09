@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using static System.Math;
 using FEA2D.Structures;
+using APG_FEA2D.Helper;
 
 namespace FEA2D.Elements
 {

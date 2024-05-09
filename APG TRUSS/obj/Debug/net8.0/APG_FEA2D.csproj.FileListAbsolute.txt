@@ -133,3 +133,4 @@ D:\APG_FEA2D\APG TRUSS\bin\Debug\net8.0\DynamicData.dll
 D:\APG_FEA2D\APG TRUSS\bin\Debug\net8.0\ReactiveUI.dll
 D:\APG_FEA2D\APG TRUSS\bin\Debug\net8.0\Splat.dll
 D:\APG_FEA2D\APG TRUSS\bin\Debug\net8.0\System.Reactive.dll
+D:\APG_FEA2D\APG TRUSS\bin\Debug\net8.0\Math.Spatial.dll
