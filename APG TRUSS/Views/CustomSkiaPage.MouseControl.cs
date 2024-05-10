@@ -19,14 +19,27 @@ namespace APG_FEA2D.Views
     public partial class CustomSkiaPage
     {
         int spacingIndexForGrid = 5;
+        float initialDistanceX;
+        float initialDistanceY;
         protected override void OnPointerWheelChanged(PointerWheelEventArgs e)
         {
             var point = e.GetPosition(this);
+            var point2D = (Point2D)point;
             var delta = (float)e.Delta.Y;
-            double ratio = Math.Pow(_zoomSpeed, delta);
-            _matrix = MatrixHelper.ScaleAtPrepend(_matrix, ratio, ratio, point.X, point.Y);
-            this._grid.spacing += delta * 20;
+            //TODO
+            //Zoom From CursorPoint
 
+            //initialDistanceX = _grid.OriginX - point2D.X;
+            //initialDistanceY = _grid.OriginY - point2D.Y;
+            //Needs Corrections
+            //float delOriginShiftX = initialDistanceX / _grid.spacing * delta * 20;
+            //float delOriginShiftY = initialDistanceY / _grid.spacing * delta * 20;
+            //if (_grid.spacing != 160)
+            //{
+            //_grid.OriginX += delOriginShiftX;
+            //_grid.OriginY += delOriginShiftY;
+            //}
+            this._grid.spacing += delta * 20;
             if (this._grid.spacing < 80)
             {
                 spacingIndexForGrid--;
