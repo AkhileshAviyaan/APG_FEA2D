@@ -13,6 +13,7 @@ using System.Runtime.InteropServices;
 using Spatial;
 using Avalonia.Controls.Shapes;
 using System.Xml.Linq;
+using DynamicData;
 namespace APG_FEA2D.Views
 {
     public partial class CustomSkiaPage
@@ -118,7 +119,13 @@ namespace APG_FEA2D.Views
             PointerPointProperties properties = e.GetCurrentPoint(this).Properties;
             if (searchedPoint is not null)
             {
-                IsNodePressed = true;
+                var searchedPointInPixal = (Point2D)_grid.RealDisplayCoord(new Point(searchedPoint.X, searchedPoint.Y));
+                var distance = searchedPointInPixal.DistanceTo((Point2D)OrgCoord);
+                if (distance < 10)
+                {
+                    IsNodePressed = true;
+                    searchedPoint.IsNodeSelected = true;
+                }
             }
             InfoUpdate();
             if ((properties.IsLeftButtonPressed) && AddNodeOn == false && AddFrameOn == false && AddSupport == false)
@@ -139,6 +146,10 @@ namespace APG_FEA2D.Views
                 foreach (FrameElement2D frame in this.structure.Elements)
                 {
                     frame.IsFrameTouched = false;
+                }
+                foreach (Node2D node in this.structure.Nodes)
+                {
+                    node.IsNodeSelected = false;
                 }
             }
             if (AddNodeOn == true)
