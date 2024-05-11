@@ -142,7 +142,7 @@ namespace APG_FEA2D.Views
                 }
             }
             InfoUpdate();
-            if ((properties.IsLeftButtonPressed) && AddNodeOn == false && AddFrameOn == false && AddSupport == false)
+            if ((properties.IsLeftButtonPressed) && AddNodeOn == false && AddFrameOn == false && AddSupport == false &&IsNodePressed==false)
             {
                 foreach (FrameElement2D frame in this.structure.Elements)
                 {

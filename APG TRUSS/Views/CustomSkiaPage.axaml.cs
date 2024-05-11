@@ -28,7 +28,6 @@ namespace APG_FEA2D.Views
 		public LoadCase loadCase;
 		public CustomSkiaPage()
 		{
-			
 			_captured = false;
 			_matrix = Matrix.Identity;
 			ClipToBounds = true;
