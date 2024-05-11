@@ -13,13 +13,15 @@ using FEA2D.Materials;
 using FEA2D.CrossSections;
 using FEA2D.Loads;
 using FEA2D.Structures;
+using FEA2D.Elements;
+using Microsoft.Data.Sqlite;
 
 namespace APG_FEA2D.Views
 {
 	public partial class CustomSkiaPage : UserControl, INotifyPropertyChanged
 	{
 		public Structure structure;
-		public StructureIO StructureIO;
+		public StructureIO structureIO;
 		public static readonly string FileCache = "DefaultName";
 		IMaterial material;
 		IFrame2DSection section;
@@ -51,8 +53,11 @@ namespace APG_FEA2D.Views
 
 			FileOpenCommand = new RelayCommand(FileOpen_Pressed);
 			FileSaveCommand = new RelayCommand(FileSave_Pressed);
+
             structure = new Structure();
-			material = new GenericIsotropicMaterial() { E = 2E11, U = 0.2, Label = "Steel", Alpha = 0, Gama = 0, MaterialType = MaterialType.Steel };
+			structureIO = new StructureIO();
+
+            material = new GenericIsotropicMaterial() { E = 2E11, U = 0.2, Label = "Steel", Alpha = 0, Gama = 0, MaterialType = MaterialType.Steel };
 			section = new Generic2DSection(0.05, 0.05, 0.05, 0.0001, 0.0001, 0.0001 * 2, 1, 1, material);
 			loadCase = new LoadCase("live", LoadCaseType.Live);
 			structure.LoadCasesToRun.Add(loadCase);

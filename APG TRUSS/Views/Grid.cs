@@ -140,6 +140,12 @@ namespace APG_FEA2D.Views
             float Y = OriginY - (float)point.Y * spacing/ SpacingEquivalentInGrid;
             return new Point(X, Y);
         }
+        public Point RealDisplayCoordYImprove(Point point)
+        {
+            float X = (float)point.X / SpacingEquivalentInGrid * spacing + OriginX;
+            float Y = h-(OriginY - (float)point.Y * spacing / SpacingEquivalentInGrid);
+            return new Point(X, Y);
+        }
     }
 
 }

@@ -217,8 +217,8 @@ namespace APG_FEA2D.Views
             float distanceEnd2 = pressedPoint.DistanceTo((Point2D)endPoint);
             float distanceEnd = Math.Min(distanceEnd1, distanceEnd2);
             float distanceMid = 5 * (float)frameLength;
-            int segmentNo = 20;
-            double slopeAngle = Math.Atan2((endPoint.Y - startPoint.Y), (endPoint.X - startPoint.X));
+            int segmentNo = (int)frameLength / 5;
+            double slopeAngle = Math.Atan2((-endPoint.Y + startPoint.Y), (endPoint.X - startPoint.X));
             double delL = frameLength / segmentNo;
             Point delPointChange = new Point(delL * Math.Cos(slopeAngle), -delL * Math.Sin(slopeAngle));
             float MinDistance = 5 * (float)frameLength;

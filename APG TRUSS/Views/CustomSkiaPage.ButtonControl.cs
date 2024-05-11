@@ -17,6 +17,7 @@ namespace APG_FEA2D.Views
         public ICommand FileSaveCommand { get; }
         public void FileSave_Pressed()
         {
+			structureIO.Save(structure);
         }
 
         public ICommand NoneCommand { get; }
