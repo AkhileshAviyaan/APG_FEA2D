@@ -38,6 +38,7 @@ namespace FEA2D.Structures
             db.Open();
             command = db.CreateCommand();
             OnCreate();
+            db.Close();
         }
 
         public void OnCreate()
@@ -106,6 +107,7 @@ namespace FEA2D.Structures
         }
         public void Save(Structure structure)
         {
+            db.Open();
             //clear tables
             string material = "DELETE FROM material;";
             string section = "DELETE FROM section; ";
@@ -201,6 +203,7 @@ namespace FEA2D.Structures
 
                 }
             }
+            db.Close();
 
         }
     }

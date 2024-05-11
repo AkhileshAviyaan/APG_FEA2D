@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\APG_FEA2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\feacode\\structure\\structureio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\feacode\\structure\\structureio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\views\\customskiapage.mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|solutionrelative:apg truss\\views\\customskiapage.mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E81018D5-1CC9-43AE-A94A-20FDDE9935F1}|APG TRUSS\\APG_FEA2D.csproj|d:\\apg_fea2d\\apg truss\\feacode\\elements\\frameelement2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -127,26 +127,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "StructureIO.cs",
               "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Structure\\StructureIO.cs",
               "RelativeDocumentMoniker": "APG TRUSS\\FEACODE\\Structure\\StructureIO.cs",
               "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\FEACODE\\Structure\\StructureIO.cs",
               "RelativeToolTip": "APG TRUSS\\FEACODE\\Structure\\StructureIO.cs",
-              "ViewState": "AQIAAJkAAAAAAAAAAAASwLQAAAAZAAAA",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAiwHsAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-11T10:03:15.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CustomSkiaPage.MouseControl.cs",
               "DocumentMoniker": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
               "RelativeDocumentMoniker": "APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
               "ToolTip": "D:\\APG_FEA2D\\APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
               "RelativeToolTip": "APG TRUSS\\Views\\CustomSkiaPage.MouseControl.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAADgv5AAAACLAAAA",
+              "ViewState": "AQIAAAEBAAAAAAAAAIA/wBMBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-11T05:06:22.852Z",
               "EditorCaption": ""
