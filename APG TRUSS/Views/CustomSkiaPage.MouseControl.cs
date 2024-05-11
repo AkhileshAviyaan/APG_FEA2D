@@ -187,8 +187,11 @@ namespace APG_FEA2D.Views
                     {
                         firstPoint.IsNodeSelected = false;
                         secondPoint = NodeSearch(Coord);
+                        if(secondPoint!=firstPoint)
+                        {
                         string framename = "e" + structure.Elements.Count;
                         structure.AddElement(new[] { new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section } });
+                        }
                         AddFrameOn = false;
                         nodeCountForFrame = 0;
                     }
