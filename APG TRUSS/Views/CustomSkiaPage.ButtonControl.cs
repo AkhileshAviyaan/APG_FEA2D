@@ -10,7 +10,16 @@ namespace APG_FEA2D.Views
 	{
 		public SupportName supportType;
 		public string DiagramMode;
-		public ICommand NoneCommand { get; }
+        public ICommand FileOpenCommand { get; }
+        public void FileOpen_Pressed()
+        {
+        }
+        public ICommand FileSaveCommand { get; }
+        public void FileSave_Pressed()
+        {
+        }
+
+        public ICommand NoneCommand { get; }
 		public void None_Pressed()
 		{
 			DiagramMode = "None";

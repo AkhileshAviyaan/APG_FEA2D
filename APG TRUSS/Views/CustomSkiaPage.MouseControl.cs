@@ -28,16 +28,17 @@ namespace APG_FEA2D.Views
             var delta = (float)e.Delta.Y;
             //TODO
             //Zoom From CursorPoint
+            //Needs Corrections
 
             //initialDistanceX = _grid.OriginX - point2D.X;
             //initialDistanceY = _grid.OriginY - point2D.Y;
-            //Needs Corrections
-            //float delOriginShiftX = initialDistanceX / _grid.spacing * delta * 20;
-            //float delOriginShiftY = initialDistanceY / _grid.spacing * delta * 20;
+            //float noOfOffset = initialDistanceX / _grid.spacing;
+            //float delOriginShiftX = noOfOffset * delta * 20;
+            //float delOriginShiftY = noOfOffset * delta * 20;
             //if (_grid.spacing != 160)
             //{
-            //_grid.OriginX += delOriginShiftX;
-            //_grid.OriginY += delOriginShiftY;
+            //    _grid.OriginX += delOriginShiftX;
+            //    _grid.OriginY += delOriginShiftY;
             //}
             this._grid.spacing += delta * 20;
             if (this._grid.spacing < 80)

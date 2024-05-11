@@ -19,11 +19,14 @@ namespace APG_FEA2D.Views
 	public partial class CustomSkiaPage : UserControl, INotifyPropertyChanged
 	{
 		public Structure structure;
+		public StructureIO StructureIO;
+		public static readonly string FileCache = "DefaultName";
 		IMaterial material;
 		IFrame2DSection section;
 		public LoadCase loadCase;
 		public CustomSkiaPage()
 		{
+			
 			_captured = false;
 			_matrix = Matrix.Identity;
 			ClipToBounds = true;
@@ -46,7 +49,9 @@ namespace APG_FEA2D.Views
 			DISPLACEMENTCommand = new RelayCommand(DISPLACEMENT_Pressed);
 			SLOPECommand = new RelayCommand(SLOPE_Pressed);
 
-			structure = new Structure();
+			FileOpenCommand = new RelayCommand(FileOpen_Pressed);
+			FileSaveCommand = new RelayCommand(FileSave_Pressed);
+            structure = new Structure();
 			material = new GenericIsotropicMaterial() { E = 2E11, U = 0.2, Label = "Steel", Alpha = 0, Gama = 0, MaterialType = MaterialType.Steel };
 			section = new Generic2DSection(0.05, 0.05, 0.05, 0.0001, 0.0001, 0.0001 * 2, 1, 1, material);
 			loadCase = new LoadCase("live", LoadCaseType.Live);

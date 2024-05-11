@@ -11,7 +11,7 @@
 	xmlns:vm="using:APG_FEA2D.ViewModels"
 	Title="APG_FEA2D"
 	d:DesignHeight="450"
-	d:DesignWidth="800"
+	d:DesignWidth="1200"
 	x:DataType="vm:MainWindowViewModel"
 	Icon="/Assets/avalonia-logo.ico"
 	mc:Ignorable="d">
@@ -19,68 +19,80 @@
 		<vm:MainWindowViewModel />
 	</Design.DataContext>
 	<Grid RowDefinitions="Auto,*">
-		<StackPanel
-			Grid.Row="0"
-			HorizontalAlignment="Right"
-			x:CompileBindings="False"
-			x:DataType="view:CustomSkiaPage"
-			Orientation="Horizontal">
-			<Button Command="{Binding #CustomSkia.RunCommand}">
-				<StackPanel Orientation="Horizontal">
-					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/0Solve.png" />
-					<Label>Run</Label>
-				</StackPanel>
-			</Button>
-			<Button Command="{Binding #CustomSkia.NoneCommand}" Content="None" />
-			<Button Command="{Binding #CustomSkia.AFDCommand}" Content="AFD" />
-			<Button Command="{Binding #CustomSkia.SFDCommand}" Content="SFD" />
-			<Button Command="{Binding #CustomSkia.BMDCommand}" Content="BMD" />
-			<Button Command="{Binding #CustomSkia.DISPLACEMENTCommand}" Content="DEF" />
-			<Button Command="{Binding #CustomSkia.SLOPECommand}" Content="SLOPE" />
-			<Button Command="{Binding #CustomSkia.Node_Pressed}">
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/1Node.png" />
-			</Button>
-			<Button Command="{Binding #CustomSkia.Frame_Pressed}">
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/2AddFrameElement.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/3MemberSection.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/4AddInternalHinge.png" />
-			</Button>
-			<Button Command="{Binding #CustomSkia.Fixed_Pressed}">
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/5FixedEnd.png" />
-			</Button>
-			<Button Command="{Binding #CustomSkia.Hinge_Pressed}">
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/6HingeSupport.png" />
-			</Button>
-			<Button Command="{Binding #CustomSkia.Rollar_Pressed}">
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/7Rollar.png" />
-			</Button>
-			<Button x:DataType="vm:MainWindowViewModel" Command="{Binding NodalLoadCommand}">
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/9NodalPointLoad.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/10PointLoad.png" />
-			</Button>
-			<Button x:DataType="vm:MainWindowViewModel" Command="{Binding SupportDisplacementLoadCommand}">
-				<Button.CommandParameter />
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/11SupportDisplacement.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/12Distributed.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/13Moment.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/14Edit.png" />
-			</Button>
-			<Button>
-				<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/15NoSupport.png" />
-			</Button>
-		</StackPanel>
+		<Grid Grid.Row="0" ColumnDefinitions="Auto,Auto">
+			<StackPanel
+				Grid.Column="0"
+				HorizontalAlignment="Right"
+				x:CompileBindings="False"
+				x:DataType="view:CustomSkiaPage"
+				Orientation="Horizontal">
+				<Button Command="{Binding #CustomSkia.FileOpenCommand}" Content="OpenFile" />
+				<Button Command="{Binding #CustomSkia.FileSaveCommand}" Content="SaveFile" />
+			</StackPanel>
+
+			<StackPanel
+				Grid.Column="1"
+				HorizontalAlignment="Right"
+				x:CompileBindings="False"
+				x:DataType="view:CustomSkiaPage"
+				Orientation="Horizontal">
+				<Button Command="{Binding #CustomSkia.RunCommand}">
+					<StackPanel Orientation="Horizontal">
+						<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/0Solve.png" />
+						<Label>Run</Label>
+					</StackPanel>
+				</Button>
+				<Button Command="{Binding #CustomSkia.NoneCommand}" Content="None" />
+				<Button Command="{Binding #CustomSkia.AFDCommand}" Content="AFD" />
+				<Button Command="{Binding #CustomSkia.SFDCommand}" Content="SFD" />
+				<Button Command="{Binding #CustomSkia.BMDCommand}" Content="BMD" />
+				<Button Command="{Binding #CustomSkia.DISPLACEMENTCommand}" Content="DEF" />
+				<Button Command="{Binding #CustomSkia.SLOPECommand}" Content="SLOPE" />
+				<Button Command="{Binding #CustomSkia.Node_Pressed}">
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/1Node.png" />
+				</Button>
+				<Button Command="{Binding #CustomSkia.Frame_Pressed}">
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/2AddFrameElement.png" />
+				</Button>
+				<!--<Button>
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/3MemberSection.png" />
+				</Button>-->
+				<!--<Button>
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/4AddInternalHinge.png" />
+				</Button>-->
+				<Button Command="{Binding #CustomSkia.Fixed_Pressed}">
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/5FixedEnd.png" />
+				</Button>
+				<Button Command="{Binding #CustomSkia.Hinge_Pressed}">
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/6HingeSupport.png" />
+				</Button>
+				<Button Command="{Binding #CustomSkia.Rollar_Pressed}">
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/7Rollar.png" />
+				</Button>
+				<Button x:DataType="vm:MainWindowViewModel" Command="{Binding NodalLoadCommand}">
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/9NodalPointLoad.png" />
+				</Button>
+				<Button>
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/10PointLoad.png" />
+				</Button>
+				<Button x:DataType="vm:MainWindowViewModel" Command="{Binding SupportDisplacementLoadCommand}">
+					<Button.CommandParameter />
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/11SupportDisplacement.png" />
+				</Button>
+				<Button>
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/12Distributed.png" />
+				</Button>
+				<Button>
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/13Moment.png" />
+				</Button>
+				<!--<Button>
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/14Edit.png" />
+				</Button>
+				<Button>
+					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/15NoSupport.png" />
+				</Button>-->
+			</StackPanel>
+		</Grid>
 		<Grid Grid.Row="1" RowDefinitions="*,Auto,Auto">
 			<local:CustomSkiaPage
 				Name="CustomSkia"
