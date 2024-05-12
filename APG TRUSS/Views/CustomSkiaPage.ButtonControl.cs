@@ -13,6 +13,7 @@ namespace APG_FEA2D.Views
         public ICommand FileOpenCommand { get; }
         public void FileOpen_Pressed()
         {
+			this.structure=structureIO.Open();
         }
         public ICommand FileSaveCommand { get; }
         public void FileSave_Pressed()

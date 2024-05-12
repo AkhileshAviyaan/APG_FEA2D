@@ -108,7 +108,11 @@ namespace FEA2D.Structures
             foreach (var node in nodes)
                 this.AddNode(node);
         }
-
+        public void AddNode( List<Node2D>nodes)
+        {
+            foreach (var node in nodes)
+                this.AddNode(node);
+        }
         /// <summary>
         /// Adds elements to the structure.
         /// </summary>
@@ -147,7 +151,13 @@ namespace FEA2D.Structures
                 this.AddElement(item, addNodes);
             }
         }
-
+        public void AddElement(List<FrameElement2D> elements)
+        {
+            foreach (var item in elements)
+            {
+                this.AddElement(item);
+            }
+        }
         /// <summary>
         /// Calculates fixed end forces and moments at each node of an element and add them to <see cref="IElement.GlobalEndForcesForLoadCase"/> dictionary.
         /// </summary>

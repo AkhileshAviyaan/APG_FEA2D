@@ -33,6 +33,7 @@ namespace FEA2D.CrossSections
             base.MaxWidth = wmax;
             base.Material = material;
         }
+        public Generic2DSection() { }
 
     }
 }

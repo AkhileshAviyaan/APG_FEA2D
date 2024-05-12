@@ -139,10 +139,12 @@ namespace APG_FEA2D.Views
                 {
                     IsNodePressed = true;
                     searchedPoint.IsNodeSelected = true;
+                    Unselection(searchedPoint);
+                   
                 }
             }
             InfoUpdate();
-            if ((properties.IsLeftButtonPressed) && AddNodeOn == false && AddFrameOn == false && AddSupport == false &&IsNodePressed==false)
+            if ((properties.IsLeftButtonPressed) && AddNodeOn == false && AddFrameOn == false && AddSupport == false && IsNodePressed == false)
             {
                 foreach (FrameElement2D frame in this.structure.Elements)
                 {
@@ -152,20 +154,27 @@ namespace APG_FEA2D.Views
                         Info = frameGet.Label + " is pressed";
                         frameGet.IsFrameTouched = true;
                         NearestDistance = 10;
+                        Unselection(null,frame);
                     }
                 }
             }
-            if (Info == "")
+            if (Info == "") Unselection();
+            void Unselection(Node2D n = null, FrameElement2D f = null)
             {
                 foreach (FrameElement2D frame in this.structure.Elements)
                 {
-                    frame.IsFrameTouched = false;
+                    if (frame != f)
+                        frame.IsFrameTouched = false;
+
                 }
                 foreach (Node2D node in this.structure.Nodes)
                 {
-                    node.IsNodeSelected = false;
+                    if (node != n)
+                        node.IsNodeSelected = false;
+
                 }
             }
+
             if (AddNodeOn == true)
             {
                 string nodename = "n" + structure.Nodes.Count;
@@ -187,10 +196,11 @@ namespace APG_FEA2D.Views
                     {
                         firstPoint.IsNodeSelected = false;
                         secondPoint = NodeSearch(Coord);
-                        if(secondPoint!=firstPoint)
+                        if (secondPoint != firstPoint)
                         {
-                        string framename = "e" + structure.Elements.Count;
-                        structure.AddElement(new[] { new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section } });
+                            secondPoint.IsNodeSelected = false;
+                            string framename = "e" + structure.Elements.Count;
+                            structure.AddElement(new[] { new FrameElement2D(firstPoint, secondPoint, framename) { CrossSection = section } });
                         }
                         AddFrameOn = false;
                         nodeCountForFrame = 0;
