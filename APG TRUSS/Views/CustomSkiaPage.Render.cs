@@ -55,7 +55,7 @@ namespace APG_FEA2D.Views
 							node.DrawSupport(customSkiaPage.canvas, customSkiaPage._grid);
 							if (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Successful)
 							{
-								node.force = customSkiaPage.structure.Results.GetSupportReaction(node, customSkiaPage.loadCase);
+								node.force = customSkiaPage.structure.Results.GetSupportReaction(node, customSkiaPage.structure.LoadCasesToRun[0]);
 								node.DrawReaction(customSkiaPage.canvas, customSkiaPage._grid);
 							}
 						}

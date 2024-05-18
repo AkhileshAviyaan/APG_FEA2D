@@ -42,7 +42,7 @@ namespace APG_FEA2D.Views
 			nodalLoad = await dialog.ShowDialog<NodalLoad?>(this);
 			if (nodalLoad is not null)
 			{
-				nodalLoad.LoadCase = CustomSkia.loadCase;
+				nodalLoad.LoadCase = CustomSkia.structure.LoadCasesToRun[0];
 				CustomSkia.searchedPoint.NodalLoads.Add(nodalLoad);
 			}
 			interaction.SetOutput(nodalLoad);

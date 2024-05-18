@@ -116,7 +116,7 @@ namespace APG_FEA2D.Views
 			}
 
 				this.structure.Solve();
-				var R1 = structure.Results.GetSupportReaction(firstPoint, loadCase);
+				//var R1 = structure.Results.GetSupportReaction(firstPoint, loadCase);
 
 				if (structure.AnalysisStatus is FEA2D.Structures.AnalysisStatus.Failure)
 				{
