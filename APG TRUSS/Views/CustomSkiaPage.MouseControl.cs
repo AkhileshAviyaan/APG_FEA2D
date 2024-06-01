@@ -120,7 +120,7 @@ namespace APG_FEA2D.Views
         }
         float OriginXWhenPressed;
         float OriginYWhenPressed;
-        FrameElement2D frameGet = new();
+        public FrameElement2D frameGet = new();
         protected override void OnPointerPressed(PointerPressedEventArgs e)
         {
             IsNodePressed = false;

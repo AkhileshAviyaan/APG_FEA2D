@@ -76,10 +76,9 @@
 					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/10PointLoad.png" />
 				</Button>
 				<Button x:DataType="vm:MainWindowViewModel" Command="{Binding SupportDisplacementLoadCommand}">
-					<Button.CommandParameter />
 					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/11SupportDisplacement.png" />
 				</Button>
-				<Button>
+				<Button x:DataType="vm:MainWindowViewModel" Command="{Binding FrameTrapezoidalLoadCommand}">
 					<Image Height="20" Source="avares://APG_FEA2D/AssetsPng/12Distributed.png" />
 				</Button>
 				<Button>

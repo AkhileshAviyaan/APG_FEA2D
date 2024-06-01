@@ -16,13 +16,19 @@ namespace APG_FEA2D.ViewModels
 			NodalLoadCommand = new RelayCommand(NodalLoadCommandMethod);
 			SupportDisplacementLoadCommand = new RelayCommand(SupportDisplacementLoadCommandMethod);
 			SupportDisplacementLoadDialog = new Interaction<SupportDisplacementLoadViewModel, SupportDisplacementLoad?>();
+			FrameTrapezoidalLoadCommand = new RelayCommand(FrameTrapezoidalLoadCommandMethod);
+			FrameTrapezoidalLoadDialog = new Interaction<FrameTrapezoidalLoadViewModel, FrameTrapezoidalLoad?>();
 		}
 		public ICommand NodalLoadCommand { get; }
 		public ICommand SupportDisplacementLoadCommand { get; }
+		public ICommand FrameTrapezoidalLoadCommand { get; }
+		public async void FrameTrapezoidalLoadCommandMethod()
+		{
+			var result = await FrameTrapezoidalLoadDialog.Handle(new FrameTrapezoidalLoadViewModel());
+		}
 		public async void NodalLoadCommandMethod()
 		{
 			var result = await NodalLoadDialog.Handle(new NodalLoadViewModel());
-
 		}
 		public async void SupportDisplacementLoadCommandMethod()
 		{
@@ -30,5 +36,6 @@ namespace APG_FEA2D.ViewModels
 		}
 		public Interaction<NodalLoadViewModel, NodalLoad?> NodalLoadDialog { get; }
 		public Interaction<SupportDisplacementLoadViewModel, SupportDisplacementLoad?> SupportDisplacementLoadDialog { get; }
+		public Interaction<FrameTrapezoidalLoadViewModel, FrameTrapezoidalLoad?> FrameTrapezoidalLoadDialog { get; }
 	}
 }

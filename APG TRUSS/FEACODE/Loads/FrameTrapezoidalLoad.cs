@@ -33,7 +33,6 @@ namespace FEA2D.Loads
         public FrameTrapezoidalLoad(double wx1, double wx2, double wy1, double wy2, LoadDirection direction,
                                      LoadCase loadCase, double l1 = 0, double l2 = 0)
         {
-
             this.Wx1 = wx1; this.Wx2 = wx2;
             this.Wy1 = wy1; this.Wy2 = wy2;
             this.LoadDirection = direction;
@@ -41,11 +40,20 @@ namespace FEA2D.Loads
             this.L1 = l1;
             this.L2 = l2;
         }
+		public FrameTrapezoidalLoad(double wx1, double wx2, double wy1, double wy2, LoadDirection direction,
+							double l1 = 0, double l2 = 0)
+		{
+			this.Wx1 = wx1; this.Wx2 = wx2;
+			this.Wy1 = wy1; this.Wy2 = wy2;
+			this.LoadDirection = direction;
+			this.L1 = l1;
+			this.L2 = l2;
+		}
 
-        /// <summary>
-        /// Magnitude of the uniform load in X-direction (left).
-        /// </summary>
-        public double Wx1 { get; set; }
+		/// <summary>
+		/// Magnitude of the uniform load in X-direction (left).
+		/// </summary>
+		public double Wx1 { get; set; }
 
         /// <summary>
         /// Magnitude of the uniform load in X-direction (right).

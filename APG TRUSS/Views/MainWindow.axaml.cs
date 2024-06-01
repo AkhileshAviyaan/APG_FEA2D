@@ -2,15 +2,6 @@ using ReactiveUI;
 using System.Threading.Tasks;
 using APG_FEA2D.ViewModels;
 using Avalonia.ReactiveUI;
-using APG_FEA2D.Views;
-using APG_FEA2D.ViewModels;
-using System;
-using Microsoft.VisualBasic;
-
-
-using Avalonia.ReactiveUI;
-using ReactiveUI;
-using System.Threading.Tasks;
 using FEA2D.Loads;
 namespace APG_FEA2D.Views
 {
@@ -18,6 +9,7 @@ namespace APG_FEA2D.Views
 	{
 		public NodalLoad nodalLoad;
 		public SupportDisplacementLoad supportDisplacementLoad;
+		public FrameTrapezoidalLoad frameTrapezoidalLoad;
 
 		public MainWindow()
 		{
@@ -26,6 +18,8 @@ namespace APG_FEA2D.Views
 						   action(ViewModel!.NodalLoadDialog.RegisterHandler(NodalLoadDialogAsync)));
 			this.WhenActivated(action =>
 			   action(ViewModel!.SupportDisplacementLoadDialog.RegisterHandler(SupportDisplacementLoadDialogAsync)));
+			this.WhenActivated(action =>
+			   action(ViewModel!.FrameTrapezoidalLoadDialog.RegisterHandler(FrameTrapezoidalLoadDialogAsync)));
 		}
 
 		private async Task NodalLoadDialogAsync(IInteractionContext<NodalLoadViewModel,
@@ -80,6 +74,32 @@ namespace APG_FEA2D.Views
 					}
 					return;
 				}
+			}
+		}
+		private async Task FrameTrapezoidalLoadDialogAsync(IInteractionContext<FrameTrapezoidalLoadViewModel,
+										FrameTrapezoidalLoad?> interaction)
+		{
+			var dialog = new FrameTrapezoidalLoadView();
+			dialog.DataContext = interaction.Input;
+			if (CustomSkia.frameGet.IsFrameTouched is false)
+			{
+				CustomSkia.Info = "Please Select Frame First";
+				interaction.SetOutput(new FrameTrapezoidalLoad());
+				return;
+			}
+			else
+			{
+				CustomSkia.Info = "Input FrameLoad";
+				frameTrapezoidalLoad = await dialog.ShowDialog<FrameTrapezoidalLoad?>(this);
+				CustomSkia.Info = "FrameLoad Added";
+
+				interaction.SetOutput(frameTrapezoidalLoad);
+				if (frameTrapezoidalLoad is not null)
+				{
+					frameTrapezoidalLoad.LoadCase = CustomSkia.loadCase;
+					CustomSkia.frameGet.Loads.Add(frameTrapezoidalLoad);
+				}
+				return;
 			}
 		}
 	}

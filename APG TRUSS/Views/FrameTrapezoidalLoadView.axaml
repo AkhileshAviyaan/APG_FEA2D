@@ -1,0 +1,22 @@
+<Window
+	x:Class="APG_FEA2D.Views.FrameTrapezoidalLoadView"
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:vm="using:APG_FEA2D.ViewModels"
+	Title="FrameTrapezoidalLoadView"
+	Width="250"
+	Height="150"
+	d:DesignHeight="450"
+	d:DesignWidth="800"
+	WindowStartupLocation="CenterOwner"
+	mc:Ignorable="d">
+	<StackPanel x:DataType="vm:FrameTrapezoidalLoadViewModel">
+		<Label>Enter Wy1</Label>
+		<TextBox Text="{Binding Wy1}">10.0</TextBox>
+		<Label>Enter Wy2</Label>
+		<TextBox Text="{Binding Wy2}">10.0</TextBox>
+		<Button Command="{Binding FrameTrapezoidalLoadOkCommand}">OK</Button>
+	</StackPanel>
+</Window>

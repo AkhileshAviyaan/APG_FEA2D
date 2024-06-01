@@ -73,6 +73,10 @@ namespace APG_FEA2D.Views
 					foreach (FrameElement2D element in customSkiaPage.structure.Elements)
 					{
 						element.Draw(customSkiaPage.canvas, customSkiaPage._grid);
+						if (element.Loads.Count > 0 && (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Failure ||customSkiaPage.DiagramMode=="None"))
+						{
+							element.DrawTrapezoidalLoad(customSkiaPage.canvas, customSkiaPage._grid);
+						}
 					}
 					if (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Successful && customSkiaPage.DiagramMode is not null)
 

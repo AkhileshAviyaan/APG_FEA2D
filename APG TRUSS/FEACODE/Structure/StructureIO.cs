@@ -33,6 +33,7 @@ namespace FEA2D.Structures
 				string section = "DROP TABLE IF EXISTS   section; ";
 				string nodes = "DROP TABLE IF EXISTS  nodes; ";
 				string frame = "DROP TABLE IF EXISTS   frame; ";
+				string frameTrapezoidalLoad = "DROP TABLE IF EXISTS   frameTrapezoidalLoad; ";
 				string supports = "DROP TABLE IF EXISTS  supports; ";
 				string nodalloads = "DROP TABLE IF EXISTS  nodalloads; ";
 				command.CommandText = material;
@@ -42,6 +43,8 @@ namespace FEA2D.Structures
 				command.CommandText = nodes;
 				command.ExecuteNonQuery();
 				command.CommandText = frame;
+				command.ExecuteNonQuery();
+				command.CommandText = frameTrapezoidalLoad;
 				command.ExecuteNonQuery();
 				command.CommandText = supports;
 				command.ExecuteNonQuery();
@@ -59,6 +62,7 @@ namespace FEA2D.Structures
 				string section = "CREATE TABLE  if not exists section(id integer primary key autoincrement,element_label text, a number, ax number, ay text, ix number,iy number,j number, hmax number, wmax number); ";
 				string nodes = "CREATE TABLE if not exists nodes(id integer primary key autoincrement, x number, y number, label text); ";
 				string frame = "CREATE TABLE  if not exists frame(id integer primary key autoincrement, start_nodeX integer,start_nodeY integer,start_nodelabel text, end_nodeX integer,end_nodeY integer,end_nodelabel text, label text); ";
+				string frameTrapezoidalLoad = "CREATE TABLE  if not exists frameTrapezoidalLoad(id integer primary key autoincrement, framelabel text,wy1 number, wy2 number); ";
 				string supports = "CREATE TABLE  if not exists supports(id integer primary key autoincrement, node_label text, restrain_x number,restrain_y number,restrain_R number); ";
 				string nodalloads = "CREATE TABLE  if not exists nodalloads(id integer primary key autoincrement, node_label text, magnitude number, angle number); ";
 				command.CommandText = material;
@@ -68,6 +72,8 @@ namespace FEA2D.Structures
 				command.CommandText = nodes;
 				command.ExecuteNonQuery();
 				command.CommandText = frame;
+				command.ExecuteNonQuery();
+				command.CommandText = frameTrapezoidalLoad;
 				command.ExecuteNonQuery();
 				command.CommandText = supports;
 				command.ExecuteNonQuery();
@@ -84,6 +90,7 @@ namespace FEA2D.Structures
 				string section = "DROP TABLE  if exists section; ";
 				string nodes = "DROP TABLE if exists nodes; ";
 				string frame = "DROP TABLE  if exists frame; ";
+				string frameTrapezoidalLoad = "DROP TABLE  if exists frameTrapezoidalLoad; ";
 				string supports = "DROP TABLE  if exists supports; ";
 				string nodalloads = "DROP TABLE  if exists nodalloads; ";
 				command.CommandText = material;
@@ -93,6 +100,8 @@ namespace FEA2D.Structures
 				command.CommandText = nodes;
 				command.ExecuteNonQuery();
 				command.CommandText = frame;
+				command.ExecuteNonQuery();
+				command.CommandText = frameTrapezoidalLoad;
 				command.ExecuteNonQuery();
 				command.CommandText = supports;
 				command.ExecuteNonQuery();
@@ -123,6 +132,7 @@ namespace FEA2D.Structures
 			string material = "SELECT * FROM material;";
 			string section = "SELECT * FROM section; ";
 			string frame = "SELECT * FROM frame; ";
+			string frameTrapezoidalLoad = "SELECT * FROM frameTrapezoidalLoad; ";
 			string nodes = "SELECT * FROM nodes; ";
 			string supports = "SELECT * FROM supports; ";
 			string nodalloads = "SELECT * FROM nodalloads; ";
@@ -141,7 +151,7 @@ namespace FEA2D.Structures
 						nodeList.Add(nod);
 					}
 				}
-		
+
 
 				command.CommandText = supports;
 				using (SqliteDataReader reader = command.ExecuteReader())
@@ -163,7 +173,7 @@ namespace FEA2D.Structures
 				{
 					while (reader.Read())
 					{
-						NodalLoad nodload = new(Convert.ToDouble(reader["angle"])*180/Math.PI, Convert.ToDouble(reader["magnitude"]));
+						NodalLoad nodload = new(Convert.ToDouble(reader["angle"]) * 180 / Math.PI, Convert.ToDouble(reader["magnitude"]));
 						var node_label = (string)reader["node_label"];
 						Node2D node = nodeList.Where(n => n.Label == node_label).FirstOrDefault();
 						nodload.LoadCase = loadCase;
@@ -222,6 +232,18 @@ namespace FEA2D.Structures
 						frameList.Add(fra);
 					}
 				}
+				command.CommandText = frameTrapezoidalLoad;
+				List<FrameTrapezoidalLoad> frameTrapezoidalLoadList = [];
+				using (SqliteDataReader reader = command.ExecuteReader())
+				{
+					while (reader.Read())
+					{
+						FrameElement2D fra = frameList.Where(n => n.Label == (string)reader["framelabel"]).FirstOrDefault();
+
+						FrameTrapezoidalLoad TrapezoidalLoad = new(0, 0, Convert.ToDouble(reader["wy1"]), Convert.ToDouble(reader["wy2"]), LoadDirection.Local,loadCase);
+						fra.Loads.Add(TrapezoidalLoad);
+					}
+				}
 				structure.AddNode(nodeList);
 				structure.AddElement(frameList);
 				structure.LoadCasesToRun.Add(loadCase);
@@ -240,6 +262,7 @@ namespace FEA2D.Structures
 				string section = "DELETE FROM section; ";
 				string nodes = "DELETE FROM nodes; ";
 				string frame = "DELETE FROM frame; ";
+				string frameTrapezoidalLoad = "DELETE FROM frameTrapezoidalLoad; ";
 				string supports = "DELETE FROM supports; ";
 				string nodalloads = "DELETE FROM nodalloads; ";
 				command.CommandText = material;
@@ -249,6 +272,8 @@ namespace FEA2D.Structures
 				command.CommandText = nodes;
 				command.ExecuteNonQuery();
 				command.CommandText = frame;
+				command.ExecuteNonQuery();
+				command.CommandText = frameTrapezoidalLoad;
 				command.ExecuteNonQuery();
 				command.CommandText = supports;
 				command.ExecuteNonQuery();
@@ -372,7 +397,26 @@ namespace FEA2D.Structures
 				}
 				insertTransaction.Commit();
 			}
-
+			// Insert frameTrapezoidalLoad
+			using (SqliteTransaction insertTransaction = db.BeginTransaction())
+			{
+				foreach (FrameElement2D frameElement in structure.Elements)
+				{
+					foreach (FrameTrapezoidalLoad load in frameElement.Loads)
+					{
+						using (SqliteCommand command = db.CreateCommand())
+						{
+							command.Transaction = insertTransaction;
+							command.CommandText = @"INSERT INTO frameTrapezoidalLoad(framelabel,wy1,wy2) VALUES (@framelabel,@wy1,@wy2)";
+							command.Parameters.AddWithValue("@framelabel", frameElement.Label);
+							command.Parameters.AddWithValue("@wy1", load.Wy1);
+							command.Parameters.AddWithValue("@wy2", load.Wy2);
+							command.ExecuteNonQuery();
+						}
+					}
+				}
+				insertTransaction.Commit();
+			}
 
 		}
 	}
