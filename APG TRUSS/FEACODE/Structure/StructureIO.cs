@@ -12,7 +12,8 @@ namespace FEA2D.Structures
 {
 	public class StructureIO
 	{
-		public readonly string path;
+		public string fileName;
+		private readonly string path;
 		SqliteConnection db;
 		public StructureIO()
 		{

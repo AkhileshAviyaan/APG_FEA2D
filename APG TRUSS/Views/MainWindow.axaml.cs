@@ -81,7 +81,7 @@ namespace APG_FEA2D.Views
 		{
 			var dialog = new FrameTrapezoidalLoadView();
 			dialog.DataContext = interaction.Input;
-			if (CustomSkia.frameGet.IsFrameTouched is false)
+			if (CustomSkia.frameGet is null)
 			{
 				CustomSkia.Info = "Please Select Frame First";
 				interaction.SetOutput(new FrameTrapezoidalLoad());
