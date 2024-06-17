@@ -47,67 +47,13 @@ namespace APG_FEA2D.Views
 					using var lease = leaseFeature.Lease();
 					customSkiaPage.canvas = lease.SkCanvas;
                     customSkiaPage._grid.DrawGrid(customSkiaPage.canvas, Bounds, _matrix);
-					foreach (var node in customSkiaPage.structure.Nodes)
-					{
-						node.DrawNode(customSkiaPage.canvas, customSkiaPage._grid);
-						if (node.Support is not null)
-						{
-							node.DrawSupport(customSkiaPage.canvas, customSkiaPage._grid);
-							if (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Successful)
-							{
-								node.force = customSkiaPage.structure.Results.GetSupportReaction(node, customSkiaPage.structure.LoadCasesToRun[0]);
-								node.DrawReaction(customSkiaPage.canvas, customSkiaPage._grid);
-							}
-						}
 
-						if (node.NodalLoads.Count > 0)
-						{
-							node.DrawNodalLoad(customSkiaPage.canvas, customSkiaPage._grid);
-						}
-						if(node.SupportDisplacementLoad.Count > 0)
-						{
-							//TO DO
-							//node.DrawSupportDisplacementLoad();
-						}
-					}
-					foreach (FrameElement2D element in customSkiaPage.structure.Elements)
-					{
-						element.Draw(customSkiaPage.canvas, customSkiaPage._grid);
-						if (element.Loads.Count > 0 && (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Failure ||customSkiaPage.DiagramMode=="None"))
-						{
-							element.DrawTrapezoidalLoad(customSkiaPage.canvas, customSkiaPage._grid);
-						}
-					}
+					customSkiaPage.structure.DrawStructure(customSkiaPage.canvas, customSkiaPage._grid, customSkiaPage.DiagramMode);
+					
 					if (customSkiaPage.structure.AnalysisStatus is AnalysisStatus.Successful && customSkiaPage.DiagramMode is not null)
 
 					{
-
-						int drawCase = customSkiaPage.DiagramModeDictionary[customSkiaPage.DiagramMode];
-						if (drawCase == 0)
-						{
-							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "None");
-						}
-						else if (drawCase == 1)
-						{
-							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Fx");
-						}
-						else if (drawCase == 2)
-						{
-							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Fy");
-						}
-						else if (drawCase == 3)
-						{
-							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Mz");
-						}
-						else if (drawCase == 4)
-						{
-							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Ux");
-						}
-						else if (drawCase == 5)
-						{
-							customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid, "Rz");
-						}
-						//customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid);
+						customSkiaPage.structure.DrawResult(customSkiaPage.canvas, customSkiaPage._grid,customSkiaPage.DiagramModeDictionary[customSkiaPage.DiagramMode]);
 					}
 				}
 			}

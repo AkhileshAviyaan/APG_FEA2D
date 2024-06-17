@@ -20,7 +20,67 @@ namespace FEA2D.Structures
 			IsAntialias = true,
 			Style = SKPaintStyle.Stroke
 		};
+		public void DrawStructure(SKCanvas canvas, APG_FEA2D.Views.Grid _grid,string DiagramMode)
+		{
+			foreach (var node in this.Nodes)
+			{
+				node.DrawNode(canvas, _grid);
+				if (node.Support is not null)
+				{
+					node.DrawSupport(canvas, _grid);
+					if (this.AnalysisStatus is AnalysisStatus.Successful)
+					{
+						node.force = this.Results.GetSupportReaction(node, this.LoadCasesToRun[0]);
+						node.DrawReaction(canvas, _grid);
+					}
+				}
 
+				if (node.NodalLoads.Count > 0)
+				{
+					node.DrawNodalLoad(canvas, _grid);
+				}
+				if (node.SupportDisplacementLoad.Count > 0)
+				{
+					//TO DO
+					//node.DrawSupportDisplacementLoad();
+				}
+			}
+			foreach (FrameElement2D element in this.Elements)
+			{
+				element.Draw(canvas, _grid);
+				if (element.Loads.Count > 0 && (this.AnalysisStatus is AnalysisStatus.Failure || DiagramMode == "None"))
+				{
+					element.DrawTrapezoidalLoad(canvas, _grid);
+				}
+			}
+		}
+		public void DrawResult(SKCanvas canvas, APG_FEA2D.Views.Grid _grid,int drawCase)
+		{
+			if (drawCase == 0)
+			{
+				this.DrawResult(canvas, _grid, "None");
+			}
+			else if (drawCase == 1)
+			{
+				this.DrawResult(canvas, _grid, "Fx");
+			}
+			else if (drawCase == 2)
+			{
+				this.DrawResult(canvas, _grid, "Fy");
+			}
+			else if (drawCase == 3)
+			{
+				this.DrawResult(canvas, _grid, "Mz");
+			}
+			else if (drawCase == 4)
+			{
+				this.DrawResult(canvas, _grid, "Ux");
+			}
+			else if (drawCase == 5)
+			{
+				this.DrawResult(canvas, _grid, "Rz");
+			}
+		}
 		public void DrawResult(SKCanvas canvas, APG_FEA2D.Views.Grid _grid, String loadName)
 		{
 			float pixalDisplay = 50;
