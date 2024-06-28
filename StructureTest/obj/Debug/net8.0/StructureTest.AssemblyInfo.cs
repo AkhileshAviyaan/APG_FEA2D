@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StructureTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d3ef90efbc2437d03ec023cc8e0e062b06974f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9546c096ba40234360c61e025c4e5326588d3bb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("StructureTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StructureTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

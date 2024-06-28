@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UrncekWMBffvXyxxK1dtx07raFq3XTRlqIZX+VQixYSfj4F3mmyHPvme+aHbER/Igi9bOGeAJUL+3jiMQZmXFQ==",
+  "dgSpecHash": "biaYRmAzaU8o15x8qwJ6JFfYePBqk1EEQnsWlvB1vRBB8gTIdBwMCabPZt8FxuXNrApLhVSJ1etzueOSKNB9Ig==",
   "success": true,
   "projectFilePath": "D:\\APG_FEA2D\\APG TRUSS\\APG_FEA2D.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,8 @@
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.data.sqlite\\8.0.4\\microsoft.data.sqlite.8.0.4.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.4\\microsoft.data.sqlite.core.8.0.4.nupkg.sha512",
+    "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.net.compilers\\4.1.0\\microsoft.net.compilers.4.1.0.nupkg.sha512",
+    "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.net.compilers.toolset\\4.10.0\\microsoft.net.compilers.toolset.4.10.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\reactiveui\\19.6.1\\reactiveui.19.6.1.nupkg.sha512",

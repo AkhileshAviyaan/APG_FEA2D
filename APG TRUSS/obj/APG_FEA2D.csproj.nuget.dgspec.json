@@ -98,6 +98,18 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "Microsoft.Net.Compilers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.10.0, )"
+            },
             "ReactiveUI": {
               "target": "Package",
               "version": "[19.6.1, )"

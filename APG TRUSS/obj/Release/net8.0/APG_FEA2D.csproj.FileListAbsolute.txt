@@ -1,0 +1,8 @@
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\APG_FEA2D.csproj.AssemblyReference.cache
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\Avalonia\Resources.Inputs.cache
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\Avalonia\resources
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\APG_FEA2D.GeneratedMSBuildEditorConfig.editorconfig
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\APG_FEA2D.AssemblyInfoInputs.cache
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\APG_FEA2D.AssemblyInfo.cs
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\APG_FEA2D.csproj.CoreCompileInputs.cache
+D:\APG_FEA2D\APG TRUSS\obj\Release\net8.0\APG_FEA2D.sourcelink.json

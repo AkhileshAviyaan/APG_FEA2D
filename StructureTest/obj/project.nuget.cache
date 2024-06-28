@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JDPMDoUNXgAdGEDDh19qYwBctKLPeWM1+VsjZmOHQAsevnD3pnaqjID5erLWnZ3xRz0F9ZDWQtU5ERCF5V9/ZQ==",
+  "dgSpecHash": "HYjQkw0uS6PKVZZrNV/OSZGUd6qX5BDceyRnoPW+mvkOYqPFrfPJF5vwjwLjLav35jzhMTRP5k+aYaFGEJR0lg==",
   "success": true,
   "projectFilePath": "D:\\APG_FEA2D\\StructureTest\\StructureTest.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,8 @@
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.data.sqlite\\8.0.4\\microsoft.data.sqlite.8.0.4.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.4\\microsoft.data.sqlite.core.8.0.4.nupkg.sha512",
+    "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.net.compilers\\4.1.0\\microsoft.net.compilers.4.1.0.nupkg.sha512",
+    "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.net.compilers.toolset\\4.10.0\\microsoft.net.compilers.toolset.4.10.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\1akhi\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

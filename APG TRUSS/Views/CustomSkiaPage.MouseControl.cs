@@ -42,6 +42,13 @@ namespace APG_FEA2D.Views
 			//    _grid.OriginX += delOriginShiftX;
 			//    _grid.OriginY += delOriginShiftY;
 			//}
+
+			//float diffx = CurrentMovingPoint.X - _grid.OriginX;
+			//float diffy = CurrentMovingPoint.Y - _grid.OriginY;
+			//float scale1 =this._grid.spacing;
+			//_grid.OriginX += diffx;
+			//_grid.OriginY += diffy;
+
 			this._grid.spacing += delta * 20;
 			if (this._grid.spacing < 80)
 			{
@@ -74,8 +81,9 @@ namespace APG_FEA2D.Views
 					spacingIndexForGrid = this._grid.SpacingEquivalentInGridList.Length - 1;
 				}
 			}
-
-
+			//float scale2 = this._grid.spacing;
+			//_grid.OriginX -= diffx * (scale2 / scale1);
+			//_grid.OriginY -= diffy * (scale2 / scale1);
 		}
 		int nodeCountForFrame = 0;
 		Node2D firstPoint;
@@ -271,11 +279,11 @@ namespace APG_FEA2D.Views
 		protected override void OnPointerMoved(PointerEventArgs e)
 		{
 			base.OnPointerMoved(e);
+			CurrentMovingPoint = (Point2D)e.GetPosition(this);
 			if (IsPanning is not true)
 			{
 				return;
 			}
-			CurrentMovingPoint = (Point2D)e.GetPosition(this);
 			double x = CurrentMovingPoint.X;
 			double y = CurrentMovingPoint.Y;
 			var dx = x - PreviousPoint.X;
