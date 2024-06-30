@@ -23,31 +23,17 @@ namespace APG_FEA2D.Views
 		int spacingIndexForGrid = 5;
 		float initialDistanceX;
 		float initialDistanceY;
-		protected override void OnPointerWheelChanged(PointerWheelEventArgs e)
+				protected override void OnPointerWheelChanged(PointerWheelEventArgs e)
 		{
 			var point = e.GetPosition(this);
 			var point2D = (Point2D)point;
 			var delta = (float)e.Delta.Y;
-			//TODO
-			//Zoom From CursorPoint
-			//Needs Corrections
 
-			//initialDistanceX = _grid.OriginX - point2D.X;
-			//initialDistanceY = _grid.OriginY - point2D.Y;
-			//float noOfOffset = initialDistanceX / _grid.spacing;
-			//float delOriginShiftX = noOfOffset * delta * 20;
-			//float delOriginShiftY = noOfOffset * delta * 20;
-			//if (_grid.spacing != 160)
-			//{
-			//    _grid.OriginX += delOriginShiftX;
-			//    _grid.OriginY += delOriginShiftY;
-			//}
-
-			//float diffx = CurrentMovingPoint.X - _grid.OriginX;
-			//float diffy = CurrentMovingPoint.Y - _grid.OriginY;
-			//float scale1 =this._grid.spacing;
-			//_grid.OriginX += diffx;
-			//_grid.OriginY += diffy;
+			float diffx = CurrentMovingPoint.X - _grid.OriginX;
+			float diffy = CurrentMovingPoint.Y - _grid.OriginY;
+			float spacingBeforeZoom = (this._grid.spacing / Grid.SpacingEquivalentInGrid);
+			_grid.OriginX += diffx;
+			_grid.OriginY += diffy;
 
 			this._grid.spacing += delta * 20;
 			if (this._grid.spacing < 80)
@@ -81,9 +67,11 @@ namespace APG_FEA2D.Views
 					spacingIndexForGrid = this._grid.SpacingEquivalentInGridList.Length - 1;
 				}
 			}
-			//float scale2 = this._grid.spacing;
-			//_grid.OriginX -= diffx * (scale2 / scale1);
-			//_grid.OriginY -= diffy * (scale2 / scale1);
+			float spacingAfterZoom = (this._grid.spacing / Grid.SpacingEquivalentInGrid);
+			float diffxAfterZoom = diffx*spacingAfterZoom/spacingBeforeZoom;
+			float diffyAfterZoom = diffy* spacingAfterZoom / spacingBeforeZoom;
+			_grid.OriginX -= diffxAfterZoom;
+			_grid.OriginY -= diffyAfterZoom;
 		}
 		int nodeCountForFrame = 0;
 		Node2D firstPoint;
